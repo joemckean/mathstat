@@ -43,5 +43,5 @@ test_that("input", {
 
 test_that("mu=50, sig=10, n=25", {
 	finger <- getFingerprint(file = "../test_img/tpowerg_key.png")
-	expect_true(isSimilar(file = "../test_img/tpowerg_test.png", finger))
+  expect_true(isSimilar(file = "../test_img/tpowerg_test.png", finger, threshold = 10))
 })
