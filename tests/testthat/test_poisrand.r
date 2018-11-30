@@ -1,36 +1,32 @@
-context("poisrand test")
+context("poisrand.r")
 
-samp <- "function output"
+six_decimal_error <- 0.0000001
 
+# Test invalid inputs.
 test_that("input", {
-  expect_error(poisrand("x", 7),
-	             " * argument 1 must be positive")
-  expect_error(poisrand(5, "x"),
-	             " * argument 2 must be a number")
-  expect_error(poisrand(-1, 4),
-	             " * argument 1 must be positive")
-  expect_error(poisrand(4.3, 6),
-	             " * argument 1 must be an integer")
-  expect_error(poisrand(5, -9),
-	             " * argument 2 must be positive")
+	expect_error(poisrand("n", 5), "argument 1 must be a number")
+	expect_error(poisrand(1000, "lambda"), "argument 2 must be a number")
+	expect_error(poisrand(c(1,2,3), 5), "argument 1 cannot have length greater than 1")
+	expect_error(poisrand(1000, c(1,2,3)), "argument 2 cannot have length greater than 1")
+	expect_error(poisrand(Inf, 5), "argument 1 cannot include an Inf or -Inf")
+	expect_error(poisrand(1000, Inf), "argument 2 cannot include an Inf or -Inf")
+	expect_error(poisrand(NaN, 5), "argument 1 cannot include a NaN")
+	expect_error(poisrand(1000, NaN), "argument 2 cannot include a NaN")
+	expect_error(poisrand(-1, 5), "argument 1 must be positive")
+	expect_error(poisrand(1000, -1), "argument 2 must be positive")
+	expect_error(poisrand(0, 5), "argument 1 must be numeric and non-zero")
+	expect_error(poisrand(1000, 0), "argument 2 must be numeric and non-zero")
 })
 
-test_that("output", {
-    set.seed(1234)
-    samp <- poisrand(8, 11.5)
+# Test valid input which result in valid results.
 
-    expect_is(samp, "numeric")
-    expect_equal(length(samp), 8)
-    expect_equal(samp, c(13,16,10,16,14,15,22,8))
+test_that("n=1000, lamba=5", {
+ 	result <- poisrand(1000, 5)
+ 	expect_that(length(result), equals(1000))
+ 	expect_that(abs(5 - mean(result)) < 0.5, is_true())
 })
 
-test_that("limits", {
-  expect_error(poisrand(0, 7),
-	             " * argument 1 must be numeric and non-zero")
-  expect_error(poisrand(7, 0),
-	             " * argument 2 must be numeric and non-zero")
-  set.seed(1234)
-  samp <- poisrand(7, .000000001)
-  expect_equal(samp, c(0,0,0,0,0,0,0))
-
+# Test valid input which results in invalid result.
+test_that("n=5000000000, lambda=5", {
+ 	expect_that(poisrand(5000000000, 5), throws_error("cannot allocate vector"))
 })
