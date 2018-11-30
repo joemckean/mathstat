@@ -234,20 +234,3 @@ is_posdetmat2 <- function(x, argPos){
     v <- c("argument", argPos, "must be a matrix")
     return(paste(v, collapse = " "))
 }
-
-report_messages <- function(error_vec){
-  check <- ArgumentCheck::newArgCheck()
-  errors <- 0
-  for(i in 1:length(error_vec)){
-    if(!is.null(error_vec[i])){
-      ArgumentCheck::addError(
-        msg = error_vec[i],
-        argcheck = check
-      )
-      errors <- errors +1
-    }
-  }
-  if(errors>0){
-    ArgumentCheck::finishArgCheck(check)
-  }
-}

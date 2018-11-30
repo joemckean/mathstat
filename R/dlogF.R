@@ -21,7 +21,6 @@
 #' pdf <- dlogF(0)
 #' pdf <- dlogF(589)
 #' pdf <- dlogF(3.14159)
-#' pdf <- dlogF(real_number_variable_within_specified_limits)
 #'
 #' # Example where input is a vector of numbers to be passed into function.
 #' # Each number in this input vector is evaluated independently.

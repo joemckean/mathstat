@@ -110,7 +110,7 @@
 #'
 #' @format A list with 15 rows and 1 variable
 #' \describe{
-#'   \tiem{x}{some variable from 4.4.4}
+#'   \item{x}{some variable from 4.4.4}
 #' }
 "eg4.4.4data"
 
@@ -217,7 +217,7 @@
 #' \describe{
 #'   \item{lifetime}{life of a motor}
 #' }
-"lifetime"
+"lifetimemotor"
 
 #' men 1500m
 #'

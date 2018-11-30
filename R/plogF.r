@@ -15,7 +15,8 @@
 #' cdf <- plogF(1)
 #' cdf <- plogF(-1)
 #' cdf <- plogF(3.14159)
-#' cdf <- plogF(real_number_variable_within_specified_limits)
+#'
+#' @export plogF
 
 plogF <- function(x){
 	# INPUT VALIDATION

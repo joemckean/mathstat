@@ -21,7 +21,6 @@
 #' @examples
 #' inverse_cdf <- qlogF(0.1)
 #' inverse_cdf <- qlogF(0.9)
-#' inverse_cdf <- qlogF(real_number_variable)
 #'
 #' @export qlogF
 
