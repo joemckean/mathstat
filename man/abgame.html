@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Coin Flip versus Die Roll Game</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for abgame {mathstat}"><tr><td>abgame {mathstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Coin Flip versus Die Roll Game</h2>
+
+<h3>Description</h3>
+
+<p>This function simulates a game involving two players. Person A
+flips a fair coin initially, with the objective of getting a head. Person B
+rolls a fair six-sided die after Person A's move with the obejective of getting
+a 1, 2, 3, or 4. The game is repeated until one person is able to complete his
+or her objective first thereby winning the game. The winner of the game
+receives a 1 while the loser receives a 0.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+abgame()
+</pre>
+
+
+<h3>Details</h3>
+
+<p>The function plays one round of the game referenced in
+Example 1.4.8 (8th Edition). There is no input required to run this simulation.
+The function defines all possible outcomes of a coin toss or the rolling of a
+die, as well as calculates the probability of both the coin landing on heads,
+and the die landing on one through four.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>results</code> contains the resulting score of one round of the game.
+</p>
+
+
+<h3>References</h3>
+
+<p>Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
+Statistics, 8th Ed. Boston: Pearson.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ind &lt;- 0
+nsims &lt;- 10000
+for (i in 1:nsims) {
+    seeA &lt;- abgame()
+    if (seeA[1] == 1){
+        ind &lt;- ind + 1
+    }
+}
+estpA &lt;- ind/nsims
+err &lt;- 1.96 * sqrt(estpA * (1 - estpA)/ nsims)
+estpA; err
+
+</pre>
+
+
+</body></html>
