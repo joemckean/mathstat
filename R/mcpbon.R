@@ -25,7 +25,6 @@
 #' @seealso mcpfisher() for details about Fisher's PLSD Multiple Comparison Procedure
 #'
 #' @examples
-#' load('./data/fastcars.rda')
 #' speed <- fastcars$speed
 #' car <- fastcars$ind
 #' mcpbon(speed, car)
@@ -136,3 +135,5 @@ mcpbon <- function(y,
 
     return(tab2)
 }
+
+data("fastcars", envir = environment(mcpbon))

@@ -34,7 +34,6 @@ An example of this Fisher's PLSD Multiple Comparison Procedure
 can be found in Example 9.4.1 on page 529 of HMC (2018).
 }
 \examples{
-load('./data/fastcars.rda')
 speed <- fastcars$speed
 car <- fastcars$ind
 mcpfisher(speed, car)

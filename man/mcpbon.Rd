@@ -32,7 +32,6 @@ Computes the Bonferroni confidence intervals as seen in Example
 9.4.1 on page 529.
 }
 \examples{
-load('./data/fastcars.rda')
 speed <- fastcars$speed
 car <- fastcars$ind
 mcpbon(speed, car)

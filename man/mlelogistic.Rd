@@ -11,10 +11,6 @@ mlelogistic(x, eps = 1e-04)
 
 \item{eps}{This quantity validates that the initial guess is a consistent estimator
 of theta based on the inputted precision.}
-
-\item{theta0}{Called the one-step estimator. This estimator has the same asymptotic
-distribution as the mle. The initial guess used for theta0 is the mean of the
-input argument 'x'.}
 }
 \value{
 \code{theta1} is the asymptotically efficient estimate of theta. \code{check}

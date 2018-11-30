@@ -18,7 +18,6 @@
 #'             Statistics, 8th Ed. Boston: Pearson.
 #'
 #' @examples
-#' load('./data/men1500m.rda')
 #' year <- men1500m$year
 #' time <- men1500m$time
 #' cipi(fit = lm(time ~ year), hmat = c(1, 2020), alpha = 0.05)
@@ -104,4 +103,4 @@ cipi <- function(fit,
     return(matcipi)
 
 }
-
+data("men1500m", envir = environment(cipi))

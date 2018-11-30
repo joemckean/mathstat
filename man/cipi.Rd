@@ -27,7 +27,6 @@ A sample of this function's usage can be found in Example 9.6.1
 from the book, Introduction to Mathematical Statistics (8th Edition)
 }
 \examples{
-load('./data/men1500m.rda')
 year <- men1500m$year
 time <- men1500m$time
 cipi(fit = lm(time ~ year), hmat = c(1, 2020), alpha = 0.05)

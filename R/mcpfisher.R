@@ -27,7 +27,6 @@
 #' @seealso mcpbon() for details Bonferroni procedure for all pairwise comparisons
 #'
 #' @examples
-#' load('./data/fastcars.rda')
 #' speed <- fastcars$speed
 #' car <- fastcars$ind
 #' mcpfisher(speed, car)
@@ -135,3 +134,4 @@ mcpfisher <- function(y,
 
     return(list(ftest=ftest,tab=tab2))
 }
+data("fastcars", envir = environment(mcpfisher))
