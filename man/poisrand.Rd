@@ -2,34 +2,29 @@
 % Please edit documentation in R/poisrand.R
 \name{poisrand}
 \alias{poisrand}
-\title{Poisson Random Sample Generator}
+\title{Simulating Poisson Processes}
 \usage{
 poisrand(n, lambda)
 }
 \arguments{
-\item{n}{a positive non-zero integer the, size of sample}
+\item{n}{Iterations to repeat (number of simulations).}
 
-\item{lambda}{a positive non-zero floating point number, The mean of the poisson distribution}
+\item{lambda}{Mean variable in function.}
 }
 \value{
-a poisson random sample
+Vector of realizations from poisson distribution.
 }
 \description{
-This function creates a random sample of n elements using the
-poisson distribution.
-}
-\details{
-Simulates the Poisson Processes in Example 4.8.2 on page 295 of HMC
-(2018).
+Generate n simulations of a Poisson Distribution. See Example
+4.8.2 on page 295 of 8th edition.
 }
 \examples{
-n <- 10
-lambda <- 25.2
-poisrand(n, lambda)
-mean(poisrand(10000, lambda))
+# Example where parameters are passed in as variables.
+n <- 1000
+lambda <- 5
+result <- poisrand(n, lambda)
 
-}
-\references{
-Hogg, R. McKean, J. Craig, A. (2018) Introduction to Mathematical
-Statistics, 8th Ed. Boston: Pearlson
+# Example where parameters are passed in as values.
+result <- poisrand(1000, 5)
+
 }

@@ -23,27 +23,37 @@
 #' @export rcn
 
 rcn <- function(n = 0,
-                eps = 0.0,
+                eps = 0.0001,
                 sigma_c = 1.0) {
 
-    # Convert input to numeric
-    n <- as.numeric(n)
+    # checking arguments
+    errors <- makeAssertCollection()
+    # argument 1 n
+    errors$push(is_oneelement(n, 1))
+    errors$push(is_numeric(n, 1))
+    errors$push(has_nonan(n, 1))
+    errors$push(has_noinf(n, 1))
+    errors$push(is_nonzero(n, 1))
+    errors$push(is_positive(n, 1))
+    # argument 2 eps
+    errors$push(has_nonan(eps, 2))
+    errors$push(has_noinf(eps, 2))
+    errors$push(is_numeric(eps, 2))
+    errors$push(is_oneelement(eps, 2))
+    # argument 2 sigma_c
+    errors$push(has_nonan(sigma_c, 3))
+    errors$push(has_noinf(sigma_c, 3))
+    errors$push(is_positive(sigma_c, 3))
+    errors$push(is_numeric(sigma_c, 3))
+    errors$push(is_oneelement(sigma_c, 3))
+    # argument check results
+    reportAssertions(errors)
 
-    # Error Handling
-
-    if (is.na(n)) {
-        stop(gettext("input object 'n' is non-numeric"))
-
-    } else if (n < 0.0) {
-        stop(gettext("'n' cannot be less than zero"))
-
-    } else if (n > 10000e4) {
-        stop(gettext("'n' cannot be greater than 10000e4"))
-
-    } else if (identical(n, 0.0)) {
-        warning(gettext("'n' cannot equal zero"))
-
+    # Edge case check for input argument 'eps'
+    if (eps < 0 || eps >= 1) {
+        stop(gettext("input argument 'eps' must be between zero and one"))
     }
+
 
 	ind <- rbinom(n, 1, eps) # random generation for the binomial distribution
 	x <- rnorm(n) # random generation for the normal distribution

@@ -21,7 +21,6 @@ The PDF is given in expression 1.7.9 on page 52 of the book.
 cdf <- plogF(1)
 cdf <- plogF(-1)
 cdf <- plogF(3.14159)
-
 }
 \references{
 Hogg, R. McKean, J. Craig, A (2018) Introduction to

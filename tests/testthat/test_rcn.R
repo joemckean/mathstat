@@ -1,27 +1,52 @@
-# Test spike for rcn function
+# Test for aresimcn function
 #
 # Returns:
-#    An error message if an tests fail
-context("RCN Limits")
+#    An error message if any tests fail
 
-set.seed(1)
+context("rcn")
 
-test_that("validating rcn input", {
-    #expect_equal(rcn(n = 0, eps = 0.20, sigma_c = 2), numeric(0))
-    #expect_warning(rcn(n = 0, eps = 0.20, sigma_c = 2))
-    expect_error(rcn(n = -1, eps = 0.20, sigma_c = 2))
-    expect_error(rcn(n = 10000e5, eps = 0.20, sigma_c = 2))
+test_that("edge cases", {
+    expect_error(rcn(Inf),
+                 "argument 1 cannot include an Inf or -Inf")
+    expect_error(rcn(n = -1),
+                 "argument 1 must be positive")
+    expect_error(rcn(n = 50, eps = -1))
+    expect_error(rcn(n = 50, eps = 1.01))
+    expect_error(rcn(n = 50, eps = Inf),
+                 "argument 2 cannot include an Inf or -Inf")
+    expect_error(rcn(n = 50, sigma_c = -1),
+                 "argument 3 must be positive")
+    expect_error(rcn(n = 50, sigma_c = Inf),
+                 "argument 3 cannot include an Inf or -Inf")
+
 })
 
-test_that("validating rcn output", {
-    expect_equal(rcn(n = 12, eps = 0.20, sigma_c = 4), c(0.48742905, 0.73832471,
-                                                       0.57578135, -1.22155355,
-                                                       1.51178117,  1.55937295,
-                                                       -2.48496232, -2.21469989,
-                                                       1.12493092, -0.04493361,
-                                                       -0.01619026,  0.94383621))
-    expect_equal(is.numeric(rcn(n = 14, eps = 0.15, sigma_c = 2)), TRUE)
-    expect_equal(length(rcn(n = 25, eps = 0.10, sigma_c = 2)), 25)
+test_that("input", {
+    # Checking invalid input for n
+    expect_error(rcn(n = 0),
+                 "argument 1 must be numeric and non-zero")
+    expect_error(rcn(n = NA),
+                 "argument 1 must be a number")
+    expect_error(rcn(n = NA),
+                 "argument 1 must be numeric and non-zero")
+    expect_error(rcn(n = NA),
+                 "argument 1 must be positive")
+    # Checking invalid input for eps
+    expect_error(rcn(n = 50, eps = NA),
+                 "argument 2 must be a number")
+    expect_error(rcn(n = 50, eps = NaN),
+                 "argument 2 cannot include a NaN")
+    # Checking invalid input for vc
+    expect_error(rcn(n = 50, sigma_c = NA),
+                 "argument 3 must be positive")
+    expect_error(rcn(n = 50, sigma_c = NA),
+                 "argument 3 must be a number")
+})
+
+test_that("output", {
+    expect_equal(is.numeric(rcn(30, 0.25, 3)), TRUE)
+    expect_equal(is.vector(rcn(30, 0.25, 3)), TRUE)
+    expect_equal(length(rcn(30, 0.25, 3)), 30)
 })
 
 

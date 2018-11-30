@@ -4,7 +4,7 @@
 \alias{rcn}
 \title{Random Contaminated Normal Deviates}
 \usage{
-rcn(n = 0, eps = 0, sigma_c = 1)
+rcn(n = 0, eps = 1e-04, sigma_c = 1)
 }
 \arguments{
 \item{n}{Size of random sample to generate}

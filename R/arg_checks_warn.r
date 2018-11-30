@@ -234,3 +234,12 @@ is_posdetmat2 <- function(x, argPos){
     v <- c("argument", argPos, "must be a matrix")
     return(paste(v, collapse = " "))
 }
+
+is_linearmodel <- function(x, argpos) {
+	if (class(x) == "lm") {
+		return()
+	}
+
+	v <- c("argument", argpos, "must be a linear model")
+	return(paste(v, collapse = " "))
+}
