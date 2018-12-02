@@ -1,6 +1,6 @@
 ---
-title: "Vignette Title"
-author: "Vignette Author"
+title: "mathstat"
+author: "Dr. Joseph McKean"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -16,50 +16,41 @@ knitr::opts_chunk$set(
 )
 ```
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
+## Overview
+This vignette illustrates the applicability of the concepts and alogrithms covered in 8th edition of the text *Introduction to Mathematical Statics* by Hogg, McKean, and Craig (2018). The topics in which these functions apply to includes but are not limited to the following:
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+1. Probability and Distributions
+1. Multivariate Distributions
+1. Some Special Distributions 
+1. Some Elementary Statistical Inferences 
+1. Consistency and Limiting Distributions
+1. Maximum Likelihood Methods
+1. Sufficiency 
+1. Optimal Test of Hypothesis 
+1. Inference About Normal Linear Models
+1. Nonparametric and Robust Statistics
+1. Bayesian Statistics
 
-## Vignette Info
+Below consists of the list of function within the mathstat package.
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+## Functions
 
-## Styles
-
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
-```
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+<center> <h2>--A--</h2> </center>
+<center> <h2>--B--</h2> </center>
+[bday](man/bday.Rd) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Birthday Solver
+<center> <h2>--C--</h2> </center>
+<center> <h2>--D--</h2> </center>
+<center> <h2>--E--</h2> </center>
+<center> <h2>--F--</h2> </center>
+<center> <h2>--G--</h2> </center>
+[getcis](https://www.dropbox.com/home/HTML?preview=getcis.html) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get Confidence Intervals
+<center> <h2>--H--</h2> </center>
+<center> <h2>--M--</h2> </center>
+<center> <h2>--N--</h2> </center>
+<center> <h2>--O--</h2> </center>
+<center> <h2>--P--</h2> </center>
+<center> <h2>--Q--</h2> </center>
+<center> <h2>--R--</h2> </center>
+<center> <h2>--S--</h2> </center>
+<center> <h2>--T--</h2> </center>
+<center> <h2>--W--</h2> </center>
