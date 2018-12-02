@@ -3,16 +3,25 @@
 \docType{data}
 \name{genexpd}
 \alias{genexpd}
-\title{genexpd}
+\title{Generated exp Data}
 \format{A list containing 22 rows and 2 variables
 \describe{
-  \item{c.x..y.}{i dont know}
-  \item{indy}{not sure}
+  \item{c.x..y.}{observations from one of the F-test distributions}
+  \item{indy}{denotes which distribution derived from
+  0 = \code{rexp(10, 1/20)}, 1 = \code{rexp(12, 1/40)}}
 }}
 \usage{
 genexpd
 }
 \description{
-A data set containg 22 observations about genexpd
+A data set containg 22 observations from F-tests derived from
+Excercise 6.5.7.
+}
+\details{
+see page 402 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

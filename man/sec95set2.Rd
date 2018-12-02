@@ -16,4 +16,11 @@ sec95set2
 \description{
 A data set containg 15 observations about sec 9.5 set 2
 }
+\details{
+See page 539 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
+}
 \keyword{datasets}

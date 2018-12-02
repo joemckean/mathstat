@@ -3,16 +3,25 @@
 \docType{data}
 \name{aztdoses}
 \alias{aztdoses}
-\title{aztdoses}
+\title{AZT doses}
 \format{A list with 20 rows and 2 variables:
 \describe{
-  \item{azt}{no clue what this means}
-  \item{dose}{maybe has something to do with how much given}
+  \item{azt}{p24 antigen levels of HIV patients after their
+  treatment with AZT.}
+  \item{dose}{the does of AZT in mg given to the patient, 300 or 600.}
 }}
 \usage{
 aztdoses
 }
 \description{
-A data set containg 20 azt and doses
+A data set containg 20 observations concerning the effect that
+different dosages fo the drug AZT have on patients with HIV.
+}
+\details{
+see page 282 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

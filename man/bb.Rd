@@ -3,20 +3,27 @@
 \docType{data}
 \name{bb}
 \alias{bb}
-\title{bb}
+\title{Baseball}
 \format{A list with 59 rows and 6 variables:
 \describe{
   \item{hand}{right or left}
   \item{height}{height in inches}
   \item{weight}{weight in pounds}
-  \item{hitind}{something to do with hit?}
-  \item{hitpitind}{something}
-  \item{average}{some kind of an average}
+  \item{hitind}{hit index}
+  \item{hitpitind}{hit pitch index}
+  \item{average}{batting average}
 }}
 \usage{
 bb
 }
 \description{
-A data set containing 59 with multiple types of data
+A data set containing data on 59 professional baseball players.
+}
+\details{
+see page 236, 243, 554 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

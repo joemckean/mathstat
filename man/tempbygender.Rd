@@ -3,16 +3,24 @@
 \docType{data}
 \name{tempbygender}
 \alias{tempbygender}
-\title{temp by gender}
+\title{Tempature by Gender}
 \format{A list containing 130 rows and 2 variables
 \describe{
-  \item{temp}{something}
+  \item{temp}{the tempature of the individual in degrees fahrenheit}
   \item{gender}{gender of the person male or female}
 }}
 \usage{
 tempbygender
 }
 \description{
-A data set containg 130 observations of temp by gender
+A data set containg 130 observations of tempature of individuals
+by their gender
+}
+\details{
+See page 497 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

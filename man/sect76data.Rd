@@ -6,12 +6,19 @@
 \title{section 7.6 data}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{x}{some x value}
+  \item{x}{some x value drawn from a normal distribution}
 }}
 \usage{
 sect76data
 }
 \description{
-A data set containg 20 observations of x values
+A data set containg 20 observations drawn from a normal distribution
+}
+\details{
+See page 444 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,21 +3,28 @@
 \docType{data}
 \name{braindata}
 \alias{braindata}
-\title{brain data}
+\title{Brain Data}
 \format{A list of 40 rows and 7 variables
 \describe{
   \item{gender}{gender of the person male or female}
-  \item{FSIQ}{something}
-  \item{VIQ}{something}
-  \item{PIQ}{something}
+  \item{FSIQ}{the full scale IQ}
+  \item{VIQ}{the verbal IQ}
+  \item{PIQ}{the performance IQ}
   \item{weight}{weight of the person in pounds}
   \item{height}{height of the person in inches}
-  \item{MRI_Count}{something}
+  \item{MRI_Count}{MRI count}
 }}
 \usage{
 braindata
 }
 \description{
-A data set containg 40 observations about human brains
+A data set containg 40 observations of the brains of college students.
+}
+\details{
+see page 237 of the book.
+}
+\references{
+downloaded from http://lib.stat.cmu.edu/DASL/ at Carnegie-Melon
+University. the original source is willerman et al. (1991).
 }
 \keyword{datasets}

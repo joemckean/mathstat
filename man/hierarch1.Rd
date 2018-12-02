@@ -25,8 +25,8 @@ hierarch1(nsims = 0, x = 0, tau = 0.05, kstart = 1)
 Computes the solution to Example 11.4.2 on page 681.
 }
 \examples{
-hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)
-hierarch1(nsims = 1500, x = 3, tau = 0.045, kstart = 3500)
+hierarch1(nsims = 300, x = 6, tau = 0.05, kstart = 20)
+hierarch1(nsims = 150, x = 3, tau = 0.045, kstart = 35)
 
 }
 \references{

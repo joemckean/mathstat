@@ -3,7 +3,7 @@
 \docType{data}
 \name{fastcars}
 \alias{fastcars}
-\title{fast cars}
+\title{Fast Cars}
 \format{A list containing 30 rows and 2 variables
 \describe{
   \item{ind}{type of car}
@@ -13,6 +13,13 @@
 fastcars
 }
 \description{
-A data set containg 30 observations of car speeds
+A data set containg 30 observations of car speeds.
+}
+\details{
+see page 528 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{normal50}
 \alias{normal50}
-\title{normal50}
+\title{Normal 50}
 \format{A list containing 50 rows and 1 variable
 \describe{
   \item{x}{some x value}
@@ -12,6 +12,13 @@
 normal50
 }
 \description{
-A data set containg 50 observations of x values
+A data set containg 50 random values x
+}
+\details{
+see page 395 of the book
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

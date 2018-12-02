@@ -3,16 +3,20 @@
 \docType{data}
 \name{men1500m}
 \alias{men1500m}
-\title{men 1500m}
+\title{Mens 1500m Run}
 \format{A list containing 27 rows and 2 variables
 \describe{
   \item{year}{the year this took place}
-  \item{time}{the time taken to run in minutes}
+  \item{time}{the time taken to run in seconds}
 }}
 \usage{
 men1500m
 }
 \description{
 A data set containg 27 observations about mens 1500m runs
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

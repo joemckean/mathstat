@@ -3,7 +3,7 @@
 \docType{data}
 \name{eg4.4.4data}
 \alias{eg4.4.4data}
-\title{eg 4.4.4 data}
+\title{Eg 4.4.4 Data}
 \format{A list with 15 rows and 1 variable
 \describe{
   \item{x}{some variable from 4.4.4}
@@ -12,6 +12,10 @@
 eg4.4.4data
 }
 \description{
-A data set containing 15 values
+A data set containing 15 values.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

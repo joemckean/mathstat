@@ -3,16 +3,24 @@
 \docType{data}
 \name{darwin}
 \alias{darwin}
-\title{darwin}
+\title{Darwin}
 \format{A list containing 15 rows with 2 variables
 \describe{
-  \item{cross}{no clue}
-  \item{self}{no cluer}
+  \item{cross}{height of a cross fertilized Zea mays}
+  \item{self}{height of a self fertilized Zea mays}
 }}
 \usage{
 darwin
 }
 \description{
-A data set containing 15 observation from darwin
+A data set containing 15 observation of Zea mays heights when self fertilized vs.
+cross fertilized
+}
+\details{
+see page 272 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

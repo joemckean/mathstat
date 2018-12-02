@@ -26,8 +26,8 @@ teststatall contains the bootstrap test median
 On page 311 of HMC (2019), a bootstrap test for a one sample
 location problem based on the sample mean is presented. For the function, boottestonemed, the sample median is
 used for the test statistic. The hypotheses tested, are:H 0 :
-\eqn{\Theta = \Theta 0} versus H a : \eqn{\Theta > \Theta 0} where
-\eqn{\Theta 0} is spectified, (an input value of the function).
+\eqn{\theta = \theta 0} versus H a : \eqn{\theta > \theta 0} where
+\eqn{\theta 0} is spectified, (an input value of the function).
 The bootstrapped p-value is returned.
 }
 \examples{

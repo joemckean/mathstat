@@ -3,16 +3,26 @@
 \docType{data}
 \name{selfrival}
 \alias{selfrival}
-\title{self vs rival}
+\title{Base Running Challenge}
 \format{A list containing 50 rows and 2 variables
 \describe{
-  \item{self}{what you got}
-  \item{rival}{what your rival got}
+  \item{self}{the time it took one of the player in the pair to
+  run around the bases in seconds}
+  \item{rival}{the time it took the other player in the pair to
+  run around the bases in seconds}
 }}
 \usage{
 selfrival
 }
 \description{
-A data set containg 20 observations of self and rival
+A data set containg 20 times for a challenge given by a baseball
+coach to pairs of players.
+}
+\details{
+See page 281 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

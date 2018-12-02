@@ -3,15 +3,22 @@
 \docType{data}
 \name{earthmoon}
 \alias{earthmoon}
-\title{earthmoon}
+\title{Earth to Moon Mass Ratio}
 \format{A list containg 7 rows and 1 variable
 \describe{
-  \item{ratios}{earth to moon ratios}
+  \item{ratios}{Earth to Moon Mass ratios}
 }}
 \usage{
 earthmoon
 }
 \description{
-A data set containing 7 ratios
+A data set containing 7 ratios of Earth to Moon Mass
+}
+\details{
+see page 401 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,15 +3,22 @@
 \docType{data}
 \name{lengthriver}
 \alias{lengthriver}
-\title{river length}
+\title{River Length}
 \format{A list containing 141 rows and 1 variable
 \describe{
-  \item{lengthriver}{the length of rivers}
+  \item{lengthriver}{the length of the river in miles}
 }}
 \usage{
 lengthriver
 }
 \description{
-A data set containg 141 observations of values of river lenght
+A data set containg 141 observations of American river lengths.
+}
+\details{
+see page 585 of the book
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

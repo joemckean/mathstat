@@ -23,4 +23,11 @@ crimealk
 A data set containing the number of different crimes commited by drinkers
 and non drinkers
 }
+\details{
+see page 291 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
+}
 \keyword{datasets}

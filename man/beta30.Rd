@@ -3,15 +3,23 @@
 \docType{data}
 \name{beta30}
 \alias{beta30}
-\title{beta30}
+\title{Beta 30}
 \format{A list of 30 rows in 1 variable
 \describe{
-  \item{x}{a beta}
+  \item{x}{observations from beta distribution}
 }}
 \usage{
 beta30
 }
 \description{
-A data set containg 30 betas
+A data set containg 30 observations generated from beta(\egn{\theta}, 1)
+distribution where \eqn{\theta} = 4
+}
+\details{
+see page 375 of the book
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,15 +3,22 @@
 \docType{data}
 \name{shoshoni}
 \alias{shoshoni}
-\title{shoshoni}
+\title{Shoshoni Rectangles}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{shoshoni}{something}
+  \item{shosratios}{golden ratios for rectangles}
 }}
 \usage{
 shoshoni
 }
 \description{
-A data set containg 20 observations about shoshoni
+A data set containg 20 observations about Golden rectangles
+}
+\details{
+See page 574 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{examp1053}
 \alias{examp1053}
-\title{ex 1053 data}
+\title{Ex. 10.5.3 Data}
 \format{A list containing 15 rows and 2 variables
 \describe{
   \item{x}{some variable from 1053}
@@ -14,5 +14,12 @@ examp1053
 }
 \description{
 A data set containg 15 x and y values
+}
+\details{
+see page 615 of the book
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,15 +3,24 @@
 \docType{data}
 \name{sulfurdio}
 \alias{sulfurdio}
-\title{sulfur dioxide}
+\title{Sulfur Dioxide}
 \format{A list containing 24 rows and 1 variable
 \describe{
-  \item{sulfurdioxide}{the level of sulfur dioxide}
+  \item{sulfurdioxide}{the level of sulfur dioxide concentration in
+  micro grams per cubic meter}
 }}
 \usage{
 sulfurdio
 }
 \description{
-A data set containg 24 observations of sulfur dioxide levels
+A data set containg 24 observations of sulfur dioxide levels in a damaged
+Bavarian forest
+}
+\details{
+See page 229 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

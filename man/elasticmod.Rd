@@ -3,16 +3,26 @@
 \docType{data}
 \name{elasticmod}
 \alias{elasticmod}
-\title{elasticmod}
+\title{Elastic Modulus}
 \format{A list with 22 rows and 2 variables
 \describe{
-  \item{elasticmod}{not sure}
-  \item{ind}{dont know}
+  \item{elasticmod}{the elastic modulus}
+  \item{ind}{the type of casting process 1 = Permanent mold, 2 = Die
+  cast 3 = Plaster mold}
 }}
 \usage{
 elasticmod
 }
 \description{
-A data set containg 22 observations related to elastic
+A data set containg 22 observations of the elastic modulus of and
+alloy for an alloy that is cast by one of three different casting
+processes.
+}
+\details{
+see page 519 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

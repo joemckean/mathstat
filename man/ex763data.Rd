@@ -3,7 +3,7 @@
 \docType{data}
 \name{ex763data}
 \alias{ex763data}
-\title{ex 7.6.3 data}
+\title{Ex. 7.6.3 Data}
 \format{A list containing 30 rows and 1 variable
 \describe{
   \item{x}{some variable from 7.6.3}
@@ -13,5 +13,12 @@ ex763data
 }
 \description{
 A data set containg 30 values
+}
+\details{
+see page 445 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

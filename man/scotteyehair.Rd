@@ -3,7 +3,7 @@
 \docType{data}
 \name{scotteyehair}
 \alias{scotteyehair}
-\title{scottish eye and hair color}
+\title{Scottish Eye and Hair Color}
 \format{A matrix containing 4 rows of eye color and 5 columns of hair color
 \describe{
   \item{blue}{a row of people with blue eyes}
@@ -21,5 +21,12 @@ scotteyehair
 }
 \description{
 A data set containg observations about hair and eye color
+}
+\details{
+See pages 231 and 288 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

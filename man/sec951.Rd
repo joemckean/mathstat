@@ -16,4 +16,11 @@ sec951
 \description{
 A data set containg 24 observations from section 9.5.1
 }
+\details{
+See page 539 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
+}
 \keyword{datasets}

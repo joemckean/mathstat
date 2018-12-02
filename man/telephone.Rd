@@ -6,13 +6,21 @@
 \title{telephone}
 \format{A list containing 24 rows and 2 variables
 \describe{
-  \item{year}{the year of the observation}
-  \item{numcall}{the average number of calls}
+  \item{year}{the year}
+  \item{numcall}{the number of call made in tens of millions in Belgium}
 }}
 \usage{
 telephone
 }
 \description{
-A data set containg 24 observations about phone calls
+A data set containg 24 observations about phone calls made in belgium
+from 1950 to 1973
+}
+\details{
+See pages 548 and 627 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

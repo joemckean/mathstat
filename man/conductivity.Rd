@@ -3,17 +3,20 @@
 \docType{data}
 \name{conductivity}
 \alias{conductivity}
-\title{conductivity}
-\format{A list of 18 rows with 3 variables
-\describe{
-  \item{Conductivity}{the value of conductivity}
-  \item{Binder}{something}
-  \item{Aggregate}{something}
-}}
+\title{Conductivity}
+\format{An object of class \code{data.frame} with 18 rows and 3 columns.}
 \usage{
 conductivity
 }
 \description{
-A data set containg 18 observations about conductivity
+A data set containg 18 observations about thurmal conductivity due to
+Binder Grade and Coarseness fo Aggregate
+}
+\details{
+see page 537 of the book
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

@@ -3,15 +3,23 @@
 \docType{data}
 \name{mix668}
 \alias{mix668}
-\title{mix668}
+\title{Mix 6.6.8}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{x}{some variable from 6.6.8}
+  \item{x}{A random variable}
 }}
 \usage{
 mix668
 }
 \description{
-A data set containg 20 observations of x values
+A data set containg 20 observations of x values based on
+a Bernoulli distribution with a probability of success 0.7
+}
+\details{
+see page 411 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

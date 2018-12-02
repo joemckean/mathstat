@@ -3,15 +3,23 @@
 \docType{data}
 \name{lifetimemotor}
 \alias{lifetimemotor}
-\title{life time motor}
+\title{Life Time of Motors}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{lifetime}{life of a motor}
+  \item{lifetime}{life time of a motor in hours}
 }}
 \usage{
 lifetimemotor
 }
 \description{
-A data set containg 20 observations about motor life time
+A data set containg 20 observations about motor life time in high
+tempatures.
+}
+\details{
+see page 235 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

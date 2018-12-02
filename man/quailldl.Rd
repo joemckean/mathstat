@@ -3,16 +3,24 @@
 \docType{data}
 \name{quailldl}
 \alias{quailldl}
-\title{quailldl}
+\title{Quail LDL}
 \format{A list containing 39 rows and 2 variables
 \describe{
-  \item{treat}{i dont know}
-  \item{ldl}{not sure}
+  \item{treat}{referes to the drug used}
+  \item{ldl}{the patients LDL level}
 }}
 \usage{
 quailldl
 }
 \description{
-A data set containg 39 observations about quailldl
+A data set containg 39 observations of an experiment with 4 drugs
+treating cholesterol.
+}
+\details{
+see page 521 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

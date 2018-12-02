@@ -3,16 +3,24 @@
 \docType{data}
 \name{waterwheel}
 \alias{waterwheel}
-\title{waterwheel}
+\title{Water Wheel Data Set}
 \format{A list containing 20 rows and 2 variables
 \describe{
-  \item{numbrev}{something}
-  \item{indgrp2}{not sure}
+  \item{numbrev}{wheel revolutions per minute}
+  \item{indgrp2}{under influence of a drug or placebo}
 }}
 \usage{
 waterwheel
 }
 \description{
-A data set containg 20 observations about waterwheel
+A data set containg 20 observations about the water
+wheel experiment.
+}
+\details{
+See page 600 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

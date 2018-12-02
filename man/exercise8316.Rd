@@ -3,7 +3,7 @@
 \docType{data}
 \name{exercise8316}
 \alias{exercise8316}
-\title{exercise 8.3.16 data}
+\title{Exercise 8.3.16 Data}
 \format{A list containing 15 rows and 2 variables
 \describe{
   \item{x}{some variable from 8.3.16}
@@ -13,6 +13,13 @@
 exercise8316
 }
 \description{
-A data set containg 15 x and y values
+A data set containg 15 x and y values.
+}
+\details{
+see page 499 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

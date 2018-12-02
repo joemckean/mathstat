@@ -3,15 +3,19 @@
 \docType{data}
 \name{ex6111}
 \alias{ex6111}
-\title{ex 6111 data}
+\title{Ex 6.1.1 Data}
 \format{A list containing 25 rows and 1 variable
 \describe{
-  \item{x}{some variable from 6111}
+  \item{x}{some variable from 6.1.1}
 }}
 \usage{
 ex6111
 }
 \description{
 A data set containg 25 values
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}

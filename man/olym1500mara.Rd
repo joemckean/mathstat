@@ -7,13 +7,20 @@
 \format{A list containing 20 rows and 3 variables
 \describe{
   \item{year}{the year it took place}
-  \item{m1500}{not sure}
-  \item{marathon}{not sure}
+  \item{m1500}{the winning time in seconds of the 1500 meter run}
+  \item{marathon}{the winning time in seconds of the marathon}
 }}
 \usage{
 olym1500mara
 }
 \description{
-A data set containg 20 observations about olympic 1500 marathon
+A data set containg 20 observations about olympic 1500 meter run and the marathon
+}
+\details{
+see pages 545 and 633 of the book.
+}
+\references{
+Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
 }
 \keyword{datasets}
