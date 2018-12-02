@@ -39,6 +39,16 @@ is_nonzero <- function(x, argpos, msg = NULL) {
 	return(paste(v, collapse = " "))
 }
 
+is_logical <- function(x, argpos) {
+	# check to see if argument is a logical
+	if (is.logical(x)) {
+		return()
+	}
+	v <- c("argument", argpos, "must be logical")
+	return(paste(v, collapse = " "))
+}
+
+
 is_integer <- function(x, argPos, msg = NULL) {
   # check to see if argument is an integer
   if (is.numeric(x)) {
