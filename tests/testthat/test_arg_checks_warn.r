@@ -222,14 +222,9 @@ test_that("has_noinf works", {
 test_that("has_nonan works", {
 	expect_equal(has_nonan(3, 1), NULL)
 	expect_equal(has_nonan(c(3, 4, 3), 1), NULL)
-<<<<<<< HEAD
-#	expect_equal(has_nonan(NaN, 1))
-#	expect_equal(has_nonan(c(1, 3, 2, NaN, 3), 1))
-=======
 	expect_equal(has_nonan(NaN, 1), "argument 1 cannot include a NaN")
 	expect_equal(has_nonan(c(1, 3, 2, NaN, 3), 1),
 		           "argument 1 cannot include a NaN")
->>>>>>> 224f477e0ef82be88e725c4cb691bb6d7f2117a2
 	expect_equal(has_nonan("x", 1), NULL)
 })
 

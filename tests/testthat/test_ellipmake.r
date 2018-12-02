@@ -31,7 +31,9 @@ test_that("output is correct", {
   ellipmake(p=.85, b=matrix(c(2,1,1,3), nrow=2), mu=c(3, 3))
   dev.off()
   finger <- getFingerprint(file = "../test_img/ellipmakekey.png")
-  expect_true(isSimilar(file = "../test_img/ellipmaketest.png", finger))
+  expect_true(isSimilar(file = "../test_img/ellipmaketest.png",
+  					  finger,
+  					  threshold=8))
 })
 
 test_that("limits", {

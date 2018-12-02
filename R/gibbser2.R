@@ -4,7 +4,7 @@
 #' described in Example 11.3.2 on page 677. The input parameter alpha
 #' is the parameter in the joint distribution of the random vector (X, Y) which
 #' is given in the example. The value of m is the number of initial runs of the
-#' sampler for achieving equilibrium, then the next (n * m)í°€m runs are recorded and returned
+#' sampler for achieving equilibrium, then the next (n * m) runs are recorded and returned
 #' in the R vectors x2 and y2. The paired items (x2,i) \& (y2,i) are the variates for
 #' random vector (X, Y).
 #'
@@ -19,13 +19,13 @@
 #'             Statistics, 8th Ed. Boston: Pearson.
 #'
 #' @examples
-#' gibbser2(alpha = 10, m = 3000, n = 6000)
-#' gibbser2(alpha = 12, m = 4000, n = 10000)
+#' gibbser2(alpha = 10, m = 30, n = 60)
+#' gibbser2(alpha = 12, m = 40, n = 100)
 #'
-#'  @seealso gibbser3() for more details on Monte Carlo techniques used for
+#' @seealso gibbser3() for more details on Monte Carlo techniques used for
 #' integrating in Bayesian inference
 #'
-#'@export gibbser2
+#' @export gibbser2
 
 gibbser2 <- function(alpha = 0,
                      m = 0,

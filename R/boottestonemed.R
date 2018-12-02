@@ -1,9 +1,11 @@
 #' @title Bootstrap Test One Median
 #'
-#' @description  On page 311 of HMC (2019), a bootstrap test for a one sample location problem based
-#' on the sample mean is presented. For the function, boottestonemed, the sample median is
-#' used for the test statistic. The hypotheses tested, are:H 0 : θ = θ 0 versus H a : θ > θ 0 where
-#' θ 0 is spectified, (an input value of the functioin). The bootstrapped p-value is returned.
+#' @description  On page 311 of HMC (2019), a bootstrap test for a one sample
+#' location problem based on the sample mean is presented. For the function, boottestonemed, the sample median is
+#' used for the test statistic. The hypotheses tested, are:H 0 :
+#' \eqn{\Theta = \Theta 0} versus H a : \eqn{\Theta > \Theta 0} where
+#' \eqn{\Theta 0} is spectified, (an input value of the function).
+#' The bootstrapped p-value is returned.
 #'
 #' @param sample a vector, is the sample
 #' @param theta0 a number, the null value of the mean
