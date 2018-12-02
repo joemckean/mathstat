@@ -39,13 +39,11 @@ test_that("input", {
 })
 
 test_that("output", {
-	png("../test_img/tpowerg2test.png")
+	png("../test_img/tpowerg2test.png", res=200)
 	samp <- tpowerg2(10, 10, 10, .4)
 	dev.off()
   finger <- getFingerprint(file = "../test_img/tpowerg2test.png")
-	expect_true(isSimilar(file = "../test_img/tpowerg2key.png",
-						  finger,
-						  threshold=10))
+	expect_true(isSimilar(file = "../test_img/tpowerg2key.png", finger))
 	expect_true(samp[1] >= 0.9989441 - ep && samp[1] <= 0.9989441 + ep)
 	expect_true(samp[71] >= 0.8228882 - ep && samp[71] <= 0.8228882 + ep)
 	expect_true(samp[127] >= 0.4000545 - ep && samp[127] <= 0.4000545 + ep)
