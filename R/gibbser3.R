@@ -24,8 +24,8 @@
 #' page 677.
 #'
 #' @examples
-#' gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)
-#' gibbser3(alpha = 12, beta = 4, nt = 100, m = 4000, n = 10000)
+#' gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)
+#' gibbser3(alpha = 12, beta = 4, nt = 100, m = 40, n = 100)
 #'
 #' @export gibbser3
 

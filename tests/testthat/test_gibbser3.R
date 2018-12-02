@@ -113,20 +113,20 @@ test_that("input", {
 })
 
 test_that("output", {
-    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)), 4)
-    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$y1), "numeric")
-    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$y2), "numeric")
-    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$x1), "numeric")
-    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$x2), "numeric")
+    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)), 4)
+    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$y1), "numeric")
+    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$y2), "numeric")
+    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$x1), "numeric")
+    expect_equal(mode(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$x2), "numeric")
 
-    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$y1),
-                 3000)
-    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$y2),
-                 6000)
-    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$x1),
-                 3000)
-    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 3000, n = 6000)$x2),
-                 6000)
+    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$y1),
+                 30)
+    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$y2),
+                 60)
+    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$x1),
+                 30)
+    expect_equal(length(gibbser3(alpha = 10, beta = 4, nt = 100, m = 30, n = 60)$x2),
+                 60)
 })
 
 
