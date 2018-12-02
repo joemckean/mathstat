@@ -6,7 +6,7 @@
 \title{section 7.6 data}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{x}{some x value drawn from a normal distribution}
+\item{x}{some x value drawn from a normal distribution}
 }}
 \usage{
 sect76data

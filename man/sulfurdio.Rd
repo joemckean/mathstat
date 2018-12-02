@@ -6,8 +6,8 @@
 \title{Sulfur Dioxide}
 \format{A list containing 24 rows and 1 variable
 \describe{
-  \item{sulfurdioxide}{the level of sulfur dioxide concentration in
-  micro grams per cubic meter}
+\item{sulfurdioxide}{the level of sulfur dioxide concentration in
+micro grams per cubic meter}
 }}
 \usage{
 sulfurdio

@@ -6,7 +6,7 @@
 \title{Life Time of Motors}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{lifetime}{life time of a motor in hours}
+\item{lifetime}{life time of a motor in hours}
 }}
 \usage{
 lifetimemotor

@@ -6,8 +6,8 @@
 \title{Mens 1500m Run}
 \format{A list containing 27 rows and 2 variables
 \describe{
-  \item{year}{the year this took place}
-  \item{time}{the time taken to run in seconds}
+\item{year}{the year this took place}
+\item{time}{the time taken to run in seconds}
 }}
 \usage{
 men1500m

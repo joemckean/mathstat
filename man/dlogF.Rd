@@ -9,13 +9,11 @@ dlogF(x)
 \arguments{
 \item{x}{Real number (or vector of numbers) where -inf < x < inf.
 In R, these limits are determined by data limitations.
-Thus we get the following piecewise function,
-```
-           \{   0,          x <= -746
+Thus we get the following piecewise function,\preformatted{           \{   0,          x <= -746
 dlogF(x) = \{ pdf,  -745 <= x <=  589
            \{   0,   590 <= x <=  709
            \{ NaN,          x >=  710
-```}
+}}
 }
 \value{
 PDF (single value or vector based on input) of X.

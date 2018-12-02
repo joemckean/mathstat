@@ -6,14 +6,14 @@
 \title{Beta 30}
 \format{A list of 30 rows in 1 variable
 \describe{
-  \item{x}{observations from beta distribution}
+\item{x}{observations from beta distribution}
 }}
 \usage{
 beta30
 }
 \description{
-A data set containg 30 observations generated from beta(\egn{\theta}, 1)
-distribution where \eqn{\theta} = 4
+A data set containg 30 observations generated from beta(theta, 1)
+distribution where theta = 4
 }
 \details{
 see page 375 of the book

@@ -6,8 +6,8 @@
 \title{Darwin}
 \format{A list containing 15 rows with 2 variables
 \describe{
-  \item{cross}{height of a cross fertilized Zea mays}
-  \item{self}{height of a self fertilized Zea mays}
+\item{cross}{height of a cross fertilized Zea mays}
+\item{self}{height of a self fertilized Zea mays}
 }}
 \usage{
 darwin

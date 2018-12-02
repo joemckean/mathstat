@@ -6,7 +6,7 @@
 \title{Ex 6.1.1 Data}
 \format{A list containing 25 rows and 1 variable
 \describe{
-  \item{x}{some variable from 6.1.1}
+\item{x}{some variable from 6.1.1}
 }}
 \usage{
 ex6111

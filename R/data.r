@@ -40,8 +40,8 @@
 
 #' Beta 30
 #'
-#' A data set containg 30 observations generated from beta(\egn{\theta}, 1)
-#' distribution where \eqn{\theta} = 4
+#' A data set containg 30 observations generated from beta(theta, 1)
+#' distribution where theta = 4
 #'
 #' @format A list of 30 rows in 1 variable
 #' \describe{

@@ -6,9 +6,9 @@
 \title{AZT doses}
 \format{A list with 20 rows and 2 variables:
 \describe{
-  \item{azt}{p24 antigen levels of HIV patients after their
-  treatment with AZT.}
-  \item{dose}{the does of AZT in mg given to the patient, 300 or 600.}
+\item{azt}{p24 antigen levels of HIV patients after their
+treatment with AZT.}
+\item{dose}{the does of AZT in mg given to the patient, 300 or 600.}
 }}
 \usage{
 aztdoses

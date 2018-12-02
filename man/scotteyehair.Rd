@@ -6,15 +6,15 @@
 \title{Scottish Eye and Hair Color}
 \format{A matrix containing 4 rows of eye color and 5 columns of hair color
 \describe{
-  \item{blue}{a row of people with blue eyes}
-  \item{light}{a row of people with light eyes}
-  \item{medium}{a row of people with medium eyes}
-  \item{dark}{a row of people with dark eyes}
-  \item{fair}{a column of people with fair hair}
-  \item{red}{a column of people with red hair}
-  \item{medium}{a column of people with medium hair}
-  \item{dark}{a column of people with dark hair}
-  \item{black}{a column of people with black hair}
+\item{blue}{a row of people with blue eyes}
+\item{light}{a row of people with light eyes}
+\item{medium}{a row of people with medium eyes}
+\item{dark}{a row of people with dark eyes}
+\item{fair}{a column of people with fair hair}
+\item{red}{a column of people with red hair}
+\item{medium}{a column of people with medium hair}
+\item{dark}{a column of people with dark hair}
+\item{black}{a column of people with black hair}
 }}
 \usage{
 scotteyehair

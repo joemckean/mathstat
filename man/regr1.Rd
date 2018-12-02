@@ -6,8 +6,8 @@
 \title{ACT and Exam Scores}
 \format{A list containing 15 rows and 2 variables
 \describe{
-  \item{actscores}{score on act}
-  \item{examscores}{score on exam, out of 200}
+\item{actscores}{score on act}
+\item{examscores}{score on exam, out of 200}
 }}
 \usage{
 regr1

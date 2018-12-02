@@ -6,7 +6,7 @@
 \title{Eg 4.4.4 Data}
 \format{A list with 15 rows and 1 variable
 \describe{
-  \item{x}{some variable from 4.4.4}
+\item{x}{some variable from 4.4.4}
 }}
 \usage{
 eg4.4.4data

@@ -27,11 +27,10 @@ are (x, y) = (sqrt(2)/2, sqrt(2)/2). X and Y denote the lifetimes of the batteri
 of the component in standard units.
 }
 \details{
-Below is the function's pdf:
-```
-pdf(x,y) = \{ 4xye^-(x^2 + y^2), when x > 0, y > 0
+Below is the function's pdf:\preformatted{pdf(x,y) = \{ 4xye^-(x^2 + y^2), when x > 0, y > 0
            \{ 0                  otherwise
-```
+}
+
 This function is used to solve Exercise 2.1.6 on page 98 of the book.
 }
 \examples{
@@ -53,5 +52,5 @@ plifetime(x1, x2, y1, y2)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }

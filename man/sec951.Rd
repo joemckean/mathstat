@@ -6,9 +6,9 @@
 \title{sec 9.5.1}
 \format{A list containing 24 rows and 3 variables
 \describe{
-  \item{x}{some variable x}
-  \item{fa}{some other variable fa}
-  \item{fb}{soem other variable fb}
+\item{x}{some variable x}
+\item{fa}{some other variable fa}
+\item{fb}{soem other variable fb}
 }}
 \usage{
 sec951

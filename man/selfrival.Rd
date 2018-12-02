@@ -6,10 +6,10 @@
 \title{Base Running Challenge}
 \format{A list containing 50 rows and 2 variables
 \describe{
-  \item{self}{the time it took one of the player in the pair to
-  run around the bases in seconds}
-  \item{rival}{the time it took the other player in the pair to
-  run around the bases in seconds}
+\item{self}{the time it took one of the player in the pair to
+run around the bases in seconds}
+\item{rival}{the time it took the other player in the pair to
+run around the bases in seconds}
 }}
 \usage{
 selfrival

@@ -18,12 +18,12 @@ n x 1 numeric vector containing the random deviates.
 }
 \description{
 Generates data sets from a contaminated normal distribution as
-              in Example 4.9.2
+in Example 4.9.2
 }
 \details{
 With probability (1-eps) a deviates are drawn from a standard normal
-         distribution. With probability eps deviates are drawn from a normal
-         distribution with mean 0 and standard devation sigma_c.
+distribution. With probability eps deviates are drawn from a normal
+distribution with mean 0 and standard devation sigma_c.
 }
 \examples{
 rcn(n = 12, eps = 0.20, sigma_c = 4)
@@ -32,5 +32,5 @@ rcn(n = 30, eps = 0.30, sigma_c = 6)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }

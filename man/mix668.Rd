@@ -6,7 +6,7 @@
 \title{Mix 6.6.8}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{x}{A random variable}
+\item{x}{A random variable}
 }}
 \usage{
 mix668

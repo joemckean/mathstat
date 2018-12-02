@@ -20,7 +20,7 @@ The density of the log gamma distribution
 this function calculates density of log gamma distribution.
 }
 \details{
-f(x) = (1/(gamma(alpha)*beta^alpha))*x^(-(1+beta)/beta)*(log x)^(alpha-1)
+f(x) = (1/(gamma(alpha)*beta^alpha))\emph{x^(-(1+beta)/beta)}(log x)^(alpha-1)
 }
 \examples{
 dloggamma(5, 1, 1)

@@ -6,8 +6,8 @@
 \title{Tempature by Gender}
 \format{A list containing 130 rows and 2 variables
 \describe{
-  \item{temp}{the tempature of the individual in degrees fahrenheit}
-  \item{gender}{gender of the person male or female}
+\item{temp}{the tempature of the individual in degrees fahrenheit}
+\item{gender}{gender of the person male or female}
 }}
 \usage{
 tempbygender

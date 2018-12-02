@@ -6,7 +6,7 @@
 \title{Ex. 7.6.3 Data}
 \format{A list containing 30 rows and 1 variable
 \describe{
-  \item{x}{some variable from 7.6.3}
+\item{x}{some variable from 7.6.3}
 }}
 \usage{
 ex763data

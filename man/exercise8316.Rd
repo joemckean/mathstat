@@ -6,8 +6,8 @@
 \title{Exercise 8.3.16 Data}
 \format{A list containing 15 rows and 2 variables
 \describe{
-  \item{x}{some variable from 8.3.16}
-  \item{y}{some variable from 8.3.16}
+\item{x}{some variable from 8.3.16}
+\item{y}{some variable from 8.3.16}
 }}
 \usage{
 exercise8316

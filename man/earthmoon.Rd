@@ -6,7 +6,7 @@
 \title{Earth to Moon Mass Ratio}
 \format{A list containg 7 rows and 1 variable
 \describe{
-  \item{ratios}{Earth to Moon Mass ratios}
+\item{ratios}{Earth to Moon Mass ratios}
 }}
 \usage{
 earthmoon

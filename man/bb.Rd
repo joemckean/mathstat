@@ -6,12 +6,12 @@
 \title{Baseball}
 \format{A list with 59 rows and 6 variables:
 \describe{
-  \item{hand}{right or left}
-  \item{height}{height in inches}
-  \item{weight}{weight in pounds}
-  \item{hitind}{hit index}
-  \item{hitpitind}{hit pitch index}
-  \item{average}{batting average}
+\item{hand}{right or left}
+\item{height}{height in inches}
+\item{weight}{weight in pounds}
+\item{hitind}{hit index}
+\item{hitpitind}{hit pitch index}
+\item{average}{batting average}
 }}
 \usage{
 bb

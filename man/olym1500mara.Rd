@@ -6,9 +6,9 @@
 \title{olympic 1500 marathon}
 \format{A list containing 20 rows and 3 variables
 \describe{
-  \item{year}{the year it took place}
-  \item{m1500}{the winning time in seconds of the 1500 meter run}
-  \item{marathon}{the winning time in seconds of the marathon}
+\item{year}{the year it took place}
+\item{m1500}{the winning time in seconds of the 1500 meter run}
+\item{marathon}{the winning time in seconds of the marathon}
 }}
 \usage{
 olym1500mara
