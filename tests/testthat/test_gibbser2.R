@@ -30,7 +30,7 @@ test_that("output", {
     expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)), 4)
     expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$y1), "numeric")
     expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$y2), "numeric")
-    expect_equal(mode(gibbser2(alpha = 10, m = 3000, n = 60)$x1), "numeric")
+    expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$x1), "numeric")
     expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$x2), "numeric")
 
     expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$y1),
