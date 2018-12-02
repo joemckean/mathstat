@@ -91,22 +91,22 @@ test_that("input", {
 
 test_that("output", {
     # Check class output name
-    expect_equal(attributes(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000))$names,
+    expect_equal(attributes(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4))$names,
                  c("clambda", "cb", "gibbslambda", "gibbsb"))
     # Check class output is.numeric
-    expect_true(is.numeric(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$clambda))
-    expect_true(is.numeric(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$cb))
-    expect_true(is.numeric(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$gibbslambda))
-    expect_true(is.numeric(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$gibbsb))
+    expect_true(is.numeric(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$clambda))
+    expect_true(is.numeric(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$cb))
+    expect_true(is.numeric(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$gibbslambda))
+    expect_true(is.numeric(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$gibbsb))
     # Check class output length
-    expect_equal(length(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$clambda),
-                 7000)
-    expect_equal(length(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$cb),
-                7000)
-    expect_equal(length(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$gibbslambda),
-                 3000)
-    expect_equal(length(hierarch1(nsims = 3000, x = 6, tau = 0.05, kstart = 4000)$gibbsb),
-                 3000)
+    expect_equal(length(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$clambda),
+                 34)
+    expect_equal(length(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$cb),
+                34)
+    expect_equal(length(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$gibbslambda),
+                 30)
+    expect_equal(length(hierarch1(nsims = 30, x = 6, tau = 0.05, kstart = 4)$gibbsb),
+                 30)
 })
 
 
