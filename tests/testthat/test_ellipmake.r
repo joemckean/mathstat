@@ -33,7 +33,7 @@ test_that("output is correct", {
   finger <- getFingerprint(file = "../test_img/ellipmakekey.png")
   expect_true(isSimilar(file = "../test_img/ellipmaketest.png",
   					  finger,
-  					  threshold=8))
+  					  threshold=25))
 })
 
 test_that("limits", {
