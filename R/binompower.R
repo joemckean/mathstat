@@ -7,11 +7,6 @@
 #' @description Plots the power functions for binomial tests which validate
 #' in general the monotonicity of the power function for binomial tests.
 #'
-#' @param n Size of sample
-#' @param k1 Size of critical region for Test 1
-#' @param k2 Size of critical region for Test 2
-#' @param p0 Specified power for hypothesis test
-#'
 #' @details Produces a graph similar to what is seen in Figure 4.5.1 (8th Edition).
 #' The power functions in the plot are described in Example 4.5.2 (8th Edition).
 #'
