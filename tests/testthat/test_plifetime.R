@@ -29,13 +29,13 @@ test_that("input", {
                  "argument 4 must be a number")
     # Check for NaN values
     expect_error(plifetime(NaN, 2, 1, 2),
-                 "argument 1 cannot include a NA or NaN")
+                 "argument 1 cannot include a NaN")
     expect_error(plifetime(1, NaN, 1, 2),
-                 "argument 2 cannot include a NA or NaN")
+                 "argument 2 cannot include a NaN")
     expect_error(plifetime(1, 2, NaN, 2),
-                 "argument 3 cannot include a NA or NaN")
+                 "argument 3 cannot include a NaN")
     expect_error(plifetime(1, 2, 1, NaN),
-                 "argument 4 cannot include a NA or NaN")
+                 "argument 4 cannot include a NaN")
 })
 
 test_that("output", {
