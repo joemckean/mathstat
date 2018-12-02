@@ -39,7 +39,7 @@ test_that("input", {
 })
 
 test_that("output", {
-	png("../test_img/tpowerg2test.png", res=200)
+	png("../test_img/tpowerg2test.png")
 	samp <- tpowerg2(10, 10, 10, .4)
 	dev.off()
   finger <- getFingerprint(file = "../test_img/tpowerg2test.png")
