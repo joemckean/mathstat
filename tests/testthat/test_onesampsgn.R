@@ -7,7 +7,7 @@ context("onesampsgn")
 # Declare test variables
 x <- c(56, 70, 89, 94, 96, 101, 102, 102, 102, 105, 106, 108, 110, 113, 116)
 oops_inf <- c(Inf, 1, 2)
-oops_na <- c(1, NA, 3)
+oops_nan <- c(1, NaN, 3)
 oops_notnumeric <- c(1, 2, "oops")
 
 test_that("edge cases", {
@@ -37,8 +37,8 @@ test_that("input", {
     # Check for x
     expect_error(onesampsgn(NA),
                  "argument 1 must have length greater than 1")
-    expect_error(onesampsgn(oops_na))
-    expect_error(onesampsgn(oops_na))
+    expect_error(onesampsgn(oops_nan))
+    expect_error(onesampsgn(oops_nan))
     expect_error(onesampsgn(oops_notnumeric),
                  "argument 1 must be a number")
     expect_error(onesampsgn(oops_notnumeric),

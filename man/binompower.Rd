@@ -6,15 +6,6 @@
 \usage{
 binompower()
 }
-\arguments{
-\item{n}{Size of sample}
-
-\item{k1}{Size of critical region for Test 1}
-
-\item{k2}{Size of critical region for Test 2}
-
-\item{p0}{Specified power for hypothesis test}
-}
 \value{
 A plot of the power functions for binomial tests of size alpha
 }
