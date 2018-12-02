@@ -21,8 +21,8 @@
 #'             Statistics, 8th Ed. Boston: Pearson.
 #'
 #' @examples
-#' aresimcn(30, 10000, 0.25, 3)
-#' aresimcn(30, 1000, 0.20, 25)
+#' aresimcn(30, 1000, 0.25, 3)
+#' aresimcn(30, 100, 0.20, 25)
 #'
 #' @export aresimcn
 

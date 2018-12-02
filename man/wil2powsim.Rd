@@ -38,7 +38,7 @@ See section 10.4.4 on page 605 of the book.
 # then passed into function.
 n1 <- 30
 n2 <- 30
-nsims <- 10000
+nsims <- 100
 eps <- 0.2
 vc <- 10
 Delta <- c(-3, 3, 1)
@@ -49,7 +49,7 @@ results <- wil2powsim(n1, n2, nsims, eps, vc, Delta, alpha)
 # Example where values are passed directly
 # into function, along with a default param
 # override for the Delta param.
-results <- wil2powsim(30, 30, 10000, 0.20, 10, c(-3, 3, 1), 0.25)
+results <- wil2powsim(30, 30, 100, 0.20, 10, c(-3, 3, 1), 0.25)
 
 }
 \references{

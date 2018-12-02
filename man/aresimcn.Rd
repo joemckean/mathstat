@@ -28,8 +28,8 @@ An illustration of this function can be found in Section 10.3.4 on
 page 596. This example uses samples of size 30 and runs 10,000 simulations.
 }
 \examples{
-aresimcn(30, 10000, 0.25, 3)
-aresimcn(30, 1000, 0.20, 25)
+aresimcn(30, 1000, 0.25, 3)
+aresimcn(30, 100, 0.20, 25)
 
 }
 \references{
