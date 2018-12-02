@@ -17,5 +17,5 @@ test_that("input", {
 
 test_that("vec = 1:1000", {
 	finger <- getFingerprint(file = "../test_img/qqplotc4s2_key.png")
-  expect_true(isSimilar(file = "../test_img/qqplotc4s2_test.png", finger, threshold = 8))
+  expect_true(isSimilar(file = "../test_img/qqplotc4s2_test.png", finger, threshold = 25))
 })
