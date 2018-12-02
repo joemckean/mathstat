@@ -6,8 +6,8 @@
 \title{Fast Cars}
 \format{A list containing 30 rows and 2 variables
 \describe{
-  \item{ind}{type of car}
-  \item{speed}{the speed of the car}
+\item{ind}{type of car}
+\item{speed}{the speed of the car}
 }}
 \usage{
 fastcars

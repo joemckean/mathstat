@@ -6,8 +6,8 @@
 \title{Water Wheel Data Set}
 \format{A list containing 20 rows and 2 variables
 \describe{
-  \item{numbrev}{wheel revolutions per minute}
-  \item{indgrp2}{under influence of a drug or placebo}
+\item{numbrev}{wheel revolutions per minute}
+\item{indgrp2}{under influence of a drug or placebo}
 }}
 \usage{
 waterwheel

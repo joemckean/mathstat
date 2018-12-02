@@ -27,7 +27,7 @@ page 677, but with Bayesian influence integrated. The input parameter alpha
 is the parameter in the joint distribution of the random vector (X, Y) which
 is given in the example. The value of m is the number of initial runs of the
 sampler for achieving equilibrium; then the next (n * m) runs are recorded and returned
-in the R vectors x2 and y2. The paired items (x2, i) \& (y2, i) are the variates for
+in the R vectors x2 and y2. The paired items (x2, i) & (y2, i) are the variates for
 random vector (X, Y).
 }
 \examples{
@@ -37,7 +37,7 @@ gibbser3(alpha = 12, beta = 4, nt = 100, m = 40, n = 100)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }
 \seealso{
 gibbser2() for more details on the Gibbs sampler routine described on

@@ -6,7 +6,7 @@
 \title{Speed of Light}
 \format{A list containing 66 rows and 1 variable
 \describe{
-  \item{speed}{the speed of light}
+\item{speed}{the speed of light}
 }}
 \usage{
 speedlight

@@ -34,5 +34,5 @@ cipi(fit = lm(time ~ year), hmat = c(1, 2020), alpha = 0.05)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }

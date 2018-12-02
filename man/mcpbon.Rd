@@ -15,11 +15,11 @@ mcpbon(y, ind, alpha = 0.05)
 }
 \value{
 This function returns a table to the user. The first two columns
-\code{j} \& \code{jp} are the specific levels (categories of cars) being compared.
-\code{muj} \& \code{mujp} are the means of two levels being compared. \code{diff}
+\code{j} & \code{jp} are the specific levels (categories of cars) being compared.
+\code{muj} & \code{mujp} are the means of two levels being compared. \code{diff}
 is the difference in means between these levels. \code{se} is the standard
 error for each comparison, \code{err} is the comparison's error estimate, and
-\code{lb} \& \code{ub} consist of the lower and upper bound for each comparison's
+\code{lb} & \code{ub} consist of the lower and upper bound for each comparison's
 confidence interval.
 }
 \description{
@@ -39,7 +39,7 @@ mcpbon(speed, car)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }
 \seealso{
 mcpfisher() for details about Fisher's PLSD Multiple Comparison Procedure

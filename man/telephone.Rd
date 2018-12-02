@@ -6,8 +6,8 @@
 \title{telephone}
 \format{A list containing 24 rows and 2 variables
 \describe{
-  \item{year}{the year}
-  \item{numcall}{the number of call made in tens of millions in Belgium}
+\item{year}{the year}
+\item{numcall}{the number of call made in tens of millions in Belgium}
 }}
 \usage{
 telephone

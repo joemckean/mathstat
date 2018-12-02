@@ -34,7 +34,7 @@ aresimcn(30, 100, 0.20, 25)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }
 \seealso{
 mses() for calculating mean square error and rcn() for generating

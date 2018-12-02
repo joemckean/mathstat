@@ -8,15 +8,12 @@ qlogF(x)
 }
 \arguments{
 \item{x}{Real number(or vector of numbers) where 0 < x < 1.
-CDF of X is F(x) = 1 - (1+5e^(-x))^(-0.1), -inf < x < inf.
-# X is a real number with the following piecewise function:
-```
-           \{  NaN,      x < 0
+CDF of X is F(x) = 1 - (1+5e^(-x))^(-0.1), -inf < x < inf.X is a real number with the following piecewise function:\preformatted{           \{  NaN,      x < 0
            \{ -Inf,      x = 0
 qlogF(x) = \{    n,  0 < x < 1
            \{  Inf,      x = 1
            \{  NaN,      x > 1
-```}
+}}
 }
 \value{
 Inverse of the CDF (single value or vector based on input) of X.

@@ -23,7 +23,7 @@ described in Example 11.3.2 on page 677. The input parameter alpha
 is the parameter in the joint distribution of the random vector (X, Y) which
 is given in the example. The value of m is the number of initial runs of the
 sampler for achieving equilibrium, then the next (n * m) runs are recorded and returned
-in the R vectors x2 and y2. The paired items (x2,i) \& (y2,i) are the variates for
+in the R vectors x2 and y2. The paired items (x2,i) & (y2,i) are the variates for
 random vector (X, Y).
 }
 \examples{
@@ -33,7 +33,7 @@ gibbser2(alpha = 12, m = 40, n = 100)
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }
 \seealso{
 gibbser3() for more details on Monte Carlo techniques used for

@@ -6,8 +6,8 @@
 \title{Quail LDL}
 \format{A list containing 39 rows and 2 variables
 \describe{
-  \item{treat}{referes to the drug used}
-  \item{ldl}{the patients LDL level}
+\item{treat}{referes to the drug used}
+\item{ldl}{the patients LDL level}
 }}
 \usage{
 quailldl

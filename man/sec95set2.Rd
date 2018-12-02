@@ -6,9 +6,9 @@
 \title{sec95set2}
 \format{A list containing 15 rows and 3 variables
 \describe{
-  \item{x}{some variable x}
-  \item{fa}{some other variable fa}
-  \item{fb}{soem other variable fb}
+\item{x}{some variable x}
+\item{fa}{some other variable fa}
+\item{fb}{soem other variable fb}
 }}
 \usage{
 sec95set2

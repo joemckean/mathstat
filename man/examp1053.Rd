@@ -6,8 +6,8 @@
 \title{Ex. 10.5.3 Data}
 \format{A list containing 15 rows and 2 variables
 \describe{
-  \item{x}{some variable from 1053}
-  \item{y}{some variable frim 1053}
+\item{x}{some variable from 1053}
+\item{y}{some variable frim 1053}
 }}
 \usage{
 examp1053

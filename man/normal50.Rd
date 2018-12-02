@@ -6,7 +6,7 @@
 \title{Normal 50}
 \format{A list containing 50 rows and 1 variable
 \describe{
-  \item{x}{some x value}
+\item{x}{some x value}
 }}
 \usage{
 normal50

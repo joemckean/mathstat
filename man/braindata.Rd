@@ -6,13 +6,13 @@
 \title{Brain Data}
 \format{A list of 40 rows and 7 variables
 \describe{
-  \item{gender}{gender of the person male or female}
-  \item{FSIQ}{the full scale IQ}
-  \item{VIQ}{the verbal IQ}
-  \item{PIQ}{the performance IQ}
-  \item{weight}{weight of the person in pounds}
-  \item{height}{height of the person in inches}
-  \item{MRI_Count}{MRI count}
+\item{gender}{gender of the person male or female}
+\item{FSIQ}{the full scale IQ}
+\item{VIQ}{the verbal IQ}
+\item{PIQ}{the performance IQ}
+\item{weight}{weight of the person in pounds}
+\item{height}{height of the person in inches}
+\item{MRI_Count}{MRI count}
 }}
 \usage{
 braindata

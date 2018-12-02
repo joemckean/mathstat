@@ -7,14 +7,14 @@
 \format{A matrix containg 6 crimes and how many drinkers vs non drinkers
 commited them
 \describe{
-  \item{arson}{a row corresponding to people who commited arson}
-  \item{rape}{a row corresponding to people who commited rape}
-  \item{violence}{a row corresponding to people who commited violent crimes}
-  \item{theft}{a row corresponding to people who commited theft}
-  \item{coining}{a row corresponding to people who commited coining}
-  \item{fraud}{a row corresponding to people who commited fraud}
-  \item{drinker}{a column corresponding to the people who drink alcohol}
-  \item{nondrinker}{a column corresponding to the people who do not drink alcohol}
+\item{arson}{a row corresponding to people who commited arson}
+\item{rape}{a row corresponding to people who commited rape}
+\item{violence}{a row corresponding to people who commited violent crimes}
+\item{theft}{a row corresponding to people who commited theft}
+\item{coining}{a row corresponding to people who commited coining}
+\item{fraud}{a row corresponding to people who commited fraud}
+\item{drinker}{a column corresponding to the people who drink alcohol}
+\item{nondrinker}{a column corresponding to the people who do not drink alcohol}
 }}
 \usage{
 crimealk

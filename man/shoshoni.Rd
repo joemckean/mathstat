@@ -6,7 +6,7 @@
 \title{Shoshoni Rectangles}
 \format{A list containing 20 rows and 1 variable
 \describe{
-  \item{shosratios}{golden ratios for rectangles}
+\item{shosratios}{golden ratios for rectangles}
 }}
 \usage{
 shoshoni

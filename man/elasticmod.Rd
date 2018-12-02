@@ -6,9 +6,9 @@
 \title{Elastic Modulus}
 \format{A list with 22 rows and 2 variables
 \describe{
-  \item{elasticmod}{the elastic modulus}
-  \item{ind}{the type of casting process 1 = Permanent mold, 2 = Die
-  cast 3 = Plaster mold}
+\item{elasticmod}{the elastic modulus}
+\item{ind}{the type of casting process 1 = Permanent mold, 2 = Die
+cast 3 = Plaster mold}
 }}
 \usage{
 elasticmod

@@ -6,13 +6,13 @@
 \title{Distance of Punts}
 \format{A list containing 13 rows and 7 variables
 \describe{
-  \item{distance}{the average distance in feet of 10 punts}
-  \item{strength}{the strength}
-  \item{hangtime}{the time the ball was in the air}
-  \item{lf}{a predictor}
-  \item{llstrength}{a predictor of strength}
-  \item{rf}{a predictor}
-  \item{rl}{a predictor}
+\item{distance}{the average distance in feet of 10 punts}
+\item{strength}{the strength}
+\item{hangtime}{the time the ball was in the air}
+\item{lf}{a predictor}
+\item{llstrength}{a predictor of strength}
+\item{rf}{a predictor}
+\item{rl}{a predictor}
 }}
 \usage{
 punter

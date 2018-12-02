@@ -6,7 +6,7 @@
 \title{River Length}
 \format{A list containing 141 rows and 1 variable
 \describe{
-  \item{lengthriver}{the length of the river in miles}
+\item{lengthriver}{the length of the river in miles}
 }}
 \usage{
 lengthriver

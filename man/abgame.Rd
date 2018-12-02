@@ -12,7 +12,7 @@ abgame()
 \description{
 This function simulates a game involving two players. Person A
 flips a fair coin initially, with the objective of getting a head. Person B
-rolls a fair six-sided die after Person A\'s move with the obejective of getting
+rolls a fair six-sided die after Person A's move with the obejective of getting
 a 1, 2, 3, or 4. The game is repeated until one person is able to complete his
 or her objective first thereby winning the game. The winner of the game
 receives a 1 while the loser receives a 0.
@@ -40,5 +40,5 @@ estpA; err
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }

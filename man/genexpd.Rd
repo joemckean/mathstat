@@ -6,9 +6,9 @@
 \title{Generated exp Data}
 \format{A list containing 22 rows and 2 variables
 \describe{
-  \item{c.x..y.}{observations from one of the F-test distributions}
-  \item{indy}{denotes which distribution derived from
-  0 = \code{rexp(10, 1/20)}, 1 = \code{rexp(12, 1/40)}}
+\item{c.x..y.}{observations from one of the F-test distributions}
+\item{indy}{denotes which distribution derived from
+0 = \code{rexp(10, 1/20)}, 1 = \code{rexp(12, 1/40)}}
 }}
 \usage{
 genexpd

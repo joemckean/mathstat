@@ -25,7 +25,7 @@ fp1()
 }
 \references{
 Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
-            Statistics, 8th Ed. Boston: Pearson.
+Statistics, 8th Ed. Boston: Pearson.
 }
 \seealso{
 fp2() for the F-distribution table of the 0.95 quantile with the numerator
