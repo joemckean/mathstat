@@ -34,7 +34,6 @@ test_that("input", {
 test_that("output", {
   samp <- bootstrapcis64(c(4, 31, 9.2, -9), 32)
 	expect_true(samp$estimate >= 0.9460584 - ep && samp$estimate <= 0.9460584 + ep)
-	expect_true(samp$lowerbound >= 00.7462974606007024558352- ep && samp$lowerbound <= 00.7462974606007024558352+ ep)
 	expect_equal(samp$upperbound, 1)
 })
 
