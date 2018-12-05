@@ -19,8 +19,8 @@
 #' @export ellipmake
 #'
 
-# Part of this code was obtained from an annonymous author at the site
-# http://stats.stackexchange.com/questions/9898/
+# Part of this code was obtained from an annonymous author at the
+# site http://stats.stackexchange.com/questions/9898/
 
 ellipmake <- function(p = 0.95, b = matrix(c(1, 0.75, 0.75, 1), nrow = 2), 
   mu = c(5, 2)) {

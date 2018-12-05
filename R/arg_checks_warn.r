@@ -119,8 +119,8 @@ is_inrange <- function(x, argpos, min, max, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argpos, "must be greater than or equal to", min, 
-    "and less than or equal to", max)
+  v <- c("argument", argpos, "must be greater than or equal to", 
+    min, "and less than or equal to", max)
   return(paste(v, collapse = " "))
 }
 
@@ -223,7 +223,8 @@ is_matrix <- function(x, argpos) {
 
 is_posmatrix2 <- function(x, argpos) {
   # is a all positive entry 2x2 matrix must be a 2x2 matrix
-  if (x[1, 1] >= 0 && x[1, 2] >= 0 && x[2, 1] >= 0 && x[2, 2] >= 0) {
+  if (x[1, 1] >= 0 && x[1, 2] >= 0 && x[2, 1] >= 0 && x[2, 2] >= 
+    0) {
     return()
   }
   v <- c("argument", argpos, "must have all positive entries")

@@ -1,6 +1,6 @@
 # The values below sketch power functions for tests described in
-# Example 4.5.2.  But it is easy to change these for other binomial
-# situation
+# Example 4.5.2.  But it is easy to change these for other
+# binomial situation
 
 #' @title Power Functions for Binomial Tests
 #'

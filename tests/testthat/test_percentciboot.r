@@ -21,13 +21,16 @@ test_that("output", {
   samp <- percentciboot(c(4, 3, 5, 30, 18, 5), 20, 0.2)
   expect_is(samp, "list")
   expect_is(samp["theta"], "list")
-  expect_true(samp$theta >= 10.83333 - ep && samp$theta <= 10.83333 + ep)
+  expect_true(samp$theta >= 10.83333 - ep && samp$theta <= 10.83333 + 
+    ep)
   expect_is(samp["lower"], "list")
   expect_true(samp$lower >= 3.5 - ep && samp$lower <= 3.5 + ep)
   expect_is(samp["upper"], "list")
-  expect_true(samp$upper >= 19.16667 - ep && samp$upper <= 19.16667 + ep)
+  expect_true(samp$upper >= 19.16667 - ep && samp$upper <= 19.16667 + 
+    ep)
   expect_is(samp["thetastar"], "list")
-  expect_true(samp$thetastar[4] >= 4.166667 - ep && samp$thetastar[4] <= 4.166667 + ep)
+  expect_true(samp$thetastar[4] >= 4.166667 - ep && samp$thetastar[4] <= 
+    4.166667 + ep)
   expect_true(length(samp$thetastar) == 20)
 })
 

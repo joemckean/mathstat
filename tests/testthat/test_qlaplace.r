@@ -10,10 +10,14 @@ test_that("input", {
 test_that("output", {
   expect_equal(qlaplace(0.5), 0)
   samp <- qlaplace(c(0.9, 0.2, 0.7, 0.4))
-  expect_true(samp[1] >= -0.9162907 - ep && samp[1] <= -0.9162907 + ep)
-  expect_true(samp[2] >= -0.2231436 - ep && samp[2] <= -0.2231436 + ep)
-  expect_true(samp[3] >= 1.6094379 - ep && samp[3] <= 1.6094379 + ep)
-  expect_true(samp[4] >= 0.5108256 - ep && samp[4] <= 0.5108256 + ep)
+  expect_true(samp[1] >= -0.9162907 - ep && samp[1] <= -0.9162907 + 
+    ep)
+  expect_true(samp[2] >= -0.2231436 - ep && samp[2] <= -0.2231436 + 
+    ep)
+  expect_true(samp[3] >= 1.6094379 - ep && samp[3] <= 1.6094379 + 
+    ep)
+  expect_true(samp[4] >= 0.5108256 - ep && samp[4] <= 0.5108256 + 
+    ep)
 })
 
 test_that("limits", {

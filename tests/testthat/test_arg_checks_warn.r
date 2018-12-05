@@ -220,8 +220,10 @@ test_that("has_nonan works", {
 test_that("is_vecinrange works", {
   expect_equal(is_vecinrange(c(1, 2, 3), 1, 1, 3), NULL)
   expect_equal(is_vecinrange(2, 1, 1, 3), NULL)
-  expect_equal(is_vecinrange(c(1.5, 0.999999999, 1, 2), 1, 1, 2), "all elements in argument 1 must be greater than or equal to 1 and less than or equal to 2")
-  expect_equal(is_vecinrange(c(1, 2, 2.00000000001, 0), 1, 0, 2), "all elements in argument 1 must be greater than or equal to 0 and less than or equal to 2")
+  expect_equal(is_vecinrange(c(1.5, 0.999999999, 1, 2), 1, 1, 2), 
+    "all elements in argument 1 must be greater than or equal to 1 and less than or equal to 2")
+  expect_equal(is_vecinrange(c(1, 2, 2.00000000001, 0), 1, 0, 2), 
+    "all elements in argument 1 must be greater than or equal to 0 and less than or equal to 2")
   expect_equal(is_vecinrange(c(1, 2, 3), 1, -Inf, Inf), NULL)
   expect_equal(is_vecinrange(c(Inf, 2, 3), 1, -6, 9), "all elements in argument 1 must be greater than or equal to -6 and less than or equal to 9")
   expect_equal(is_vecinrange(c(NaN, 1, 2), 1, 0, 2), NULL)
@@ -232,7 +234,8 @@ test_that("is_vecxrange works", {
   expect_equal(is_vecxrange(c(1, 2, 2.5), 1, 1, 3), "all elements in argument 1 must be greater than 1 and less than 3")
   expect_equal(is_vecxrange(2, 1, 1, 3), NULL)
   expect_equal(is_vecxrange(c(1.5, 1.0000001, 2), 1, 1, 3), NULL)
-  expect_equal(is_vecxrange(c(1, 0.5, 1.5, 1.9999999), 1, 0, 2), NULL)
+  expect_equal(is_vecxrange(c(1, 0.5, 1.5, 1.9999999), 1, 0, 2), 
+    NULL)
   expect_equal(is_vecxrange(c(1, 2, 3), 1, -Inf, Inf), NULL)
   expect_equal(is_vecxrange(c(Inf, 2, 3), 1, -6, 9), "all elements in argument 1 must be greater than -6 and less than 9")
   expect_equal(is_vecxrange(c(NaN, 1, 2), 1, 0, 3), NULL)
@@ -253,16 +256,22 @@ test_that("is_matrix works", {
 })
 
 test_that("is_posmatrix2 works", {
-  expect_equal(is_posmatrix2(matrix(c(1, 2, 3, 4), nrow = 2), 1), NULL)
-  expect_equal(is_posmatrix2(matrix(c(0, 0, 0, 0), nrow = 2), 1), NULL)
-  expect_equal(is_posmatrix2(matrix(c(1, 2, -3, 4), nrow = 2), 1), "argument 1 must have all positive entries")
-  expect_equal(is_posmatrix2(matrix(c(-1, -2, -3, -4), nrow = 2), 1), "argument 1 must have all positive entries")
+  expect_equal(is_posmatrix2(matrix(c(1, 2, 3, 4), nrow = 2), 1), 
+    NULL)
+  expect_equal(is_posmatrix2(matrix(c(0, 0, 0, 0), nrow = 2), 1), 
+    NULL)
+  expect_equal(is_posmatrix2(matrix(c(1, 2, -3, 4), nrow = 2), 1), 
+    "argument 1 must have all positive entries")
+  expect_equal(is_posmatrix2(matrix(c(-1, -2, -3, -4), nrow = 2), 
+    1), "argument 1 must have all positive entries")
 })
 
 test_that("is_posdetmat2 works", {
   expect_equal(is_posdetmat2("x", 1), "argument 1 must be a matrix")
   expect_equal(is_posdetmat2(c(1, 2, 3), 1), "argument 1 must be a matrix")
   expect_equal(is_posdetmat2(4, 1), "argument 1 must be a matrix")
-  expect_equal(is_posdetmat2(matrix(c(1, 2, 3, 6), nrow = 2), 1), "the determinate of argument 1 must be positive")
-  expect_equal(is_posdetmat2(matrix(c(2, 2, 3, 4), nrow = 2), 1), NULL)
+  expect_equal(is_posdetmat2(matrix(c(1, 2, 3, 6), nrow = 2), 1), 
+    "the determinate of argument 1 must be positive")
+  expect_equal(is_posdetmat2(matrix(c(2, 2, 3, 4), nrow = 2), 1), 
+    NULL)
 })

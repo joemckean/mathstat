@@ -14,6 +14,8 @@ test_that("input", {
 
 test_that("output", {
   samp <- waldpois(c(3, 4.93, -11, 67), c(-8, 27.5))
-  expect_true(samp[1] >= 143.94752 - ep && samp[1] <= 143.94752 + ep)
-  expect_true(samp[2] >= 33.19951 - ep && samp[2] <= 33.19951 + ep)
+  expect_true(samp[1] >= 143.94752 - ep && samp[1] <= 143.94752 + 
+    ep)
+  expect_true(samp[2] >= 33.19951 - ep && samp[2] <= 33.19951 + 
+    ep)
 })

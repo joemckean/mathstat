@@ -105,8 +105,8 @@ mcpfisher <- function(y, ind, alpha = 0.05) {
     }
   }
   
-  colnames(tab) <- c("j", "jp", "muj", "mujp", "diff", "se", "err", "lb", 
-    "ub")
+  colnames(tab) <- c("j", "jp", "muj", "mujp", "diff", "se", "err", 
+    "lb", "ub")
   
   # Converting table to dataframe: Allows car names to be returned
   tab2 <- as.data.frame(tab, row.names = " ")

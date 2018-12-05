@@ -1,4 +1,5 @@
-# Test for chistable function Returns: An error message if any tests fail
+# Test for chistable function Returns: An error message if any
+# tests fail
 
 context("chistable")
 

@@ -38,7 +38,8 @@ abgame <- function() {
   # rolling a dice
   rngA <- c(0, 1)
   rngB <- 1:6
-  # defines probability of outcomes for flipping a coin and rolling dice
+  # defines probability of outcomes for flipping a coin and rolling
+  # dice
   pA <- rep(1/2, 2)
   pB <- rep(1/6, 6)
   # counter for while loop

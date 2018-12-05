@@ -1,4 +1,5 @@
-# Test for normaltable function Returns: An error message if any tests fail
+# Test for normaltable function Returns: An error message if any
+# tests fail
 
 context("normaltable")
 

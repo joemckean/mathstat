@@ -1,8 +1,10 @@
-# Test for onesampsgn function Returns: An error message if any tests fail
+# Test for onesampsgn function Returns: An error message if any
+# tests fail
 context("onesampsgn")
 
 # Declare test variables
-x <- c(56, 70, 89, 94, 96, 101, 102, 102, 102, 105, 106, 108, 110, 113, 116)
+x <- c(56, 70, 89, 94, 96, 101, 102, 102, 102, 105, 106, 108, 110, 
+  113, 116)
 oops_inf <- c(Inf, 1, 2)
 oops_nan <- c(1, NaN, 3)
 oops_notnumeric <- c(1, 2, "oops")
@@ -59,12 +61,18 @@ test_that("output", {
   expect_equal(length(onesampsgn(x, maktable = FALSE)$acconf), 1)
   expect_equal(length(onesampsgn(x, maktable = FALSE)$tau), 1)
   
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$est), TRUE)
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$est), TRUE)
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$lci), TRUE)
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$uci), TRUE)
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$acconf), TRUE)
-  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$tau), TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$est), 
+    TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$est), 
+    TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$lci), 
+    TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$uci), 
+    TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$acconf), 
+    TRUE)
+  expect_equal(is.numeric(onesampsgn(x, maktable = FALSE)$tau), 
+    TRUE)
 })
 
 

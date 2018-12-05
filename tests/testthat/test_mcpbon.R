@@ -1,4 +1,5 @@
-# Test for mcpbon function Returns: An error message if an tests fail
+# Test for mcpbon function Returns: An error message if an tests
+# fail
 
 context("mcpbon")
 
@@ -30,8 +31,8 @@ test_that("input", {
 })
 
 test_that("output", {
-  expect_equal(names(mcpbon(speed, car)), c("j", "jp", "muj", "mujp", "diff", "se", "err", "lb", 
-    "ub"))
+  expect_equal(names(mcpbon(speed, car)), c("j", "jp", "muj", "mujp", 
+    "diff", "se", "err", "lb", "ub"))
   expect_equal(length(mcpbon(speed, car)$j), 10)
   expect_equal(length(mcpbon(speed, car)$jp), 10)
   expect_equal(is.numeric(mcpbon(speed, car)$muj), TRUE)

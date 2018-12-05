@@ -1,6 +1,7 @@
 context("qlogF.r")
-# X is a real number with the following piecewise function: { NaN, x < 0 { -Inf, x = 0 qlogF(x)
-# = { n, 0 < x < 1 { Inf, x = 1 { NaN, x > 1
+# X is a real number with the following piecewise function: { NaN,
+# x < 0 { -Inf, x = 0 qlogF(x) = { n, 0 < x < 1 { Inf, x = 1 {
+# NaN, x > 1
 
 six_decimal_error <- 1e-07
 

@@ -1,4 +1,5 @@
-# Test for mcpfisher function Returns: An error message if an tests fail
+# Test for mcpfisher function Returns: An error message if an
+# tests fail
 
 context("mcpfisher")
 

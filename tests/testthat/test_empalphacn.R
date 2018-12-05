@@ -12,8 +12,10 @@ test_that("input", {
 test_that("output", {
   set.seed(1234)
   samp <- empalphacn(10)
-  expect_true(samp$empiricalalpha >= 0.1 - ep && samp$empiricalalpha <= 0.1 + ep)
-  expect_true(samp$error >= 0.1859419 - ep && samp$error <= 0.1859419 + ep)
+  expect_true(samp$empiricalalpha >= 0.1 - ep && samp$empiricalalpha <= 
+    0.1 + ep)
+  expect_true(samp$error >= 0.1859419 - ep && samp$error <= 0.1859419 + 
+    ep)
 })
 
 test_that("limits", {

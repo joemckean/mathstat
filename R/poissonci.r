@@ -79,8 +79,8 @@ poissonci <- function(s, n, theta1, theta2, value, maxstp = 100, eps = 1e-05) {
   errors$push(is_positive(eps, 7))
   reportAssertions(errors)
   # if all above are ok we can check argumetn 5 value for range
-  errors$push(is_inrange(value, 5, ppois(s, n * theta2), ppois(s, n * 
-    theta1)))
+  errors$push(is_inrange(value, 5, ppois(s, n * theta2), ppois(s, 
+    n * theta1)))
   reportAssertions(errors)
   y1 <- ppois(s, n * theta1)
   y2 <- ppois(s, n * theta2)

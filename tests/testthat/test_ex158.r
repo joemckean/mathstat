@@ -6,5 +6,6 @@ dev.off()
 
 test_that("output", {
   finger <- getFingerprint(file = "../test_img/ex158key.png")
-  expect_true(isSimilar(file = "../test_img/ex158test.png", finger, threshold = 25))
+  expect_true(isSimilar(file = "../test_img/ex158test.png", finger, 
+    threshold = 25))
 })

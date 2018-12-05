@@ -35,8 +35,8 @@ bday <- function(n = 0) {
   # argument check results
   reportAssertions(errors)
   
-  # Error Handling input value 'n' 365 represents the number of days in a
-  # year
+  # Error Handling input value 'n' 365 represents the number of days
+  # in a year
   if (n > 365) {
     stop(gettext("'n' cannot be larger than 365"))
     

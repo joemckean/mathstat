@@ -37,7 +37,8 @@ piest <- function(n) {
   
   # FUNCTION BEGINS
   
-  # Generate n random deviates for uniform distribution between 0 and 1.
+  # Generate n random deviates for uniform distribution between 0
+  # and 1.
   u1 <- runif(n)
   u2 <- runif(n)
   

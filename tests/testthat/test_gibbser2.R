@@ -1,4 +1,5 @@
-# Test for gibbser2 function Returns: An error message if an tests fail
+# Test for gibbser2 function Returns: An error message if an tests
+# fail
 
 context("gibbser2")
 
@@ -22,10 +23,14 @@ test_that("output", {
   expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$x1), "numeric")
   expect_equal(mode(gibbser2(alpha = 10, m = 30, n = 60)$x2), "numeric")
   
-  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$y1), 30)
-  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$y2), 60)
-  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$x1), 30)
-  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$x2), 60)
+  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$y1), 
+    30)
+  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$y2), 
+    60)
+  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$x1), 
+    30)
+  expect_equal(length(gibbser2(alpha = 10, m = 30, n = 60)$x2), 
+    60)
 })
 
 

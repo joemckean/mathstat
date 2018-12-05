@@ -29,8 +29,10 @@ test_that("output", {
   expect_that(length(samp), equals(55))
   set.seed(1234)
   samp <- rscn(2, 0.7, 3, 4)
-  expect_true(samp[1] >= 7.253324 - ep && samp[1] <= 7.253324 + ep)
-  expect_true(samp[2] >= -3.037093 - ep && samp[2] <= -3.037093 + ep)
+  expect_true(samp[1] >= 7.253324 - ep && samp[1] <= 7.253324 + 
+    ep)
+  expect_true(samp[2] >= -3.037093 - ep && samp[2] <= -3.037093 + 
+    ep)
 })
 
 test_that("limits", {

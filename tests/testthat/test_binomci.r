@@ -41,15 +41,19 @@ test_that("input", {
 test_that("output", {
   samp <- binomci(17, 30, 0.4, 0.45, 0.95)
   expect_is(samp, "list")
-  expect_true(samp$solution >= 0.4339417 - ep && samp$solution <= 0.4339417 + ep)
-  expect_true(samp$valatsol >= 0.9500042 - ep && samp$valatsol <= 0.9500042 + ep)
+  expect_true(samp$solution >= 0.4339417 - ep && samp$solution <= 
+    0.4339417 + ep)
+  expect_true(samp$valatsol >= 0.9500042 - ep && samp$valatsol <= 
+    0.9500042 + ep)
   
 })
 
 test_that("limits", {
   samp <- binomci(17, 32, 0.4, 0.45, 0.95)
-  expect_true(samp$solution >= 0.4031677 - ep && samp$solution <= 0.4031677 + ep)
-  expect_true(samp$valatsol >= 0.9500008 - ep && samp$valatsol <= 0.9500008 + ep)
+  expect_true(samp$solution >= 0.4031677 - ep && samp$solution <= 
+    0.4031677 + ep)
+  expect_true(samp$valatsol >= 0.9500008 - ep && samp$valatsol <= 
+    0.9500008 + ep)
   
   expect_error(binomci(17, 33, 0.4, 0.45, 0.95), " * argument 5 must be greater than or equal to 0.82322902247419")
 })

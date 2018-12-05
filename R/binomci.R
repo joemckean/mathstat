@@ -77,8 +77,8 @@ binomci <- function(s, n, theta1, theta2, value, maxstp = 100, eps = 1e-05) {
   errors$push(is_positive(eps, 7))
   reportAssertions(errors)
   # if all above are ok we can check argumetn 5 value for range
-  errors$push(is_inrange(value, 5, pbinom(s, n, theta2), pbinom(s, n, 
-    theta1)))
+  errors$push(is_inrange(value, 5, pbinom(s, n, theta2), pbinom(s, 
+    n, theta1)))
   reportAssertions(errors)
   # function starts
   y1 <- pbinom(s, n, theta1)
@@ -89,8 +89,8 @@ binomci <- function(s, n, theta1, theta2, value, maxstp = 100, eps = 1e-05) {
     istep <- istep + 1
     theta3 <- (theta1 + theta2)/2
     y3 <- pbinom(s, n, theta3)
-    # if y3 is larger than value make theta3 = theta1 and y3 = y1 other
-    # wise make theta3 = theta2 and y3 = y2
+    # if y3 is larger than value make theta3 = theta1 and y3 = y1
+    # other wise make theta3 = theta2 and y3 = y2
     if (y3 > value) {
       theta1 <- theta3
       y1 <- y3

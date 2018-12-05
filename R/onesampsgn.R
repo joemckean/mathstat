@@ -159,8 +159,8 @@ onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05,
     
     pct <- 100 * (1 - alpha)
     
-    cat(pct, "%", "Confidence Interval is ", "(", lci, ",", uci, ")", 
-      "\n")
+    cat(pct, "%", "Confidence Interval is ", "(", lci, ",", uci, 
+      ")", "\n")
     
     cat("    Actual Confidence  is ", acconf, "\n")
     
@@ -178,6 +178,7 @@ onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05,
     return(list(ts = ts, zs = zs, pval = pval, est = est, lci = lci, 
       uci = uci, acconf = acconf, tau = tau))
   } else {
-    return(list(est = est, lci = lci, uci = uci, acconf = acconf, tau = tau))
+    return(list(est = est, lci = lci, uci = uci, acconf = acconf, 
+      tau = tau))
   }
 }

@@ -1,4 +1,5 @@
-# Test for fp3 function Returns: An error message if any tests fail
+# Test for fp3 function Returns: An error message if any tests
+# fail
 
 context("fp3")
 

@@ -1,7 +1,9 @@
-# Test for mlelogistic function Returns: An error message if an tests fail
+# Test for mlelogistic function Returns: An error message if an
+# tests fail
 context("mlelogistic")
 
-x <- c(200, 230, 254, 301, 354, 361, 372, 405, 413, 415, 418, 419, 423, 445)
+x <- c(200, 230, 254, 301, 354, 361, 372, 405, 413, 415, 418, 419, 
+  423, 445)
 
 test_that("edge cases", {
   expect_error(mlelogistic(Inf), "argument 1 cannot include an Inf or -Inf")

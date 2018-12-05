@@ -64,7 +64,8 @@ hierarch1 <- function(nsims = 0, x = 0, tau = 0.05, kstart = 1) {
   for (i in 1:(nsims + kstart)) {
     clambda[i] <- rgamma(1, shape = (x + 1), scale = (bold/(bold + 
       1)))
-    newy <- rgamma(1, shape = 2, scale = (tau/(clambda[i] * tau + 1)))
+    newy <- rgamma(1, shape = 2, scale = (tau/(clambda[i] * tau + 
+      1)))
     
     cb[i] <- 1/newy
     bold <- 1/newy

@@ -1,4 +1,5 @@
-# Test for plifetime function Returns: An error message if any tests fail
+# Test for plifetime function Returns: An error message if any
+# tests fail
 context("plifetime")
 
 test_that("edge cases", {

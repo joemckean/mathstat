@@ -1,4 +1,5 @@
-# Test for mses function Returns: An error message if any tests fail
+# Test for mses function Returns: An error message if any tests
+# fail
 
 context("mses")
 

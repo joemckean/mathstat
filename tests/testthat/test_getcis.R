@@ -1,4 +1,5 @@
-# Test for getcis function Returns: An error message if any tests fail
+# Test for getcis function Returns: An error message if any tests
+# fail
 context("getcis")
 
 n <- 10

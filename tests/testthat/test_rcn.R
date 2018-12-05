@@ -1,4 +1,5 @@
-# Test for aresimcn function Returns: An error message if any tests fail
+# Test for aresimcn function Returns: An error message if any
+# tests fail
 
 context("rcn")
 

@@ -31,8 +31,10 @@ test_that("input", {
 test_that("output", {
   samp <- poissonci(125, 25, 5.5, 6, 0.05)
   expect_is(samp, "list")
-  expect_true(samp$solution >= 5.800575 - ep && samp$solution <= 5.800575 + ep)
-  expect_true(samp$valatsol >= 0.04999878 - ep && samp$valatsol <= 0.04999878 + ep)
+  expect_true(samp$solution >= 5.800575 - ep && samp$solution <= 
+    5.800575 + ep)
+  expect_true(samp$valatsol >= 0.04999878 - ep && samp$valatsol <= 
+    0.04999878 + ep)
 })
 
 test_that("limits", {
@@ -42,12 +44,15 @@ test_that("limits", {
   expect_error(poissonci(125, 25, -1, 4.4, 0.95), "argument 3 must be positive")
   expect_error(poissonci(125, 25, 4, -1, 0.95), "argument 4 must be positive")
   expect_error(poissonci(125, 25, 4, 4.4, -1), "argument 5 must be positive")
-  expect_error(poissonci(123, 25.5, 0.06, 4.4, 0.8565844369232), "argument 5 must be greater than or equal to 0.856584436923202 and")
+  expect_error(poissonci(123, 25.5, 0.06, 4.4, 0.8565844369232), 
+    "argument 5 must be greater than or equal to 0.856584436923202 and")
   expect_error(poissonci(123, 25.5, 0.06, 4.4, 1.0001), "argument 5 must be greater than or equal to 0.856584436923202 and")
   expect_error(poissonci(125, 25, 4, 4.4, 0.95, 0), "argument 6 must be numeric and non-zero")
   expect_error(poissonci(125, 25, 4, 4.4, 0.95, -1), "argument 6 must be positive")
   expect_error(poissonci(125, 25, 4, 4.4, 0.95, eps = -1), "argument 7 must be positive")
   samp <- poissonci(127, 25, 4, 4.4, 0.95)
-  expect_true(samp$solution >= 4.399054 - ep && samp$solution <= 4.399054 + ep)
-  expect_true(samp$valatsol >= 0.9499986 - ep && samp$valatsol <= 0.9499986 + ep)
+  expect_true(samp$solution >= 4.399054 - ep && samp$solution <= 
+    4.399054 + ep)
+  expect_true(samp$valatsol >= 0.9499986 - ep && samp$valatsol <= 
+    0.9499986 + ep)
 })

@@ -1,4 +1,5 @@
-# Test for ftableb function Returns: An error message if any tests fail
+# Test for ftableb function Returns: An error message if any tests
+# fail
 
 context("ftableb")
 

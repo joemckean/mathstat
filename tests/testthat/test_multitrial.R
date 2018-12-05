@@ -1,4 +1,5 @@
-# Test for multitrial function Returns: An error message if any tests fail
+# Test for multitrial function Returns: An error message if any
+# tests fail
 
 context("multitrial")
 
