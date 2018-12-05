@@ -27,7 +27,6 @@
 #' @export aresimcn
 
 aresimcn <- function(n = 0, nsims = 1, eps = 0, vc = 1) {
-
   # checking arguments
   errors <- makeAssertCollection()
   # argument 1 n

@@ -119,8 +119,12 @@ is_inrange <- function(x, argpos, min, max, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argpos, "must be greater than or equal to", min, "and less than or equal to",
-    max)
+  v <- c("argument",
+         argpos,
+         "must be greater than or equal to",
+         min,
+         "and less than or equal to",
+         max)
   return(paste(v, collapse = " "))
 }
 
@@ -150,8 +154,12 @@ is_vecinrange <- function(x, argpos, min, max) {
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument", argpos, "must be greater than or equal to", min, "and less than or equal to", 
-      max)
+    v <- c("all elements in argument",
+           argpos,
+           "must be greater than or equal to",
+           min,
+           "and less than or equal to",
+           max)
     return(paste(v, collapse = " "))
   } else {
     return()
@@ -168,8 +176,12 @@ is_vecxrange <- function(x, argpos, min, max) {
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument", argpos, "must be greater than", min, "and less than", 
-      max)
+    v <- c("all elements in argument",
+           argpos,
+           "must be greater than",
+           min,
+           "and less than",
+           max)
     return(paste(v, collapse = " "))
   } else {
     return()
