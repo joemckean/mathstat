@@ -10,9 +10,12 @@ onesampsgn(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05,
 \arguments{
 \item{x}{Sample of size 'n'}
 
-\item{test}{Need Info}
+\item{test}{Computes a two-sided sign test about theta0. If \code{test} is true,
+then H_0: theta = theta0 vs. H_1: theta != theta0 is conducted.}
 
-\item{alt}{Need Info}
+\item{alt}{Computes a one-sided sign test for theta0. If \code{alt} equals 1,
+then the test H_1: theta > theta0 is conducted. If \code{alt} equals -1, then
+H_1: theta < theta0 is conducted.}
 
 \item{theta0}{Variance of sample \emph{x}}
 
