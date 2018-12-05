@@ -33,49 +33,48 @@
 #' @export multitrial
 
 multitrial <- function(p) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 p
-    errors$push(is_manyelement(p, 1))
-    errors$push(is_numeric(p, 1))
-    errors$push(has_nonan(p, 1))
-    errors$push(has_noinf(p, 1))
-    # argument check results
-    reportAssertions(errors)
-
-    # Edge case checks for individual elements
-    for (i in 1:length(p)) {
-        if ((p[i]) < 0 || p[i] > 1) {
-            stop(gettext("input vector must contain values between zero and one"))
-        }
-        else {
-            next
-        }
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 p
+  errors$push(is_manyelement(p, 1))
+  errors$push(is_numeric(p, 1))
+  errors$push(has_nonan(p, 1))
+  errors$push(has_noinf(p, 1))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Edge case checks for individual elements
+  for (i in 1:length(p)) {
+    if ((p[i]) < 0 || p[i] > 1) {
+      stop(gettext("input vector must contain values between zero and one"))
+    } else {
+      next
     }
-
-    # Error handling cumulative property of 'p'
-    if (sum(p) < 1 || sum(p) > 1) {
-        stop(gettext("elements of input value 'p' must sum to one"))
+  }
+  
+  # Error handling cumulative property of 'p'
+  if (sum(p) < 1 || sum(p) > 1) {
+    stop(gettext("elements of input value 'p' must sum to one"))
+  }
+  
+  # Function starting position
+  pr <- c(0, psum(p))
+  
+  r <- runif(1)
+  
+  ic <- 0
+  
+  j <- 1
+  
+  while (ic == 0) {
+    if ((r > pr[j]) && (r <= pr[j + 1])) {
+      multitrial <- j
+      ic <- 1
     }
-
-    # Function starting position
-    pr <- c(0, psum(p))
-
-    r <- runif(1)
-
-    ic <- 0
-
-    j <- 1
-
-    while(ic==0) {
-        if((r > pr[j]) && (r <= pr[j + 1])) {
-            multitrial <- j
-            ic <- 1
-        }
-
-        j<- j + 1
-    }
-
-    return(multitrial)
+    
+    j <- j + 1
+  }
+  
+  return(multitrial)
 }

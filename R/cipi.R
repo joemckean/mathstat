@@ -24,83 +24,74 @@
 #'
 #' @export cipi
 
-cipi <- function(fit,
-                 hmat,
-                 alpha=0.05) {
-
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 fit
-    errors$push(is_linearmodel(fit, 1))
-    # argument 2 hmat
-    errors$push(is_numeric(hmat, 2))
-    # argument 3 alpha
-    errors$push(has_nonan(alpha, 3))
-    errors$push(has_noinf(alpha, 3))
-    errors$push(is_numeric(alpha, 3))
-    errors$push(is_oneelement(alpha, 3))
-    # argument check results
-    reportAssertions(errors)
-
-    # Error handling hmat format
-    if (length(hmat) != length(fit$coefficients)) {
-        stop(gettext("length of hmat must match number of coefficients of linear model"))
-    }
-
-    # Edge case check for input argument 'alpha'
-    if (alpha < 0 || alpha >= 1) {
-        stop(gettext("input argument 'alpha' must be between zero and one"))
-    }
-
-    hmat <- as.matrix(hmat) # 1x2 matrix
-    k <- length(hmat[, 1])
-
-    n <- length(fit$resid)
-    p <- length(fit$coef)
-    df <- n - p
-
-    sfit <- summary(fit)
-    sig <- sfit$sigma
-    vc <- sfit$cov.unscaled # 2x2 matrix
-    beta <- as.matrix(fit$coef) # Converted to matrix
-
-    tc <- abs(qt(alpha/ 2.0, df))
-
-    matci <- matrix(rep(0, 4 * k), ncol=4)
-    matpi <- matrix(rep(0, 4* k), ncol=4)
-
-    for(i in 1:k) {
-           h <- hmat[i, ]
-           theta <- t(hmat) %*% beta
-
-
-           seci <- sig * sqrt(t(hmat) %*% vc %*% hmat)
-
-           lci <- theta - tc * seci
-           uci <- theta + tc * seci
-
-           matci[i, ] <- c(theta, seci, lci, uci)
-
-           sepi <- sig * sqrt(1 + t(hmat) %*% vc %*% hmat)
-
-           lpi <- theta - tc * sepi
-           upi <- theta + tc * sepi
-
-           matpi[i, ] <- c(theta, sepi, lpi, upi)
-    }
-
-    matcipi <- cbind(matci, matpi)
-    colnames(matcipi) <- c("Pred",
-                           "SECI",
-                           "LCI",
-                           "UCI",
-                           "Pred",
-                           "SEPI",
-                           "LPI",
-                           "UPI")
-
-    return(matcipi)
-
+cipi <- function(fit, hmat, alpha = 0.05) {
+  
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 fit
+  errors$push(is_linearmodel(fit, 1))
+  # argument 2 hmat
+  errors$push(is_numeric(hmat, 2))
+  # argument 3 alpha
+  errors$push(has_nonan(alpha, 3))
+  errors$push(has_noinf(alpha, 3))
+  errors$push(is_numeric(alpha, 3))
+  errors$push(is_oneelement(alpha, 3))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Error handling hmat format
+  if (length(hmat) != length(fit$coefficients)) {
+    stop(gettext("length of hmat must match number of coefficients of linear model"))
+  }
+  
+  # Edge case check for input argument 'alpha'
+  if (alpha < 0 || alpha >= 1) {
+    stop(gettext("input argument 'alpha' must be between zero and one"))
+  }
+  
+  hmat <- as.matrix(hmat)  # 1x2 matrix
+  k <- length(hmat[, 1])
+  
+  n <- length(fit$resid)
+  p <- length(fit$coef)
+  df <- n - p
+  
+  sfit <- summary(fit)
+  sig <- sfit$sigma
+  vc <- sfit$cov.unscaled  # 2x2 matrix
+  beta <- as.matrix(fit$coef)  # Converted to matrix
+  
+  tc <- abs(qt(alpha/2, df))
+  
+  matci <- matrix(rep(0, 4 * k), ncol = 4)
+  matpi <- matrix(rep(0, 4 * k), ncol = 4)
+  
+  for (i in 1:k) {
+    h <- hmat[i, ]
+    theta <- t(hmat) %*% beta
+    
+    
+    seci <- sig * sqrt(t(hmat) %*% vc %*% hmat)
+    
+    lci <- theta - tc * seci
+    uci <- theta + tc * seci
+    
+    matci[i, ] <- c(theta, seci, lci, uci)
+    
+    sepi <- sig * sqrt(1 + t(hmat) %*% vc %*% hmat)
+    
+    lpi <- theta - tc * sepi
+    upi <- theta + tc * sepi
+    
+    matpi[i, ] <- c(theta, sepi, lpi, upi)
+  }
+  
+  matcipi <- cbind(matci, matpi)
+  colnames(matcipi) <- c("Pred", "SECI", "LCI", "UCI", "Pred", "SEPI", "LPI", "UPI")
+  
+  return(matcipi)
+  
 }
 data("men1500m", envir = environment(cipi))

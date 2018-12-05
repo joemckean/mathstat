@@ -22,42 +22,40 @@
 #'
 #' @export rcn
 
-rcn <- function(n = 0,
-                eps = 0.0001,
-                sigma_c = 1.0) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 n
-    errors$push(is_oneelement(n, 1))
-    errors$push(is_numeric(n, 1))
-    errors$push(has_nonan(n, 1))
-    errors$push(has_noinf(n, 1))
-    errors$push(is_nonzero(n, 1))
-    errors$push(is_positive(n, 1))
-    # argument 2 eps
-    errors$push(has_nonan(eps, 2))
-    errors$push(has_noinf(eps, 2))
-    errors$push(is_numeric(eps, 2))
-    errors$push(is_oneelement(eps, 2))
-    # argument 2 sigma_c
-    errors$push(has_nonan(sigma_c, 3))
-    errors$push(has_noinf(sigma_c, 3))
-    errors$push(is_positive(sigma_c, 3))
-    errors$push(is_numeric(sigma_c, 3))
-    errors$push(is_oneelement(sigma_c, 3))
-    # argument check results
-    reportAssertions(errors)
-
-    # Edge case check for input argument 'eps'
-    if (eps < 0 || eps >= 1) {
-        stop(gettext("input argument 'eps' must be between zero and one"))
-    }
-
-
-	ind <- rbinom(n, 1, eps) # random generation for the binomial distribution
-	x <- rnorm(n) # random generation for the normal distribution
-	rcn <- x * (1 - ind) + sigma_c * x * ind
-
-	return(rcn)
+rcn <- function(n = 0, eps = 1e-04, sigma_c = 1) {
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 n
+  errors$push(is_oneelement(n, 1))
+  errors$push(is_numeric(n, 1))
+  errors$push(has_nonan(n, 1))
+  errors$push(has_noinf(n, 1))
+  errors$push(is_nonzero(n, 1))
+  errors$push(is_positive(n, 1))
+  # argument 2 eps
+  errors$push(has_nonan(eps, 2))
+  errors$push(has_noinf(eps, 2))
+  errors$push(is_numeric(eps, 2))
+  errors$push(is_oneelement(eps, 2))
+  # argument 2 sigma_c
+  errors$push(has_nonan(sigma_c, 3))
+  errors$push(has_noinf(sigma_c, 3))
+  errors$push(is_positive(sigma_c, 3))
+  errors$push(is_numeric(sigma_c, 3))
+  errors$push(is_oneelement(sigma_c, 3))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Edge case check for input argument 'eps'
+  if (eps < 0 || eps >= 1) {
+    stop(gettext("input argument 'eps' must be between zero and one"))
+  }
+  
+  
+  ind <- rbinom(n, 1, eps)  # random generation for the binomial distribution
+  x <- rnorm(n)  # random generation for the normal distribution
+  rcn <- x * (1 - ind) + sigma_c * x * ind
+  
+  return(rcn)
 }

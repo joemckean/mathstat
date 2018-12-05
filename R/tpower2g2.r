@@ -27,48 +27,43 @@
 #' @export tpower2g2
 #'
 
-tpower2g2 <- function(n,
-						m,
-						Delta,
-						sig,
-						alpha){
+tpower2g2 <- function(n, m, Delta, sig, alpha) {
   # checking arguments
-	errors <- makeAssertCollection()
-	# argument 1 n
-	errors$push(is_numeric(n, 1))
-	errors$push(has_noinf(n, 1))
-	errors$push(has_nonan(n, 1))
-	reportAssertions(errors)
-	errors$push(is_positive(n, 1))
-	# argument 2 m
-	errors$push(has_noinf(m, 2))
-	errors$push(has_nonan(m, 2))
-	errors$push(is_numeric(m, 2))
-	reportAssertions(errors)
+  errors <- makeAssertCollection()
+  # argument 1 n
+  errors$push(is_numeric(n, 1))
+  errors$push(has_noinf(n, 1))
+  errors$push(has_nonan(n, 1))
+  reportAssertions(errors)
+  errors$push(is_positive(n, 1))
+  # argument 2 m
+  errors$push(has_noinf(m, 2))
+  errors$push(has_nonan(m, 2))
+  errors$push(is_numeric(m, 2))
+  reportAssertions(errors)
   errors$push(is_positive(m, 2))
-	errors$push(is_inrange(n + m - 2, 2, .00000001, Inf,
-		          "argument 1 + argument 2 must be greater than 2"))
+  errors$push(is_inrange(n + m - 2, 2, 1e-08, Inf, "argument 1 + argument 2 must be greater than 2"))
   # argument 3 delta
   errors$push(has_nonan(Delta, 3))
-	errors$push(has_noinf(Delta, 3))
-	errors$push(is_numeric(Delta, 3))
-	# argument 4 sig
-	errors$push(has_noinf(sig, 4))
-	errors$push(has_nonan(sig, 4))
-	reportAssertions(errors)
+  errors$push(has_noinf(Delta, 3))
+  errors$push(is_numeric(Delta, 3))
+  # argument 4 sig
+  errors$push(has_noinf(sig, 4))
+  errors$push(has_nonan(sig, 4))
+  reportAssertions(errors)
   errors$push(is_nonzero(sig, 4))
-	errors$push(is_positive(sig, 4))
-	# argument 5 alpha
-	errors$push(has_noinf(alpha, 5))
-	errors$push(has_nonan(alpha, 5))
-	errors$push(is_numeric(alpha, 5))
-	reportAssertions(errors)
-	errors$push(is_xrange(alpha, 5, 0, 1))
-	reportAssertions(errors)
-	# function starts
-	delta <- sqrt(n * m / (m + n)) * (Delta / sig)
-	df <- n + m - 2
-	tc <- qt(1 - alpha, df)
-	gammas <- 1 - pt(tc, df, ncp=delta)
-	return(gammas)
+  errors$push(is_positive(sig, 4))
+  # argument 5 alpha
+  errors$push(has_noinf(alpha, 5))
+  errors$push(has_nonan(alpha, 5))
+  errors$push(is_numeric(alpha, 5))
+  reportAssertions(errors)
+  errors$push(is_xrange(alpha, 5, 0, 1))
+  reportAssertions(errors)
+  # function starts
+  delta <- sqrt(n * m/(m + n)) * (Delta/sig)
+  df <- n + m - 2
+  tc <- qt(1 - alpha, df)
+  gammas <- 1 - pt(tc, df, ncp = delta)
+  return(gammas)
 }

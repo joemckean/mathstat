@@ -13,11 +13,12 @@
 #' @importFrom utils data
 #'
 
-plotsulfur <- function(){
-    sulfurdiov <- unlist(sulfurdio)
-    hist(sulfurdiov, xlab = "Sulfurdioxide", ylab = " ", probability = TRUE, ylim = c(0, .04), cex.main = 1.25)
-    lines(density(sulfurdiov))
-    y <- dnorm(sulfurdiov, 53.91667, 10.07371)
-    lines(y~sulfurdiov, lty=2)
+plotsulfur <- function() {
+  sulfurdiov <- unlist(sulfurdio)
+  hist(sulfurdiov, xlab = "Sulfurdioxide", ylab = " ", probability = TRUE, ylim = c(0, 0.04), 
+    cex.main = 1.25)
+  lines(density(sulfurdiov))
+  y <- dnorm(sulfurdiov, 53.91667, 10.07371)
+  lines(y ~ sulfurdiov, lty = 2)
 }
 data("sulfurdio", envir = environment(plotsulfur))

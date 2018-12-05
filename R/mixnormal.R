@@ -24,7 +24,7 @@
 
 mixnormal <- function(x, theta0) {
   # checking arguments
-	errors <- makeAssertCollection()
+  errors <- makeAssertCollection()
   # checking arguments argument 1 x
   errors$push(is_numvector(x, 1))
   errors$push(has_nonan(x, 1))
@@ -36,21 +36,15 @@ mixnormal <- function(x, theta0) {
   errors$push(is_numvector(theta0, 2))
   reportAssertions(errors)
   # theta0[3]
-  errors$push(is_nonzero(theta0[3], 2,
-              "element 3 in argument 2 cannot be zero"))
-  errors$push(is_positive(theta0[3], 2,
-              "element 3 in argument 2 must be positive"))
+  errors$push(is_nonzero(theta0[3], 2, "element 3 in argument 2 cannot be zero"))
+  errors$push(is_positive(theta0[3], 2, "element 3 in argument 2 must be positive"))
   # theta0[4]
-  errors$push(is_nonzero(theta0[4], 2,
-              "element 4 in argument 2 cannot be zero"))
-  errors$push(is_positive(theta0[4], 2,
-              "element 4 in argument 2 must be positive"))
+  errors$push(is_nonzero(theta0[4], 2, "element 4 in argument 2 cannot be zero"))
+  errors$push(is_positive(theta0[4], 2, "element 4 in argument 2 must be positive"))
   # theta0[5]
-  errors$push(is_xrange(theta0[5], 2, 0, 1,
-              "element 5 in argument 2 must be greater than 0 and less than 1"))
+  errors$push(is_xrange(theta0[5], 2, 0, 1, "element 5 in argument 2 must be greater than 0 and less than 1"))
   reportAssertions(errors)
-  # function starts
-  # calculate gamma
+  # function starts calculate gamma
   part1 <- (1 - theta0[5]) * dnorm(x, theta0[1], theta0[3])
   part2 <- theta0[5] * dnorm(x, theta0[2], theta0[4])
   gam <- part2/(part1 + part2)
@@ -65,8 +59,8 @@ mixnormal <- function(x, theta0) {
   sig2 <- sqrt(sum(gam * ((x - mu2)^2))/denom2)
   # calculate the p value
   p <- mean(gam)
-
+  
   mixnormal <- c(mu1, mu2, sig1, sig2, p)
-
+  
   return(mixnormal)
 }

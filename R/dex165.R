@@ -17,12 +17,12 @@
 #'
 
 dex165 <- function() {
-
-	x <- 0:5
-
-	pmf <- choose(20, x) * choose(80, 5 - x)/ choose(100, 5)
-
-	tab <- rbind(x, pmf)
-
-	return(tab)
+  
+  x <- 0:5
+  
+  pmf <- choose(20, x) * choose(80, 5 - x)/choose(100, 5)
+  
+  tab <- rbind(x, pmf)
+  
+  return(tab)
 }

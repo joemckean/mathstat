@@ -28,45 +28,43 @@
 #'
 #' @export ploggamma
 
-ploggamma <- function(x,
-					  alpha,
-					  beta){
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: x
-	errors$push(has_nonan(x, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(x, 1))
-	errors$push(is_vecinrange(x, 1, 1, Inf)) #elements >= 1
-	errors$push(has_noinf(x, 1))
-	reportAssertions(errors)
-
-	# argument 2: alpha
-	errors$push(has_nonan(alpha, 2))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(alpha, 2))
-	errors$push(is_positive(alpha, 2))
-	errors$push(is_oneelement(alpha, 2))
-	errors$push(has_noinf(alpha, 2))
-	reportAssertions(errors)
-
-	# argument 3: beta
-	errors$push(has_nonan(beta, 3))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(beta, 3))
-	errors$push(is_positive(beta, 3))
-	errors$push(is_nonzero(beta, 3))
-	errors$push(is_oneelement(beta, 3))
-	errors$push(has_noinf(beta, 3))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	ploggamma <- pgamma(log(x), alpha, 1 / beta)
-
-	return(ploggamma)
+ploggamma <- function(x, alpha, beta) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: x
+  errors$push(has_nonan(x, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(x, 1))
+  errors$push(is_vecinrange(x, 1, 1, Inf))  #elements >= 1
+  errors$push(has_noinf(x, 1))
+  reportAssertions(errors)
+  
+  # argument 2: alpha
+  errors$push(has_nonan(alpha, 2))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(alpha, 2))
+  errors$push(is_positive(alpha, 2))
+  errors$push(is_oneelement(alpha, 2))
+  errors$push(has_noinf(alpha, 2))
+  reportAssertions(errors)
+  
+  # argument 3: beta
+  errors$push(has_nonan(beta, 3))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(beta, 3))
+  errors$push(is_positive(beta, 3))
+  errors$push(is_nonzero(beta, 3))
+  errors$push(is_oneelement(beta, 3))
+  errors$push(has_noinf(beta, 3))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  ploggamma <- pgamma(log(x), alpha, 1/beta)
+  
+  return(ploggamma)
 }

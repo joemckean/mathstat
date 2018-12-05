@@ -29,22 +29,23 @@
 
 boottestonemed <- function(sample, theta0, b) {
   # checking arguments
-	errors <- checkmate::makeAssertCollection()
+  errors <- checkmate::makeAssertCollection()
   # argument 1 sample
-	errors$push(has_nonan(sample, 1))
-	errors$push(has_noinf(sample, 1))
-	errors$push(is_numvector(sample, 1))
-	# argument 2 theta0
-	errors$push(is_numeric(theta0, 2))
-	errors$push(has_nonan(theta0, 2))
-	errors$push(has_noinf(theta0, 2))
-	# argument 3 b
-	errors$push(has_nonan(b, 3))
-	errors$push(has_noinf(b, 3))
-	reportAssertions(errors)
-	errors$push(is_integer(b, 3))
-	errors$push(is_positive(b, 3))
-	checkmate::reportAssertions(errors)
+  errors$push(has_nonan(sample, 1))
+  errors$push(has_noinf(sample, 1))
+  errors$push(is_numvector(sample, 1))
+  # argument 2 theta0
+  errors$push(is_numeric(theta0, 2))
+  errors$push(has_nonan(theta0, 2))
+  errors$push(has_noinf(theta0, 2))
+  # argument 3 b
+  errors$push(has_nonan(b, 3))
+  errors$push(has_noinf(b, 3))
+  errors$push(is_oneelement(b, 3))
+  reportAssertions(errors)
+  errors$push(is_integer(b, 3))
+  errors$push(is_positive(b, 3))
+  checkmate::reportAssertions(errors)
   # start function
   n <- length(sample)
   v <- median(sample)
@@ -61,6 +62,6 @@ boottestonemed <- function(sample, theta0, b) {
     }
     teststatall[i] <- vstar
   }
-  pvalue <- counter / b
+  pvalue <- counter/b
   return(list(origtest = v, pvalue = pvalue, teststatall = teststatall))
 }

@@ -1,6 +1,5 @@
-#  The values below sketch power functions for tests
-#  described in Example 4.5.2.   But it is easy to
-#  change these for other binomial situation
+# The values below sketch power functions for tests described in Example 4.5.2.  But it is easy
+# to change these for other binomial situation
 
 #' @title Power Functions for Binomial Tests
 #'
@@ -21,35 +20,29 @@
 #' @export binompower
 
 binompower <- function() {
-
-    n <- 20
-
-    k1 <- 11       # Reject if S <= k1
-    k2 <- 12       # Reject if S <= k2
-
-    p0 <- .7       # Null Hypothesis H_0: p = p0
-
-    x <- seq(0.4, 1, 0.01) # Input arguments must be doubles
-
-    pow1 <- pbinom(k1, n, x)
-    pow2 <- pbinom(k2, n, x)
-
-    # Note: Margin solution came from this source:
-    # https://stackoverflow.com/questions/23050928/error-in-plot-new-figure-margins-too-large-scatter-plot
-    par(mar = c(1,1,1,1))
-
-
-    plot(x,
-         pow2,
-         xlab="p",
-         ylab=expression(gamma(p)),
-         ylim=c(0, 1),
-         xlim=c(.35, 1),
-         type="l",
-         lty=2)
-
-    lines(x, pow1, lty=1)
-    title("Power Functions for Binomial Tests")
-    text(.72, .4,"Level 0.23")
-    text(.54, .4,"Level 0.11")
+  
+  n <- 20
+  
+  k1 <- 11  # Reject if S <= k1
+  k2 <- 12  # Reject if S <= k2
+  
+  p0 <- 0.7  # Null Hypothesis H_0: p = p0
+  
+  x <- seq(0.4, 1, 0.01)  # Input arguments must be doubles
+  
+  pow1 <- pbinom(k1, n, x)
+  pow2 <- pbinom(k2, n, x)
+  
+  # Note: Margin solution came from this source:
+  # https://stackoverflow.com/questions/23050928/error-in-plot-new-figure-margins-too-large-scatter-plot
+  par(mar = c(1, 1, 1, 1))
+  
+  
+  plot(x, pow2, xlab = "p", ylab = expression(gamma(p)), ylim = c(0, 1), xlim = c(0.35, 1), type = "l", 
+    lty = 2)
+  
+  lines(x, pow1, lty = 1)
+  title("Power Functions for Binomial Tests")
+  text(0.72, 0.4, "Level 0.23")
+  text(0.54, 0.4, "Level 0.11")
 }

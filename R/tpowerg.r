@@ -41,80 +41,76 @@
 #'
 #' @export tpowerg
 
-tpowerg <- function(mu0,
-					sig,
-					n,
-					alpha=0.05,
-					byv=0.1){
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: mu0
-	errors$push(has_nonan(mu0, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(mu0, 1))
-	errors$push(is_nonzero(mu0, 1))
-	errors$push(is_positive(mu0, 1))
-	errors$push(is_oneelement(mu0, 1))
-	errors$push(has_noinf(mu0, 1))
-	reportAssertions(errors)
-
-	# argument 2: sig
-	errors$push(has_nonan(sig, 2))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(sig, 2))
-	errors$push(is_nonzero(sig, 2))
-	errors$push(is_positive(sig, 2))
-	errors$push(is_oneelement(sig, 2))
-	errors$push(has_noinf(sig, 2))
-	reportAssertions(errors)
-
-	# argument 3: n
-	errors$push(has_nonan(n, 3))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(n, 3))
-	errors$push(is_nonzero(n, 3))
-	errors$push(is_positive(n, 3))
-	errors$push(is_oneelement(n, 3))
-	errors$push(has_noinf(n, 3))
-	reportAssertions(errors)
-
-	# argument 4: alpha
-	errors$push(has_nonan(alpha, 4))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(alpha, 4))
-	errors$push(is_nonzero(alpha, 4))
-	errors$push(is_positive(alpha, 4))
-	errors$push(is_oneelement(alpha, 4))
-	errors$push(has_noinf(alpha, 4))
-	reportAssertions(errors)
-
-	# argument 5: byv
-	errors$push(has_nonan(byv, 5))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(byv, 5))
-	errors$push(is_nonzero(byv, 5))
-	errors$push(is_positive(byv, 5))
-	errors$push(is_oneelement(byv, 5))
-	errors$push(has_noinf(byv, 5))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	fse <- 4 * sig / sqrt(n)
-	maxmu <- mu0 + fse
-	tc <- qt(1 - (alpha / 2), n - 1)
-	minmu <- mu0 - fse
-	mu1 <- seq(minmu, maxmu, byv)
-	delta <- (mu1 - mu0) / (sig / sqrt(n))
-	gammas <- 1 - pt(tc, n - 1, ncp=delta) + pt(-tc, n - 1, ncp=delta)
-	plot(gammas~mu1, pch=" ", xlab=expression(mu[1]), ylab=expression(gamma))
-	lines(gammas~mu1)
-
-	return(gammas)
+tpowerg <- function(mu0, sig, n, alpha = 0.05, byv = 0.1) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: mu0
+  errors$push(has_nonan(mu0, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(mu0, 1))
+  errors$push(is_nonzero(mu0, 1))
+  errors$push(is_positive(mu0, 1))
+  errors$push(is_oneelement(mu0, 1))
+  errors$push(has_noinf(mu0, 1))
+  reportAssertions(errors)
+  
+  # argument 2: sig
+  errors$push(has_nonan(sig, 2))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(sig, 2))
+  errors$push(is_nonzero(sig, 2))
+  errors$push(is_positive(sig, 2))
+  errors$push(is_oneelement(sig, 2))
+  errors$push(has_noinf(sig, 2))
+  reportAssertions(errors)
+  
+  # argument 3: n
+  errors$push(has_nonan(n, 3))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(n, 3))
+  errors$push(is_nonzero(n, 3))
+  errors$push(is_positive(n, 3))
+  errors$push(is_oneelement(n, 3))
+  errors$push(has_noinf(n, 3))
+  reportAssertions(errors)
+  
+  # argument 4: alpha
+  errors$push(has_nonan(alpha, 4))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(alpha, 4))
+  errors$push(is_nonzero(alpha, 4))
+  errors$push(is_positive(alpha, 4))
+  errors$push(is_oneelement(alpha, 4))
+  errors$push(has_noinf(alpha, 4))
+  reportAssertions(errors)
+  
+  # argument 5: byv
+  errors$push(has_nonan(byv, 5))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(byv, 5))
+  errors$push(is_nonzero(byv, 5))
+  errors$push(is_positive(byv, 5))
+  errors$push(is_oneelement(byv, 5))
+  errors$push(has_noinf(byv, 5))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  fse <- 4 * sig/sqrt(n)
+  maxmu <- mu0 + fse
+  tc <- qt(1 - (alpha/2), n - 1)
+  minmu <- mu0 - fse
+  mu1 <- seq(minmu, maxmu, byv)
+  delta <- (mu1 - mu0)/(sig/sqrt(n))
+  gammas <- 1 - pt(tc, n - 1, ncp = delta) + pt(-tc, n - 1, ncp = delta)
+  plot(gammas ~ mu1, pch = " ", xlab = expression(mu[1]), ylab = expression(gamma))
+  lines(gammas ~ mu1)
+  
+  return(gammas)
 }

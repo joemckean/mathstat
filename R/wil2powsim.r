@@ -49,111 +49,104 @@
 #'
 #' @importFrom checkmate makeAssertCollection reportAssertions
 
-wil2powsim <- function(	n1,
-						n2,
-						nsims,
-						eps,
-						vc,
-						Delta=0,
-						alpha=.05){
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: n1
-	errors$push(has_nonan(n1, 1))
-	errors$push(is_oneelement(n1, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(n1, 1))
-	errors$push(is_nonzero(n1, 1))
-	errors$push(is_positive(n1, 1))
-	errors$push(has_noinf(n1, 1))
-	reportAssertions(errors)
-
-	# argument 2: n2
-	errors$push(has_nonan(n2, 2))
-	errors$push(is_oneelement(n2, 2))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(n2, 2))
-	errors$push(is_nonzero(n2, 2))
-	errors$push(is_positive(n2, 2))
-	errors$push(has_noinf(n2, 2))
-	reportAssertions(errors)
-
-	# argument 3: nsims
-	errors$push(has_nonan(nsims, 3))
-	errors$push(is_oneelement(nsims, 3))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(nsims, 3))
-	errors$push(is_nonzero(nsims, 3))
-	errors$push(is_positive(nsims, 3))
-	errors$push(has_noinf(nsims, 3))
-	reportAssertions(errors)
-
-	# argument 4: eps
-	errors$push(has_nonan(eps, 4))
-	errors$push(is_oneelement(eps, 4))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(eps, 4))
-	errors$push(is_nonzero(eps, 4))
-	errors$push(is_positive(eps, 4))
-	errors$push(has_noinf(eps, 4))
-	reportAssertions(errors)
-
-	# argument 5: vc
-	errors$push(has_nonan(vc, 5))
-	errors$push(is_oneelement(vc, 5))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(vc, 5))
-	errors$push(is_nonzero(vc, 5))
-	errors$push(is_positive(vc, 5))
-	errors$push(has_noinf(vc, 5))
-	reportAssertions(errors)
-
-	# argument 6: Delta
-	errors$push(has_nonan(Delta, 6))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(Delta, 6))
-	#errors$push(is_integer(n2 / length(Delta), 6,
-	#					   "argument 6 length must divide argument 2"))
-	errors$push(has_noinf(Delta, 6))
-	reportAssertions(errors)
-
-	# argument 1: alpha
-	errors$push(has_nonan(alpha, 7))
-	errors$push(is_oneelement(alpha, 7))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(alpha, 7))
-	errors$push(is_nonzero(alpha, 7))
-	errors$push(is_positive(alpha, 7))
-	errors$push(has_noinf(alpha, 7))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	# Initialize local variables
-	indwil <-0
-	indt <- 0
-
-	for(i in 1:nsims){
-		x <- rcn(n1, eps, vc)
-		y <- rcn(n2, eps, vc) + Delta
-		# $p.value is a column in the return from wilcox.test()
-		if(wilcox.test(y, x)$p.value <= alpha){
-			indwil <- indwil + 1
-		}
-		# $p.value is a column in the return from t.test()
-		if(t.test(y, x, var.equal=TRUE)$p.value <= alpha){
-			indt <- indt + 1
-		}
-	}
-	powwil <- sum(indwil) / nsims
-	powt <- sum(indt) / nsims
-	return(c(powwil, powt))
+wil2powsim <- function(n1, n2, nsims, eps, vc, Delta = 0, alpha = 0.05) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: n1
+  errors$push(has_nonan(n1, 1))
+  errors$push(is_oneelement(n1, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(n1, 1))
+  errors$push(is_nonzero(n1, 1))
+  errors$push(is_positive(n1, 1))
+  errors$push(has_noinf(n1, 1))
+  reportAssertions(errors)
+  
+  # argument 2: n2
+  errors$push(has_nonan(n2, 2))
+  errors$push(is_oneelement(n2, 2))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(n2, 2))
+  errors$push(is_nonzero(n2, 2))
+  errors$push(is_positive(n2, 2))
+  errors$push(has_noinf(n2, 2))
+  reportAssertions(errors)
+  
+  # argument 3: nsims
+  errors$push(has_nonan(nsims, 3))
+  errors$push(is_oneelement(nsims, 3))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(nsims, 3))
+  errors$push(is_nonzero(nsims, 3))
+  errors$push(is_positive(nsims, 3))
+  errors$push(has_noinf(nsims, 3))
+  reportAssertions(errors)
+  
+  # argument 4: eps
+  errors$push(has_nonan(eps, 4))
+  errors$push(is_oneelement(eps, 4))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(eps, 4))
+  errors$push(is_nonzero(eps, 4))
+  errors$push(is_positive(eps, 4))
+  errors$push(has_noinf(eps, 4))
+  reportAssertions(errors)
+  
+  # argument 5: vc
+  errors$push(has_nonan(vc, 5))
+  errors$push(is_oneelement(vc, 5))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(vc, 5))
+  errors$push(is_nonzero(vc, 5))
+  errors$push(is_positive(vc, 5))
+  errors$push(has_noinf(vc, 5))
+  reportAssertions(errors)
+  
+  # argument 6: Delta
+  errors$push(has_nonan(Delta, 6))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(Delta, 6))
+  # errors$push(is_integer(n2 / length(Delta), 6, 'argument 6 length must divide argument 2'))
+  errors$push(has_noinf(Delta, 6))
+  reportAssertions(errors)
+  
+  # argument 1: alpha
+  errors$push(has_nonan(alpha, 7))
+  errors$push(is_oneelement(alpha, 7))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(alpha, 7))
+  errors$push(is_nonzero(alpha, 7))
+  errors$push(is_positive(alpha, 7))
+  errors$push(has_noinf(alpha, 7))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  # Initialize local variables
+  indwil <- 0
+  indt <- 0
+  
+  for (i in 1:nsims) {
+    x <- rcn(n1, eps, vc)
+    y <- rcn(n2, eps, vc) + Delta
+    # $p.value is a column in the return from wilcox.test()
+    if (wilcox.test(y, x)$p.value <= alpha) {
+      indwil <- indwil + 1
+    }
+    # $p.value is a column in the return from t.test()
+    if (t.test(y, x, var.equal = TRUE)$p.value <= alpha) {
+      indt <- indt + 1
+    }
+  }
+  powwil <- sum(indwil)/nsims
+  powt <- sum(indt)/nsims
+  return(c(powwil, powt))
 }

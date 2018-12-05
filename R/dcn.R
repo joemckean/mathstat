@@ -32,44 +32,42 @@
 #' @import stats
 #' @import graphics
 
-dcn <- function(w,
-				eps,
-				sigma_c) {
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: w
-	errors$push(has_nonan(w, 1))
-	errors$push(is_oneelement(w, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(w, 1))
-	errors$push(has_noinf(w, 1))
-	reportAssertions(errors)
-
-	# argument 2: eps
-	errors$push(has_nonan(eps, 2))
-	errors$push(is_oneelement(eps, 2))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(eps, 2))
-	errors$push(has_noinf(eps, 2))
-	reportAssertions(errors)
-
-	# argument 3: sigma_c
-	errors$push(has_nonan(sigma_c, 3))
-	errors$push(is_oneelement(sigma_c, 3))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(sigma_c, 3))
-	errors$push(has_noinf(sigma_c, 3))
-	errors$push(is_positive(sigma_c, 3))
-	errors$push(is_nonzero(sigma_c, 3))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	dcn <- (1 - eps) * dnorm(w) + eps * dnorm(w / sigma_c) / sigma_c
-
-	return(dcn)
+dcn <- function(w, eps, sigma_c) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: w
+  errors$push(has_nonan(w, 1))
+  errors$push(is_oneelement(w, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(w, 1))
+  errors$push(has_noinf(w, 1))
+  reportAssertions(errors)
+  
+  # argument 2: eps
+  errors$push(has_nonan(eps, 2))
+  errors$push(is_oneelement(eps, 2))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(eps, 2))
+  errors$push(has_noinf(eps, 2))
+  reportAssertions(errors)
+  
+  # argument 3: sigma_c
+  errors$push(has_nonan(sigma_c, 3))
+  errors$push(is_oneelement(sigma_c, 3))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(sigma_c, 3))
+  errors$push(has_noinf(sigma_c, 3))
+  errors$push(is_positive(sigma_c, 3))
+  errors$push(is_nonzero(sigma_c, 3))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  dcn <- (1 - eps) * dnorm(w) + eps * dnorm(w/sigma_c)/sigma_c
+  
+  return(dcn)
 }

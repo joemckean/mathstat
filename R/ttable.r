@@ -18,16 +18,16 @@
 #'
 #' @export ttable
 
-ttable <- function(){
-	ps <- c(.9, .925, .950, .975, .99, .995, .999)
-	df <- 1:30
-	tab <- c()
-	for(r in df){
-		tab <- rbind(tab, qt(ps, r))
-	}
-	df <- c(df, Inf)
-	nq <- qnorm(ps)
-	tab <- rbind(tab, nq)
-	tab <- cbind(df, tab)
-	return(tab)
+ttable <- function() {
+  ps <- c(0.9, 0.925, 0.95, 0.975, 0.99, 0.995, 0.999)
+  df <- 1:30
+  tab <- c()
+  for (r in df) {
+    tab <- rbind(tab, qt(ps, r))
+  }
+  df <- c(df, Inf)
+  nq <- qnorm(ps)
+  tab <- rbind(tab, nq)
+  tab <- cbind(df, tab)
+  return(tab)
 }

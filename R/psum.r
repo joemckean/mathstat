@@ -26,35 +26,34 @@
 #' @export psum
 
 psum <- function(ps) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 ps
-    errors$push(has_nonan(ps, 1))
-    errors$push(has_noinf(ps, 1))
-    errors$push(is_numvector(ps, 1))
-    errors$push(is_manyelement(ps, 1))
-    # argument check results
-    reportAssertions(errors)
-
-    # Edge case checks for individual elements
-    for (i in 1:length(ps)) {
-        if ((ps[i]) < 0 || ps[i] > 1) {
-            stop(gettext("input vector must contain values between zero and one"))
-        }
-        else {
-            next
-        }
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 ps
+  errors$push(has_nonan(ps, 1))
+  errors$push(has_noinf(ps, 1))
+  errors$push(is_numvector(ps, 1))
+  errors$push(is_manyelement(ps, 1))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Edge case checks for individual elements
+  for (i in 1:length(ps)) {
+    if ((ps[i]) < 0 || ps[i] > 1) {
+      stop(gettext("input vector must contain values between zero and one"))
+    } else {
+      next
     }
-
-    # Function starting position
-    p <- 0
-    psum <- c()
-
-    for(j in 1:length(ps)) {
-        p <- p + ps[j]
-        psum <- c(psum, p)
-    }
-
-    return(psum)
+  }
+  
+  # Function starting position
+  p <- 0
+  psum <- c()
+  
+  for (j in 1:length(ps)) {
+    p <- p + ps[j]
+    psum <- c(psum, p)
+  }
+  
+  return(psum)
 }

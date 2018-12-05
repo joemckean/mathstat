@@ -20,27 +20,20 @@
 #' @export chistable
 
 chistable <- function() {
-
-    x <- c(0.01,
-           0.025,
-           0.50,
-           0.10,
-           0.90,
-           0.95,
-           0.975,
-           0.99)
-
-    top <- 30
-
-    ptabs <- matrix(rep(0, 240), ncol=8)
-
-    for(i in 1:length(x)) {
-        ptabs[, i] <- qchisq(x[i], 1:top)
-    }
-
-    ptabs <- round(1000 * ptabs)/ 1000
-    chistable <- cbind(1:top, ptabs)
-
-    return(chistable)
-
+  
+  x <- c(0.01, 0.025, 0.5, 0.1, 0.9, 0.95, 0.975, 0.99)
+  
+  top <- 30
+  
+  ptabs <- matrix(rep(0, 240), ncol = 8)
+  
+  for (i in 1:length(x)) {
+    ptabs[, i] <- qchisq(x[i], 1:top)
+  }
+  
+  ptabs <- round(1000 * ptabs)/1000
+  chistable <- cbind(1:top, ptabs)
+  
+  return(chistable)
+  
 }

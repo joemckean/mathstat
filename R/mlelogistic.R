@@ -40,59 +40,56 @@
 #'
 #' @export mlelogistic
 
-mlelogistic <- function(x,                      # Gauss Newton Procedure
-                        eps=.0001) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 x
-    errors$push(has_nonan(x, 1))
-    errors$push(is_numvector(x, 1))
-    errors$push(has_noinf(x, 1))
-    # argument 2 eps
-    errors$push(is_oneelement(eps, 2))
-    errors$push(is_numvector(eps, 2))
-    errors$push(has_nonan(eps, 2))
-    errors$push(has_noinf(eps, 2))
-    errors$push(is_positive(eps, 2))
-    # argument check results
-    reportAssertions(errors)
-
-    # Edge case check for input argument 'eps'
-    if (eps < 0 || eps >= 1) {
-        stop(gettext("input argument 'eps' must be between zero and one"))
+mlelogistic <- function(x, eps = 1e-04) {
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 x
+  errors$push(has_nonan(x, 1))
+  errors$push(is_numvector(x, 1))
+  errors$push(has_noinf(x, 1))
+  # argument 2 eps
+  errors$push(is_oneelement(eps, 2))
+  errors$push(is_numvector(eps, 2))
+  errors$push(has_nonan(eps, 2))
+  errors$push(has_noinf(eps, 2))
+  errors$push(is_positive(eps, 2))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Edge case check for input argument 'eps'
+  if (eps < 0 || eps >= 1) {
+    stop(gettext("input argument 'eps' must be between zero and one"))
+  }
+  
+  theta0 <- mean(x)
+  n <- length(x)  # Sample size
+  
+  small <- 1 * 10^(-8)
+  
+  ic <- 0
+  
+  istop <- 0
+  
+  while (istop == 0) {
+    ic <- ic + 1
+    
+    expx <- exp(-(x - theta0))
+    
+    lprime <- n - 2 * sum(expx/(1 + expx))
+    ldprime <- -2 * sum(expx/(1 + expx)^2)
+    
+    theta1 <- theta0 - (lprime/ldprime)
+    
+    check <- abs(theta0 - theta1)/abs(theta0 + small)
+    
+    if (check < eps) {
+      istop <- 1
     }
-
-        theta0=mean(x)
-        n <- length(x) # Sample size
-
-        small <- 1.0 * 10^(-8)
-
-        ic <- 0
-
-        istop <- 0
-
-        while(istop == 0){
-            ic <- ic + 1
-
-            expx <- exp(-(x - theta0))
-
-            lprime <- n - 2 * sum(expx/(1 + expx))
-            ldprime <- -2 * sum(expx/(1 + expx)^2)
-
-            theta1 <- theta0 - (lprime/ ldprime)
-
-            check <- abs(theta0 - theta1)/abs(theta0 + small)
-
-            if(check < eps) {
-                istop <- 1
-            }
-
-            theta0 <- theta1
-        }
-
-    return(list(theta1=theta1,
-                check=check,
-                realnumstps=ic))
+    
+    theta0 <- theta1
+  }
+  
+  return(list(theta1 = theta1, check = check, realnumstps = ic))
 }
 

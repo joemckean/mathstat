@@ -22,22 +22,21 @@
 
 condsim1 <- function(nsims) {
   # checking arguments
-	errors <- makeAssertCollection()
-	# first argument nsims
+  errors <- makeAssertCollection()
+  # first argument nsims
   errors$push(is_oneelement(nsims, 1))
-	errors$push(has_nonan(nsims, 1))
-	reportAssertions(errors)
-	errors$push(is_integer(nsims, 1))
-	errors$push(is_positive(nsims, 1))
-	errors$push(is_nonzero(nsims, 1))
-	errors$push(is_noninf(nsims, 1))
-	reportAssertions(errors)
-  # function start
-  # create an list with nsims places
+  errors$push(has_nonan(nsims, 1))
+  reportAssertions(errors)
+  errors$push(is_integer(nsims, 1))
+  errors$push(is_positive(nsims, 1))
+  errors$push(is_nonzero(nsims, 1))
+  errors$push(is_noninf(nsims, 1))
+  reportAssertions(errors)
+  # function start create an list with nsims places
   collect <- rep(0, nsims)
   # generate observation nsims times
   for (i in 1:nsims) {
-    y <- -.5 * log(1 - runif(1))
+    y <- -0.5 * log(1 - runif(1))
     collect[i] <- -log(1 - runif(1)) + y
   }
   return(collect)

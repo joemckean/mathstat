@@ -27,53 +27,50 @@
 #' @export bootstrapcis64
 
 
-bootstrapcis64 <- function(x,
-                           c,
-                           nb=3000,
-                           alp2=0.025) {
-	# argument checking
-	errors <- makeAssertCollection()
-	# checking argument 1 x
+bootstrapcis64 <- function(x, c, nb = 3000, alp2 = 0.025) {
+  # argument checking
+  errors <- makeAssertCollection()
+  # checking argument 1 x
   errors$push(is_numvector(x, 1))
-	errors$push(is_manyelement(x, 1))
-	errors$push(has_noinf(x, 1))
-	errors$push(has_nonan(x, 1))
-	# checking argument 2 c
+  errors$push(is_manyelement(x, 1))
+  errors$push(has_noinf(x, 1))
+  errors$push(has_nonan(x, 1))
+  # checking argument 2 c
   errors$push(is_oneelement(c, 2))
-	errors$push(is_numeric(c, 2))
-	errors$push(has_nonan(c, 2))
-	# checking argument 3 nb
-	errors$push(is_oneelement(nb, 3))
-	errors$push(has_nonan(nb, 3))
-	reportAssertions(errors)
-	errors$push(is_integer(nb, 3))
-	errors$push(is_nonzero(nb, 3))
-	errors$push(is_positive(nb, 3))
-	errors$push(is_noninf(nb, 3))
-	# checking argument 4 alp2
-	errors$push(has_nonan(alp2, 4))
-	reportAssertions(errors)
-	errors$push(is_xrange(alp2, 4, 0, 1))
-	reportAssertions(errors)
-	# function starts
-    n <- length(x)
-    xb <- mean(x)
-    sb <- (((n - 1)/ n) * var(x))^.5
-    est <- pnorm((c - xb)/ sb)
-    collest <- c()
-  #loop nb times
-    for(i in 1:nb) {
-        xr <- sample(x, n, replace=TRUE)
-        xb <- mean(xr)
-        sb <- (((n - 1)/ n) * var(xr))^.5
-        estr <- pnorm((c - xb)/ sb)
-        collest <- c(collest, estr)
-    }
+  errors$push(is_numeric(c, 2))
+  errors$push(has_nonan(c, 2))
+  # checking argument 3 nb
+  errors$push(is_oneelement(nb, 3))
+  errors$push(has_nonan(nb, 3))
+  reportAssertions(errors)
+  errors$push(is_integer(nb, 3))
+  errors$push(is_nonzero(nb, 3))
+  errors$push(is_positive(nb, 3))
+  errors$push(is_noninf(nb, 3))
+  # checking argument 4 alp2
+  errors$push(has_nonan(alp2, 4))
+  reportAssertions(errors)
+  errors$push(is_xrange(alp2, 4, 0, 1))
+  reportAssertions(errors)
+  # function starts
+  n <- length(x)
+  xb <- mean(x)
+  sb <- (((n - 1)/n) * var(x))^0.5
+  est <- pnorm((c - xb)/sb)
+  collest <- c()
+  # loop nb times
+  for (i in 1:nb) {
+    xr <- sample(x, n, replace = TRUE)
+    xb <- mean(xr)
+    sb <- (((n - 1)/n) * var(xr))^0.5
+    estr <- pnorm((c - xb)/sb)
+    collest <- c(collest, estr)
+  }
   # find lower and upper bounds and return
-    colls <- sort(collest)
-    cut <- round(nb * alp2)
-    lb <- colls[cut]
-    ub <- colls[nb - (cut - 1)]
-    return(list(estimate = est, lowerbound = lb, upperbound = ub))
-
+  colls <- sort(collest)
+  cut <- round(nb * alp2)
+  lb <- colls[cut]
+  ub <- colls[nb - (cut - 1)]
+  return(list(estimate = est, lowerbound = lb, upperbound = ub))
+  
 }

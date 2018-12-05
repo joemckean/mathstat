@@ -26,32 +26,31 @@
 #'
 #' @export getcis
 
-getcis <- function(mat,
-                   cc = 0.90) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 mat
-    errors$push(is_matrix(mat, 1))
-    errors$push(is_numeric(mat, 1))
-    errors$push(is_manyelement(mat, 1))
-    errors$push(has_nonan(mat, 1))
-    errors$push(has_noinf(mat, 1))
-    # argument 2 cc
-    errors$push(is_numeric(cc, 2))
-    errors$push(has_nonan(cc, 2))
-    errors$push(has_noinf(cc, 2))
-    errors$push(is_inrange(cc, 2, 0, 1))
-    # argument check results
-    reportAssertions(errors)
-
-    # Function start point
-    numb <- nrow(mat)
-    ci <- c()
-
-    for(j in 1:numb) {
-        ci <- rbind(ci, t.test(mat[j, ], conf.level=cc)$conf.int)
-    }
-
-    return(ci)
+getcis <- function(mat, cc = 0.9) {
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 mat
+  errors$push(is_matrix(mat, 1))
+  errors$push(is_numeric(mat, 1))
+  errors$push(is_manyelement(mat, 1))
+  errors$push(has_nonan(mat, 1))
+  errors$push(has_noinf(mat, 1))
+  # argument 2 cc
+  errors$push(is_numeric(cc, 2))
+  errors$push(has_nonan(cc, 2))
+  errors$push(has_noinf(cc, 2))
+  errors$push(is_inrange(cc, 2, 0, 1))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Function start point
+  numb <- nrow(mat)
+  ci <- c()
+  
+  for (j in 1:numb) {
+    ci <- rbind(ci, t.test(mat[j, ], conf.level = cc)$conf.int)
+  }
+  
+  return(ci)
 }

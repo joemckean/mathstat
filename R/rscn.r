@@ -22,10 +22,9 @@
 #' @export rscn
 
 
-rscn <- function(n, eps, sd, mu){
+rscn <- function(n, eps, sd, mu) {
   errors <- makeAssertCollection()
-  # checking arguments
-  # argument 1 n
+  # checking arguments argument 1 n
   errors$push(has_nonan(n, 1))
   errors$push(has_noinf(n, 1))
   errors$push(is_oneelement(n, 1))

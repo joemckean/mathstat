@@ -19,29 +19,27 @@
 #' @export ellipmake
 #'
 
-#   Part of this code was obtained from an annonymous author at the site
-#   http://stats.stackexchange.com/questions/9898/
+# Part of this code was obtained from an annonymous author at the site
+# http://stats.stackexchange.com/questions/9898/
 
-ellipmake <- function(p = .95,
-                      b = matrix(c(1, 0.75, 0.75, 1), nrow = 2),
-                      mu = c(5, 2)) {
+ellipmake <- function(p = 0.95, b = matrix(c(1, 0.75, 0.75, 1), nrow = 2), mu = c(5, 2)) {
   # checking arguments
-	errors <- makeAssertCollection()
-	# first argument p
-	errors$push(has_nonan(p, 1))
+  errors <- makeAssertCollection()
+  # first argument p
+  errors$push(has_nonan(p, 1))
   errors$push(is_numeric(p, 1))
-	reportAssertions(errors)
+  reportAssertions(errors)
   errors$push(is_xrange(p, 1, 0, 1))
-	# second argument b
-	errors$push(has_nonan(b, 2))
-	errors$push(has_noinf(b, 2))
+  # second argument b
+  errors$push(has_nonan(b, 2))
+  errors$push(has_noinf(b, 2))
   errors$push(is_numeric(b, 2))
-	reportAssertions(errors)
+  reportAssertions(errors)
   errors$push(is_posdetmat2(b, 2))
   errors$push(is_posmatrix2(b, 2))
-	# third argument mu
+  # third argument mu
   errors$push(has_nonan(mu, 3))
-	errors$push(has_noinf(mu, 3))
+  errors$push(has_noinf(mu, 3))
   errors$push(is_numvector(mu, 3))
   errors$push(has_elements(mu, 3, 2))
   reportAssertions(errors)

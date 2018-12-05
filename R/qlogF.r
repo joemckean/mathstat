@@ -24,21 +24,21 @@
 #'
 #' @export qlogF
 
-qlogF <- function(x){
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: x
-	errors$push(has_nonan(x, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(x, 1))
-	errors$push(has_noinf(x, 1))
-	errors$push(is_vecxrange(x, 1, 0, 1)) # Bounds specified in manpage
-	reportAssertions(errors)
-
-	# FUNCTION BEGIN
-
-	inverse_cdf <- log(0.2 * ((1 - x)^(-5) - 1))
-
-	return(inverse_cdf)
+qlogF <- function(x) {
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: x
+  errors$push(has_nonan(x, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(x, 1))
+  errors$push(has_noinf(x, 1))
+  errors$push(is_vecxrange(x, 1, 0, 1))  # Bounds specified in manpage
+  reportAssertions(errors)
+  
+  # FUNCTION BEGIN
+  
+  inverse_cdf <- log(0.2 * ((1 - x)^(-5) - 1))
+  
+  return(inverse_cdf)
 }

@@ -30,80 +30,70 @@
 #' @importFrom checkmate makeAssertCollection reportAssertions
 #' @import stats
 #'
-binomci <- function(s,
-                    n,
-                    theta1,
-                    theta2,
-                    value,
-                    maxstp = 100,
-                    eps = .00001) {
-
+binomci <- function(s, n, theta1, theta2, value, maxstp = 100, eps = 1e-05) {
+  
   # checking arguments
-	errors <- makeAssertCollection()
-	# argument 1 s
+  errors <- makeAssertCollection()
+  # argument 1 s
   errors$push(has_nonan(s, 1))
-	errors$push(has_noinf(s, 1))
-	reportAssertions(errors)
+  errors$push(has_noinf(s, 1))
+  reportAssertions(errors)
   errors$push(is_positive(s, 1))
-	errors$push(is_integer(s, 1))
-	errors$push(is_numeric(s, 1))
-	# argument 2 n
-	errors$push(has_nonan(n, 2))
-	errors$push(has_noinf(n, 2))
-	reportAssertions(errors)
-	errors$push(is_positive(n, 2))
-	errors$push(is_integer(n, 2))
-	errors$push(is_numeric(n, 2))
-	# argument 3 theta1
-	errors$push(has_nonan(theta1, 3))
-	reportAssertions(errors)
-	errors$push(is_positive(theta1, 3))
-	errors$push(is_inrange(theta1, 3, 0, 1))
-	errors$push(is_numeric(theta1, 3))
-	# argument 4 theta2
-	errors$push(has_nonan(theta2, 4))
-	reportAssertions(errors)
-	errors$push(is_positive(theta2, 4))
-	errors$push(is_inrange(theta2, 4, 0, 1))
-	errors$push(is_numeric(theta2, 4))
-	# argument 3 and 4 theta1 and theta2
-	errors$push(is_smaller(theta1, theta2, 3, 4))
-	# argument 5 value
-	errors$push(has_nonan(value, 5))
-	reportAssertions(errors)
-	errors$push(is_positive(value, 5))
-	# argument 6 maxstp
-	errors$push(has_nonan(maxstp, 6))
-	reportAssertions(errors)
-	errors$push(is_positive(maxstp, 6))
-	errors$push(is_integer(maxstp, 6))
-	# argument 7 eps
-	errors$push(has_nonan(eps, 7))
-	reportAssertions(errors)
-	errors$push(is_positive(eps, 7))
-	reportAssertions(errors)
-	# if all above are ok we can check argumetn 5 value for range
-	errors$push(is_inrange(value,
-							5,
-						  pbinom(s, n, theta2),
-							pbinom(s, n, theta1)))
-	reportAssertions(errors)
-	# function starts
+  errors$push(is_integer(s, 1))
+  errors$push(is_numeric(s, 1))
+  # argument 2 n
+  errors$push(has_nonan(n, 2))
+  errors$push(has_noinf(n, 2))
+  reportAssertions(errors)
+  errors$push(is_positive(n, 2))
+  errors$push(is_integer(n, 2))
+  errors$push(is_numeric(n, 2))
+  # argument 3 theta1
+  errors$push(has_nonan(theta1, 3))
+  reportAssertions(errors)
+  errors$push(is_positive(theta1, 3))
+  errors$push(is_inrange(theta1, 3, 0, 1))
+  errors$push(is_numeric(theta1, 3))
+  # argument 4 theta2
+  errors$push(has_nonan(theta2, 4))
+  reportAssertions(errors)
+  errors$push(is_positive(theta2, 4))
+  errors$push(is_inrange(theta2, 4, 0, 1))
+  errors$push(is_numeric(theta2, 4))
+  # argument 3 and 4 theta1 and theta2
+  errors$push(is_smaller(theta1, theta2, 3, 4))
+  # argument 5 value
+  errors$push(has_nonan(value, 5))
+  reportAssertions(errors)
+  errors$push(is_positive(value, 5))
+  # argument 6 maxstp
+  errors$push(has_nonan(maxstp, 6))
+  reportAssertions(errors)
+  errors$push(is_positive(maxstp, 6))
+  errors$push(is_integer(maxstp, 6))
+  # argument 7 eps
+  errors$push(has_nonan(eps, 7))
+  reportAssertions(errors)
+  errors$push(is_positive(eps, 7))
+  reportAssertions(errors)
+  # if all above are ok we can check argumetn 5 value for range
+  errors$push(is_inrange(value, 5, pbinom(s, n, theta2), pbinom(s, n, theta1)))
+  reportAssertions(errors)
+  # function starts
   y1 <- pbinom(s, n, theta1)
   y2 <- pbinom(s, n, theta2)
   # loop maxstp times
   istep <- 0
   while (istep < maxstp) {
     istep <- istep + 1
-    theta3 <- (theta1 + theta2) / 2
+    theta3 <- (theta1 + theta2)/2
     y3 <- pbinom(s, n, theta3)
-    # if y3 is larger than value make theta3 = theta1 and y3 = y1 other wise
-		# make theta3 = theta2 and y3 = y2
+    # if y3 is larger than value make theta3 = theta1 and y3 = y1 other wise make theta3 = theta2
+    # and y3 = y2
     if (y3 > value) {
       theta1 <- theta3
       y1 <- y3
-    }
-    else {
+    } else {
       theta2 <- theta3
       y2 <- y3
     }

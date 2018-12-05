@@ -28,26 +28,25 @@
 #'
 #' @export mses
 
-mses <- function(x,
-                 theta0 = 0) {
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 x
-    errors$push(is_manyelement(x, 1))
-    errors$push(is_numeric(x, 1))
-    errors$push(is_numvector(x, 1))
-    errors$push(has_nonan(x, 1))
-    errors$push(has_noinf(x, 1))
-    # argument 2 theta0
-    errors$push(is_oneelement(theta0, 2))
-    errors$push(is_numeric(theta0, 2))
-    errors$push(has_nonan(theta0, 2))
-    errors$push(is_noninf(theta0, 2))
-    # argument check results
-    reportAssertions(errors)
-
-    # function starting position
-    mses <- sum((x - theta0)^2)/ length(x)
-
-    return(mses)
+mses <- function(x, theta0 = 0) {
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 x
+  errors$push(is_manyelement(x, 1))
+  errors$push(is_numeric(x, 1))
+  errors$push(is_numvector(x, 1))
+  errors$push(has_nonan(x, 1))
+  errors$push(has_noinf(x, 1))
+  # argument 2 theta0
+  errors$push(is_oneelement(theta0, 2))
+  errors$push(is_numeric(theta0, 2))
+  errors$push(has_nonan(theta0, 2))
+  errors$push(is_noninf(theta0, 2))
+  # argument check results
+  reportAssertions(errors)
+  
+  # function starting position
+  mses <- sum((x - theta0)^2)/length(x)
+  
+  return(mses)
 }

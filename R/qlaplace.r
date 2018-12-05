@@ -32,14 +32,14 @@
 #'
 
 qlaplace <- function(ps) {
-	# checking argument
-	errors <- makeAssertCollection()
-	# argument 1 ps
-	errors$push(is_numvector(ps, 1))
-	errors$push(is_vecinrange(ps, 1, 0, 1))
-	errors$push(has_nonan(ps, 1))
-	reportAssertions(errors)
-	# function starts
+  # checking argument
+  errors <- makeAssertCollection()
+  # argument 1 ps
+  errors$push(is_numvector(ps, 1))
+  errors$push(is_vecinrange(ps, 1, 0, 1))
+  errors$push(has_nonan(ps, 1))
+  reportAssertions(errors)
+  # function starts
   low <- ps[ps < 0.5]
   high <- ps[ps >= 0.5]
   lowq <- log(2 * low)

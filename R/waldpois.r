@@ -24,25 +24,23 @@
 #' @export waldpois
 #'
 
-waldpois <- function(x, theta0){
-	# argument checking
-	errors <- makeAssertCollection()
-	# argument 1 x
-	errors$push(is_numvector(x, 1))
-	errors$push(has_nonan(x, 1))
-	errors$push(has_noinf(x, 1))
-	reportAssertions(errors)
-	errors$push(is_nonzero(mean(x),
-	            1,
-							"argument 1 must have a mean that is not zero"))
+waldpois <- function(x, theta0) {
+  # argument checking
+  errors <- makeAssertCollection()
+  # argument 1 x
+  errors$push(is_numvector(x, 1))
+  errors$push(has_nonan(x, 1))
+  errors$push(has_noinf(x, 1))
+  reportAssertions(errors)
+  errors$push(is_nonzero(mean(x), 1, "argument 1 must have a mean that is not zero"))
   # argument 2 theta0
-	errors$push(is_numvector(theta0, 2))
-	errors$push(has_nonan(theta0, 2))
-	errors$push(has_noinf(theta0, 2))
-	reportAssertions(errors)
-	# function starts
-	n <- length(x)
-	th <- mean(x)
-	tst <- (sqrt(n / th) * (th - theta0))^2
-	return(tst)
+  errors$push(is_numvector(theta0, 2))
+  errors$push(has_nonan(theta0, 2))
+  errors$push(has_noinf(theta0, 2))
+  reportAssertions(errors)
+  # function starts
+  n <- length(x)
+  th <- mean(x)
+  tst <- (sqrt(n/th) * (th - theta0))^2
+  return(tst)
 }

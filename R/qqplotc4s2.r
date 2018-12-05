@@ -19,31 +19,31 @@
 #'
 #' @export qqplotc4s2
 
-qqplotc4s2 <- function(vec){
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: vec
-	errors$push(has_nonan(vec, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(vec, 1))
-	errors$push(has_noinf(vec, 1))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	n <- length(vec)
-	ps <- (1:n) / (n + 1)
-	normalqs <- qnorm(ps)
-	y <- sort(vec)
-	par(mfrow=c(2, 2))
-	boxplot(y, ylab="x")
-	title(main="Panel A")
-	plot(normalqs, y, xlab="Normal quantiles", ylab="Sample quantiles")
-	title(main="Panel B", xlab="Normal quantiles", ylab="Sample quantiles")
-	plot(qlaplace(ps), y, xlab="Laplace quantiles", ylab="Sample quantiles")
-	title(main="Panel C")
-	plot(qexp(ps), y, xlab="Exponential quantiles", ylab="Sample quantiles")
-	title(main="Panel D")
+qqplotc4s2 <- function(vec) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: vec
+  errors$push(has_nonan(vec, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(vec, 1))
+  errors$push(has_noinf(vec, 1))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  n <- length(vec)
+  ps <- (1:n)/(n + 1)
+  normalqs <- qnorm(ps)
+  y <- sort(vec)
+  par(mfrow = c(2, 2))
+  boxplot(y, ylab = "x")
+  title(main = "Panel A")
+  plot(normalqs, y, xlab = "Normal quantiles", ylab = "Sample quantiles")
+  title(main = "Panel B", xlab = "Normal quantiles", ylab = "Sample quantiles")
+  plot(qlaplace(ps), y, xlab = "Laplace quantiles", ylab = "Sample quantiles")
+  title(main = "Panel C")
+  plot(qexp(ps), y, xlab = "Exponential quantiles", ylab = "Sample quantiles")
+  title(main = "Panel D")
 }

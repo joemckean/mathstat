@@ -34,37 +34,39 @@
 #' @export abgame
 
 abgame <- function() {
-
-    rngA <- c(0, 1) # possible outputs for flipping a coin
-    rngB <- 1:6 # possible outputs for rolling a dice
-
-    pA <- rep(1/ 2, 2) # defines probability of outcomes for the coin flip
-    pB <- rep(1/ 6, 6) # defines probability of outcomes for rolling a dice
-
-    ic <- 0 # counter for while loop
-
-    Awin <- 0 # score keeping for flipping a coin
-    Bwin <- 0 # score keeping for rolling a dice
-
-    while(ic == 0) { # output of each loop is the result of 1 game played
-        x <- sample(rngA, 1, prob=pA) # draws a sample size 1 from rngA
-
-        if(x == 1) {
-            ic <- 1
-            Awin <- 1
-        }
-        else {
-            y <- sample(rngB, 1, prob=pB) # draws a sample size 1 from rngB
-
-            if(y <= 4) {
-                ic <- 1
-                Bwin <- 1
-            }
-        }
+  # function starts
+  # define possible outcomes for flipping a coin and rolling a dice
+  rngA <- c(0, 1)
+  rngB <- 1:6
+  # defines probability of outcomes for flipping a coin and rolling dice
+  pA <- rep(1 / 2, 2)
+  pB <- rep(1 / 6, 6)
+  # counter for while loop
+  ic <- 0
+  #keep score for coin flipping and rolling dice in these variables
+  Awin <- 0
+  Bwin <- 0
+  # output of each loop is the result of 1 game played
+  while (ic == 0) {
+    # draws a sample size 1 from rngA
+    x <- sample(rngA, 1, prob = pA)
+    # if x is one a wins
+    if (x == 1) {
+      ic <- 1
+      Awin <- 1
+    } else {
+      # draws a sample size 1 from rngB
+      y <- sample(rngB, 1, prob = pB)
+      # if y is less than or equal to 4 b wins
+      if (y <= 4) {
+        ic <- 1
+        Bwin <- 1
+      }
     }
-
-    results <- c(Awin, Bwin)
-    names(results) <- c("Awin", "Bwin")
-
-    return(results)
+  }
+  # combine results
+  results <- c(Awin, Bwin)
+  names(results) <- c("Awin", "Bwin")
+  # report results
+  return(results)
 }

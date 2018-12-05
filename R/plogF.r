@@ -18,21 +18,21 @@
 #' cdf <- plogF(-1)
 #' cdf <- plogF(3.14159)
 
-plogF <- function(x){
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: x
-	errors$push(has_nonan(x, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(x, 1))
-	errors$push(has_noinf(x, 1))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	cdf <- (1 - (1 + 5 * exp(x))^(-0.2))
-
-	return(cdf)
+plogF <- function(x) {
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: x
+  errors$push(has_nonan(x, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(x, 1))
+  errors$push(has_noinf(x, 1))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  cdf <- (1 - (1 + 5 * exp(x))^(-0.2))
+  
+  return(cdf)
 }
 

@@ -20,26 +20,26 @@
 #'
 #' @export piest2
 
-piest2 <- function(n){
-
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: n
-	errors$push(has_nonan(n, 1))
-	errors$push(is_oneelement(n, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(n, 1))
-	errors$push(has_noinf(n, 1))
-	errors$push(is_positive(n, 1))
-	errors$push(is_nonzero(n, 1))
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	sample <- 4 * sqrt(1 - runif(n)^2)
-	estimate <- mean(sample)
-	standard_error <- sqrt(var(sample) / n)
-
-	return(list(estimate=estimate,standard_error=standard_error))
+piest2 <- function(n) {
+  
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: n
+  errors$push(has_nonan(n, 1))
+  errors$push(is_oneelement(n, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(n, 1))
+  errors$push(has_noinf(n, 1))
+  errors$push(is_positive(n, 1))
+  errors$push(is_nonzero(n, 1))
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  sample <- 4 * sqrt(1 - runif(n)^2)
+  estimate <- mean(sample)
+  standard_error <- sqrt(var(sample)/n)
+  
+  return(list(estimate = estimate, standard_error = standard_error))
 }

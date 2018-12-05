@@ -43,29 +43,29 @@
 #' @export plifetime
 
 plifetime <- function(x1, x2, y1, y2) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 x1
-    errors$push(has_nonan(x1, 1))
-    errors$push(is_numeric(x1, 1))
-    errors$push(is_oneelement(x1, 1))
-    # argument 2 x2
-    errors$push(has_nonan(x2, 2))
-    errors$push(is_numeric(x2, 2))
-    errors$push(is_oneelement(x2, 2))
-    # argument 3 y1
-    errors$push(has_nonan(y1, 3))
-    errors$push(is_numeric(y1, 3))
-    errors$push(is_oneelement(y1, 3))
-    # argument 4 y2
-    errors$push(has_nonan(y2, 4))
-    errors$push(is_numeric(y2, 4))
-    errors$push(is_oneelement(y2, 4))
-    # argument check results
-    reportAssertions(errors)
-
-    # Function starting position
-    (exp(-x1^2) - exp(-x2^2)) * (exp(-y1^2) - exp(-y2^2))
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 x1
+  errors$push(has_nonan(x1, 1))
+  errors$push(is_numeric(x1, 1))
+  errors$push(is_oneelement(x1, 1))
+  # argument 2 x2
+  errors$push(has_nonan(x2, 2))
+  errors$push(is_numeric(x2, 2))
+  errors$push(is_oneelement(x2, 2))
+  # argument 3 y1
+  errors$push(has_nonan(y1, 3))
+  errors$push(is_numeric(y1, 3))
+  errors$push(is_oneelement(y1, 3))
+  # argument 4 y2
+  errors$push(has_nonan(y2, 4))
+  errors$push(is_numeric(y2, 4))
+  errors$push(is_oneelement(y2, 4))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Function starting position
+  (exp(-x1^2) - exp(-x2^2)) * (exp(-y1^2) - exp(-y2^2))
 }
 

@@ -26,57 +26,54 @@
 #'
 #' @export aresimcn
 
-aresimcn <- function(n = 0,
-                     nsims = 1,
-                     eps = 0.0,
-                     vc = 1.0) {
-
-    # checking arguments
-    errors <- makeAssertCollection()
-    # argument 1 n
-    errors$push(is_oneelement(n, 1))
-    errors$push(is_numeric(n, 1))
-    errors$push(has_nonan(n, 1))
-    errors$push(has_noinf(n, 1))
-    errors$push(is_nonzero(n, 1))
-    errors$push(is_positive(n, 1))
-    # argument 2 nsims
-    errors$push(is_oneelement(nsims, 2))
-    errors$push(is_numeric(nsims, 2))
-    errors$push(has_nonan(nsims, 2))
-    errors$push(has_noinf(nsims, 2))
-    errors$push(is_nonzero(nsims, 2))
-    errors$push(is_positive(nsims, 2))
-    # argument 3 eps
-    errors$push(has_nonan(eps, 3))
-    errors$push(has_noinf(eps, 3))
-    errors$push(is_numeric(eps, 3))
-    errors$push(is_oneelement(eps, 3))
-    # argument 4 vc
-    errors$push(has_nonan(vc, 4))
-    errors$push(has_noinf(vc, 4))
-    errors$push(is_positive(vc, 4))
-    errors$push(is_numeric(vc, 4))
-    errors$push(is_oneelement(vc, 4))
-    # argument check results
-    reportAssertions(errors)
-
-    # Edge case check for input argument 'eps'
-    if (eps < 0 || eps >= 1) {
-        stop(gettext("input argument 'eps' must be between zero and one"))
-    }
-
-    # Function starting postion
-    chl <- c()
-    cxbar <- c()
-
-    for(i in 1:nsims){
-          x <- rcn(n, eps, vc)
-          chl <- c(chl, wilcox.test(x, conf.int=TRUE)$est)
-          cxbar <- c(cxbar, t.test(x, conf.int=TRUE)$est)
-    }
-
-    aresimcn <- mses(cxbar, 0)/mses(chl, 0)
-
-    return(aresimcn)
+aresimcn <- function(n = 0, nsims = 1, eps = 0, vc = 1) {
+  
+  # checking arguments
+  errors <- makeAssertCollection()
+  # argument 1 n
+  errors$push(is_oneelement(n, 1))
+  errors$push(is_numeric(n, 1))
+  errors$push(has_nonan(n, 1))
+  errors$push(has_noinf(n, 1))
+  errors$push(is_nonzero(n, 1))
+  errors$push(is_positive(n, 1))
+  # argument 2 nsims
+  errors$push(is_oneelement(nsims, 2))
+  errors$push(is_numeric(nsims, 2))
+  errors$push(has_nonan(nsims, 2))
+  errors$push(has_noinf(nsims, 2))
+  errors$push(is_nonzero(nsims, 2))
+  errors$push(is_positive(nsims, 2))
+  # argument 3 eps
+  errors$push(has_nonan(eps, 3))
+  errors$push(has_noinf(eps, 3))
+  errors$push(is_numeric(eps, 3))
+  errors$push(is_oneelement(eps, 3))
+  # argument 4 vc
+  errors$push(has_nonan(vc, 4))
+  errors$push(has_noinf(vc, 4))
+  errors$push(is_positive(vc, 4))
+  errors$push(is_numeric(vc, 4))
+  errors$push(is_oneelement(vc, 4))
+  # argument check results
+  reportAssertions(errors)
+  
+  # Edge case check for input argument 'eps'
+  if (eps < 0 || eps >= 1) {
+    stop(gettext("input argument 'eps' must be between zero and one"))
+  }
+  
+  # Function starting postion
+  chl <- c()
+  cxbar <- c()
+  
+  for (i in 1:nsims) {
+    x <- rcn(n, eps, vc)
+    chl <- c(chl, wilcox.test(x, conf.int = TRUE)$est)
+    cxbar <- c(cxbar, t.test(x, conf.int = TRUE)$est)
+  }
+  
+  aresimcn <- mses(cxbar, 0)/mses(chl, 0)
+  
+  return(aresimcn)
 }

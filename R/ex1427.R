@@ -17,14 +17,14 @@
 #'
 
 ex1427 <- function() {
-	# function starts
-	pwin <- 0
-	x <- sample(1:20, 1)
-	y <- sample(x:25, 1)
+  # function starts
+  pwin <- 0
+  x <- sample(1:20, 1)
+  y <- sample(x:25, 1)
   # if y is greater than 21 you win/assign 1 to pwin
-	if(y > 21) {
-		pwin <- 1
-	}
+  if (y > 21) {
+    pwin <- 1
+  }
   # pwin 1 if you win 0 if you lose
-	return(pwin)
+  return(pwin)
 }

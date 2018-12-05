@@ -30,24 +30,21 @@
 #' @export dlogF
 
 dlogF <- function(x) {
-	# INPUT VALIDATION
-	errors <- makeAssertCollection()
-	# argument 1: x
-	errors$push(has_nonan(x, 1))
-	reportAssertions(errors)
-
-	errors$push(is_numeric(x, 1))
-	errors$push(has_noinf(x, 1))
-	errors$push(is_vecxrange(x, 1, -746, 710)) # Boundaries for input
-	reportAssertions(errors)
-
-	# FUNCTION BEGINS
-
-	# Piecewise of exp() function:
-	#			{ 0,	x <= -746
-	# exp(x) = 	{ n,    -745 <= x <= 709
-	#			{ inf,  710 <= x
-	options(digits=22)
-	pdf <- exp(x) / (1 + 5 * exp(x))^(1.2)
-	return(pdf)
+  # INPUT VALIDATION
+  errors <- makeAssertCollection()
+  # argument 1: x
+  errors$push(has_nonan(x, 1))
+  reportAssertions(errors)
+  
+  errors$push(is_numeric(x, 1))
+  errors$push(has_noinf(x, 1))
+  errors$push(is_vecxrange(x, 1, -746, 710))  # Boundaries for input
+  reportAssertions(errors)
+  
+  # FUNCTION BEGINS
+  
+  # Piecewise of exp() function: { 0, x <= -746 exp(x) = { n, -745 <= x <= 709 { inf, 710 <= x
+  options(digits = 22)
+  pdf <- exp(x)/(1 + 5 * exp(x))^(1.2)
+  return(pdf)
 }

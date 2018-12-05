@@ -20,34 +20,34 @@
 #'
 
 
-empalphacn <- function(nsims){
+empalphacn <- function(nsims) {
   # checking arguments
-	errors <- makeAssertCollection()
-	# argument 1 nsims
-	errors$push(has_nonan(nsims, 1))
-	errors$push(has_noinf(nsims, 1))
-	errors$push(is_integer(nsims, 1))
-	reportAssertions(errors)
-	errors$push(is_nonzero(nsims, 1))
-	errors$push(is_positive(nsims, 1))
+  errors <- makeAssertCollection()
+  # argument 1 nsims
+  errors$push(has_nonan(nsims, 1))
+  errors$push(has_noinf(nsims, 1))
+  errors$push(is_integer(nsims, 1))
+  reportAssertions(errors)
+  errors$push(is_nonzero(nsims, 1))
+  errors$push(is_positive(nsims, 1))
   reportAssertions(errors)
   # function start
   sigmac <- 25
-  eps <- .25
-  alpha <- .05
+  eps <- 0.25
+  alpha <- 0.05
   n <- 20
-  tc <- qt(1-alpha,n-1)
+  tc <- qt(1 - alpha, n - 1)
   ic <- 0
   # loop nsims times
-  for(i in 1:nsims){
+  for (i in 1:nsims) {
     samp <- rcn(n, eps, sigmac)
-    ttest <- (sqrt(n) * mean(samp)) / var(samp) ^ .5
+    ttest <- (sqrt(n) * mean(samp))/var(samp)^0.5
     # if ttest is greater than tc increment ic
-    if(ttest > tc){
+    if (ttest > tc) {
       ic <- ic + 1
     }
   }
-  empalp <- ic / nsims
-  err <- 1.96 * sqrt((empalp * (1 - empalp)) / nsims)
-  return(list(empiricalalpha=empalp, error=err))
+  empalp <- ic/nsims
+  err <- 1.96 * sqrt((empalp * (1 - empalp))/nsims)
+  return(list(empiricalalpha = empalp, error = err))
 }
