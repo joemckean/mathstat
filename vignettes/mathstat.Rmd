@@ -36,148 +36,149 @@ Below consists of the list of function within the mathstat package.
 ## Functions
 
 <center> <h2>--A--</h2> </center>
-[abgame](man/abgame.Rd) <center>Coin Flip versus Die Roll Game</center>
+[abgame](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/abgame.html) <center>Coin Flip versus Die Roll Game</center>
 <br>
-[aresimcn](man/aresimcn.Rd) <center>A Relative Efficency Investigation Simulation</center>
+[aresimcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/aresimcn.html) <center>A Relative Efficency Investigation Simulation</center>
 
 <center> <h2>--B--</h2> </center>
-[bday](man/bday.Rd) <center>Birthday Solver</center>
+[bday](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/bday.html) <center>Birthday Solver</center>
 <br>
-[betaplts](man/betaplts.Rd) <center>Beta Distribution Plots</center>
+[betaplts](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/betaplts.html) <center>Beta Distribution Plots</center>
 <br>
-[binomci](man/binomci.Rd) <center>Binomial distribution Confidence Interval</center>
+[binomci](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/binomci.html) <center>Binomial distribution Confidence Interval</center>
 <br>
-[binompower](man/binompower.Rd) <center>Power Functions for Binomial Tests</center>
+[binompower](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/binompower.html) <center>Power Functions for Binomial Tests</center>
 <br>
-[bootstrapcis64](man/bootstrapcis64.Rd) <center>Percentile Bootstrap Confidence Interval</center>
+[bootstrapcis64](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/bootstrapcis64.html) <center>Percentile Bootstrap Confidence Interval</center>
 <br>
-[boottestonemed](man/boottestonemed.Rd) <center>Bootstrap Test One Median</center>
+[boottestonemed](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/boottestonemed.html) <center>Bootstrap Test One Median</center>
 <br>
-[boottesttwo](man/boottesttwo.Rd) <center></center>
+[boottesttwo](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/boottesttwo.html) <center></center>
 
 <center> <h2>--C--</h2> </center>
-[chistable](man/chistable.Rd) <center>Chi-Square Distribution</center>
+[chistable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/chistable.html) <center>Chi-Square Distribution</center>
 <br>
-[cipi](man/cipi.Rd) <center>Confidence Interval and Predictive Interval for Linear Models</center>
+[cipi](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/cipi.html) <center>Confidence Interval and Predictive Interval for Linear Models</center>
 <br>
-[condsim1](man/condsim1.Rd) <center>Observation Generator</center>
+[condsim1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/condsim1.html) <center>Observation Generator</center>
 
 <center> <h2>--D--</h2> </center>
-[data](man/data.Rd) <center>AZT doses</center>
+[data](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/data.html) <center>AZT doses</center>
 <br>
-[dcn](man/dcn.Rd) <center>PDF of Contaminated Normal</center>
+[dcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/dcn.html) <center>PDF of Contaminated Normal</center>
 <br>
-[dex165](man/dex165.Rd) <center>Probability Mass Function for Exercise 1.6.5</center>
+[dex165](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/dex165.html) <center>Probability Mass Function for Exercise 1.6.5</center>
 <br>
-[dlogF](man/dlogF.Rd) <center>Density of Log Distribution</center>
+[dlogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/dlogF.html) <center>Density of Log Distribution</center>
 <br>
-[dloggamma](man/dloggamma.Rd) <center>Density of Log Gamma Distribution</center>
+[dloggamma](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/dloggamma.html) <center>Density of Log Gamma Distribution</center>
 
 <center> <h2>--E--</h2> </center>
 <br>
-[ellipmake](man/ellipmake.Rd) <center>Plot Ellipse</center>
+[ellipmake](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ellipmake.html) <center>Plot Ellipse</center>
 <br>
-[empalphacn](man/empalphacn.Rd) <center>Emperical Alpha</center>
+[empalphacn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/empalphacn.html) <center>Emperical Alpha</center>
 <br>
-[ex158](man/ex158.Rd) <center>Piecewise CDF Graph</center>
+[ex158](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ex158.html) <center>Piecewise CDF Graph</center>
 <br>
-[ex1427](man/ex1427.Rd) <center>Number Drawing Game</center>
+[ex1427](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ex1427.html) <center>Number Drawing Game</center>
 
 <center> <h2>--F--</h2> </center>
-[fp1](man/fp1.Rd) <center>F-Distribution Table for Upper 0.05 Critical Points</center>
+[fp1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/fp1.html) <center>F-Distribution Table for Upper 0.05 Critical Points</center>
 <br>
-[fp2](man/fp2.Rd) <center>F-Distribution Table for Upper 0.05 Critical Points</center>
+[fp2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/fp2.html) <center>F-Distribution Table for Upper 0.05 Critical Points</center>
 <br>
-[fp3](man/fp3.Rd) <center>F-Distribution Table for Upper 0.01 Critical Points</center>
+[fp3](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/fp3.html) <center>F-Distribution Table for Upper 0.01 Critical Points</center>
 <br>
-[fp4](man/fp4.Rd) <center>F-Distribution Table for Upper 0.01 Critical Points</center>
+[fp4](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/fp4.html) <center>F-Distribution Table for Upper 0.01 Critical Points</center>
 <br>
-[ftable](man/ftable.Rd) <center>F-Distribution Table for 0.05, 0.25, and 0.01 Critical Points</center>
+[ftable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ftable.html) <center>F-Distribution Table for 0.05, 0.25, and 0.01 Critical Points</center>
 
 <center> <h2>--G--</h2> </center>
-[getcis](man/getcis.Rd) <center>Get Confidence Intervals</center>
+[getcis](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/getcis.html) <center>Get Confidence Intervals</center>
 <br>
-[gibbser2](man/gibbser2.Rd) <center>Gibbs Sampler</center>
+[gibbser2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/gibbser2.html) <center>Gibbs Sampler</center>
 <br>
-[gibbser3](man/gibbser3.Rd) <center>Gibbs Sampler with Bayesian Inference</center>
+[gibbser3](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/gibbser3.html) <center>Gibbs Sampler with Bayesian Inference</center>
 
 <center> <h2>--H--</h2> </center>
-[hcplot](man/hcplot.Rd) <center></center>
+[hcplot](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/hcplot.html) <center></center>
 <br>
-[hierarch1](man/hierarch1.Rd) <center>Hierarchal Bayes Model</center>
+[hierarch1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/hierarch1.html) <center>Hierarchal Bayes Model</center>
 
 <center> <h2>--M--</h2> </center>
-[mcpbon](man/mcpbon.Rd) <center>Bonferroni's Multiple Comparisons Procedure</center>
+[mcpbon](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mcpbon.html) <center>Bonferroni's Multiple Comparisons Procedure</center>
 <br>
-[mcpfisher](man/mcpfisher.Rd) <center>Fisher's Protected Least Significance Difference</center>
+[mcpfisher](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mcpfisher.html) <center>Fisher's Protected Least Significance Difference</center>
 <br>
-[mixnormal](man/mixnormal.Rd) <center>The First Iteration of the EM Step</center>
+[mixnormal](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mixnormal.html) <center>The First Iteration of the EM Step</center>
 <br>
-[mlelogistic](man/mlelogistic.Rd) <center>MLE Estimation of Location Based on a Logistic Distribution</center>
+[mlelogistic](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mlelogistic.html) <center>MLE Estimation of Location Based on a Logistic Distribution</center>
 <br>
-[mses](man/mses.Rd) <center>Mean Squared Error</center>
+[mses](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mses.html) <center>Mean Squared Error</center>
 <br>
-[multitrial](man/multitrial.Rd) <center>Multinomial Trial Simulation</center>
+[multitrial](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/multitrial.html) <center>Multinomial Trial Simulation</center>
 
 <center> <h2>--N--</h2> </center>
-[newfigc3s3.1](man/newfigc3s3.1.Rd) <center>Figure 3.3.1</center>
+[newfigc3s3.1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/newfigc3s3.1.html) <center>Figure 3.3.1</center>
 <br>
-[normaltable](man/normaltable.Rd) <center>Normal Distribution Table</center>
+[normaltable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/normaltable.html) <center>Normal Distribution Table</center>
 
 <center> <h2>--O--</h2> </center>
-[onesampsgn](man/onesampsgn.Rd) <center>One-Sample Sign Analysis</center>
+[onesampsgn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/onesampsgn.html) <center>One-Sample Sign Analysis</center>
 
 <center> <h2>--P--</h2> </center>
-[pcn](man/pcn.Rd) <center>Probability of Contaminated Normal (CDF)</center>
+[pcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/pcn.html) <center>Probability of Contaminated Normal (CDF)</center>
 <br>
-[percentciboot](man/percentciboot.Rd) <center>Percent Confidence Interval bootstrap</center>
+[percentciboot](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/percentciboot.html) <center>Percent Confidence Interval bootstrap</center>
 <br>
-[piest](man/piest.Rd) <center>Estimation of Pi Using Binomial Experiment</center>
+[piest](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/piest.html) <center>Estimation of Pi Using Binomial Experiment</center>
 <br>
-[piest2](man/piest2.Rd) <center>Estimation of Pi by Monte Carlo Integration</center>
+[piest2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/piest2.html) <center>Estimation of Pi by Monte Carlo Integration</center>
 <br>
-[plifetime](man/plifetime.Rd) <center>Probability of Battery Lifetime</center>
+[plifetime](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plifetime.html) <center>Probability of Battery Lifetime</center>
 <br>
-[plogF](man/plogF.Rd) <center>Probability of Log Distribution</center>
+[plogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plogF.html) <center>Probability of Log Distribution</center>
 <br>
-[ploggamma](man/ploggamma.Rd) <center>PDF of Mixture Distribution</center>
+[ploggamma](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ploggamma.html) <center>PDF of Mixture Distribution</center>
 <br>
-[plotsulfur](man/plotsulfur.Rd) <center>Plot Sulfurdioxide</center>
+[plotsulfur](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plotsulfur.html) <center>Plot Sulfurdioxide</center>
 <br>
-[pltlogF](man/pltlogF.Rd) <center>Plot Log Function</center>
+[pltlogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/pltlogF.html) <center>Plot Log Function</center>
 <br>
-[poisrand](man/poisrand.Rd) <center>Simulating Poisson Processes</center>
+[poisrand](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poisrand.html) <center>Simulating Poisson Processes</center>
 <br>
-[poissonci](man/poissonci.Rd) <center>Confidence Interval for mean of of a Poisson Distribution</center>
+[poissonci](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissonci.html) <center>Confidence Interval for mean of of a Poisson Distribution</center>
 <br>
-[poissontable2](man/poissontable2.Rd) <center></center>
+[poissontable2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissontable2.html) <center></center>
 <br>
-[psum](man/psum.Rd) <center>Probability Outcomes for a Multinomial Trial</center>
+[psum](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/psum.html) <center>Probability Outcomes for a Multinomial Trial</center>
 
 <center> <h2>--Q--</h2> </center>
-[qlaplace](man/qlaplace.Rd) <center>Laplace Quantiles</center>
+[qlaplace](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qlaplace.html) <center>Laplace Quantiles</center>
 <br>
-[qlogF](man/qlogF.Rd) <center>Quantile of Log Distribution</center>
+[qlogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qlogF.html) <center>Quantile of Log Distribution</center>
 <br>
-[qqplotc4s2](man/qqplotc4s2.Rd) <center>Population Quantile Plots</center>
+[qqplotc4s2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qqplotc4s2.html) <center>Population Quantile Plots</center>
+
 <center> <h2>--R--</h2> </center>
-[rcn](man/rcn.Rd) <center>Random Contaminated Normal Deviates</center>
+[rcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/rcn.html) <center>Random Contaminated Normal Deviates</center>
 <br>
-[rscn](man/rscn.Rd) <center>Random Sample from Contaminatied Normal Distribution</center>
+[rscn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/rscn.html) <center>Random Sample from Contaminatied Normal Distribution</center>
 
 <center> <h2>--S--</h2> </center>
-[simplegame](man/simplegame.Rd) <center>Simple Game for Estimation of Expected Gain</center>
+[simplegame](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/simplegame.html) <center>Simple Game for Estimation of Expected Gain</center>
 
 <center> <h2>--T--</h2> </center>
-[tpower2g2](man/tpower2g2.Rd) <center>Power Function Of The Two Sample Test</center>
+[tpower2g2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpower2g2.html) <center>Power Function Of The Two Sample Test</center>
 <br>
-[tpowerg](man/tpowerg.Rd) <center>Power of the One Sample t-Test</center>
+[tpowerg](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpowerg.html) <center>Power of the One Sample t-Test</center>
 <br>
-[tpowerg2](man/tpowerg2.Rd) <center>Graphs a Two Sample T-Test</center>
+[tpowerg2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpowerg2.html) <center>Graphs a Two Sample T-Test</center>
 <br>
-[ttable](man/ttable.Rd) <center>t-Distribution Table</center>
+[ttable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ttable.html) <center>t-Distribution Table</center>
 
 <center> <h2>--W--</h2> </center>
-[waldpois](man/waldpois.Rd) <center>Wald Test Statistic</center>
+[waldpois](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/waldpois.html) <center>Wald Test Statistic</center>
 <br>
-[wil2powsim](man/wil2powsim.Rd) <center>Wilcox Power Simulation</center>
+[wil2powsim](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/wil2powsim.html) <center>Wilcox Power Simulation</center>
