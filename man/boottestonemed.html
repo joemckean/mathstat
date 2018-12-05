@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Bootstrap Test One Median</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for boottestonemed"><tr><td>boottestonemed</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Bootstrap Test One Median</h2>
+
+<h3>Description</h3>
+
+<p>On page 311 of HMC (2019), a bootstrap test for a one sample
+location problem based on the sample mean is presented. For the function, boottestonemed, the sample median is
+used for the test statistic. The hypotheses tested, are:H 0 :
+<i>&theta; = &theta; 0</i> versus H a : <i>&theta; &gt; &theta; 0</i> where
+<i>&theta; 0</i> is spectified, (an input value of the function).
+The bootstrapped p-value is returned.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+boottestonemed(sample, theta0, b)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>sample</code></td>
+<td>
+<p>a vector, is the sample</p>
+</td></tr>
+<tr valign="top"><td><code>theta0</code></td>
+<td>
+<p>a number, the null value of the mean</p>
+</td></tr>
+<tr valign="top"><td><code>b</code></td>
+<td>
+<p>an integer, the number of bootstrap resamples</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a list with origtest, pvalue, and teststatall
+</p>
+<p>originaltest is the median of the sample
+</p>
+<p>pvalue is the bootstrap p-value
+</p>
+<p>teststatall contains the bootstrap test median
+</p>
+
+
+<h3>References</h3>
+
+<p>Hogg, R. McKean, J. Craig, A. (2018) Introduction to
+Mathematical Statistics, 8th Ed. Boston: Pearson.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+sample &lt;- c(4, 3, 2, 9)
+theta0 &lt;- .05
+b &lt;- 5
+boottestonemed(sample, theta0, b)
+
+</pre>
+
+
+</body></html>

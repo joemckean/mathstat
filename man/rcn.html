@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Random Contaminated Normal Deviates</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for rcn"><tr><td>rcn</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Random Contaminated Normal Deviates</h2>
+
+<h3>Description</h3>
+
+<p>Generates data sets from a contaminated normal distribution as
+in Example 4.9.2
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+rcn(n = 0, eps = 1e-04, sigma_c = 1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>Size of random sample to generate</p>
+</td></tr>
+<tr valign="top"><td><code>eps</code></td>
+<td>
+<p>Proportion of contamination</p>
+</td></tr>
+<tr valign="top"><td><code>sigma_c</code></td>
+<td>
+<p>Standard deviation of contaminated component</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>With probability (1-eps) a deviates are drawn from a standard normal
+distribution. With probability eps deviates are drawn from a normal
+distribution with mean 0 and standard devation sigma_c.
+</p>
+
+
+<h3>Value</h3>
+
+<p>n x 1 numeric vector containing the random deviates.
+</p>
+
+
+<h3>References</h3>
+
+<p>Hogg, R., McKean, J., Craig, A. (2018) Introduction to Mathematical
+Statistics, 8th Ed. Boston: Pearson.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+rcn(n = 12, eps = 0.20, sigma_c = 4)
+rcn(n = 30, eps = 0.30, sigma_c = 6)
+
+</pre>
+
+
+</body></html>
