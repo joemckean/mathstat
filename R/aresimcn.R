@@ -63,14 +63,14 @@ aresimcn <- function(n = 0, nsims = 1, eps = 0, vc = 1) {
   # Function starting postion
   chl <- c()
   cxbar <- c()
-
+  
   for (i in 1:nsims) {
     x <- rcn(n, eps, vc)
     chl <- c(chl, wilcox.test(x, conf.int = TRUE)$est)
     cxbar <- c(cxbar, t.test(x, conf.int = TRUE)$est)
   }
-
-  aresimcn <- mses(cxbar, 0) / mses(chl, 0)
-
+  
+  aresimcn <- mses(cxbar, 0)/mses(chl, 0)
+  
   return(aresimcn)
 }

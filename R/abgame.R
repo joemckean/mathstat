@@ -34,16 +34,15 @@
 #' @export abgame
 
 abgame <- function() {
-  # function starts
-  # define possible outcomes for flipping a coin and rolling a dice
+  # function starts define possible outcomes for flipping a coin and rolling a dice
   rngA <- c(0, 1)
   rngB <- 1:6
   # defines probability of outcomes for flipping a coin and rolling dice
-  pA <- rep(1 / 2, 2)
-  pB <- rep(1 / 6, 6)
+  pA <- rep(1/2, 2)
+  pB <- rep(1/6, 6)
   # counter for while loop
   ic <- 0
-  #keep score for coin flipping and rolling dice in these variables
+  # keep score for coin flipping and rolling dice in these variables
   Awin <- 0
   Bwin <- 0
   # output of each loop is the result of 1 game played

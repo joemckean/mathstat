@@ -119,12 +119,8 @@ is_inrange <- function(x, argpos, min, max, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument",
-         argpos,
-         "must be greater than or equal to",
-         min,
-         "and less than or equal to",
-         max)
+  v <- c("argument", argpos, "must be greater than or equal to", min, "and less than or equal to", 
+    max)
   return(paste(v, collapse = " "))
 }
 
@@ -148,18 +144,14 @@ is_vecinrange <- function(x, argpos, min, max) {
   outrange <- 0
   for (i in 1:length(x)) {
     if (is.nan(x[i])) {
-
+      
     } else if (x[i] < min || x[i] > max) {
       outrange <- outrange + 1
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument",
-           argpos,
-           "must be greater than or equal to",
-           min,
-           "and less than or equal to",
-           max)
+    v <- c("all elements in argument", argpos, "must be greater than or equal to", min, "and less than or equal to", 
+      max)
     return(paste(v, collapse = " "))
   } else {
     return()
@@ -170,18 +162,14 @@ is_vecxrange <- function(x, argpos, min, max) {
   outrange <- 0
   for (i in 1:length(x)) {
     if (is.nan(x[i])) {
-
+      
     } else if (x[i] <= min || x[i] >= max) {
       outrange <- outrange + 1
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument",
-           argpos,
-           "must be greater than",
-           min,
-           "and less than",
-           max)
+    v <- c("all elements in argument", argpos, "must be greater than", min, "and less than", 
+      max)
     return(paste(v, collapse = " "))
   } else {
     return()
@@ -258,7 +246,7 @@ is_linearmodel <- function(x, argpos) {
   if (class(x) == "lm") {
     return()
   }
-
+  
   v <- c("argument", argpos, "must be a linear model")
   return(paste(v, collapse = " "))
 }

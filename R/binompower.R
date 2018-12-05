@@ -26,8 +26,6 @@ binompower <- function() {
   k1 <- 11  # Reject if S <= k1
   k2 <- 12  # Reject if S <= k2
   
-  p0 <- 0.7  # Null Hypothesis H_0: p = p0
-  
   x <- seq(0.4, 1, 0.01)  # Input arguments must be doubles
   
   pow1 <- pbinom(k1, n, x)
