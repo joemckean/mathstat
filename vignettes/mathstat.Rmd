@@ -167,18 +167,18 @@ Below consists of the list of function within the mathstat package.
 [rscn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/rscn.html) <center>Random Sample from Contaminatied Normal Distribution</center>
 
 <center> <h2>--S--</h2> </center>
-[simplegame](man/simplegame.Rd) <center>Simple Game for Estimation of Expected Gain</center>
+[simplegame](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/simplegame.html) <center>Simple Game for Estimation of Expected Gain</center>
 
 <center> <h2>--T--</h2> </center>
-[tpower2g2](man/tpower2g2.Rd) <center>Power Function Of The Two Sample Test</center>
+[tpower2g2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpower2g2.html) <center>Power Function Of The Two Sample Test</center>
 <br>
-[tpowerg](man/tpowerg.Rd) <center>Power of the One Sample t-Test</center>
+[tpowerg](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpowerg.html) <center>Power of the One Sample t-Test</center>
 <br>
-[tpowerg2](man/tpowerg2.Rd) <center>Graphs a Two Sample T-Test</center>
+[tpowerg2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/tpowerg2.html) <center>Graphs a Two Sample T-Test</center>
 <br>
-[ttable](man/ttable.Rd) <center>t-Distribution Table</center>
+[ttable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ttable.html) <center>t-Distribution Table</center>
 
 <center> <h2>--W--</h2> </center>
-[waldpois](man/waldpois.Rd) <center>Wald Test Statistic</center>
+[waldpois](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/waldpois.html) <center>Wald Test Statistic</center>
 <br>
-[wil2powsim](man/wil2powsim.Rd) <center>Wilcox Power Simulation</center>
+[wil2powsim](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/wil2powsim.html) <center>Wilcox Power Simulation</center>
