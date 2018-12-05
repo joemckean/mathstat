@@ -117,53 +117,54 @@ Below consists of the list of function within the mathstat package.
 <br>
 [mses](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/mses.html) <center>Mean Squared Error</center>
 <br>
-[multitrial](man/multitrial.Rd) <center>Multinomial Trial Simulation</center>
+[multitrial](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/multitrial.html) <center>Multinomial Trial Simulation</center>
 
 <center> <h2>--N--</h2> </center>
-[newfigc3s3.1](man/newfigc3s3.1.Rd) <center>Figure 3.3.1</center>
+[newfigc3s3.1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/newfigc3s3.1.html) <center>Figure 3.3.1</center>
 <br>
-[normaltable](man/normaltable.Rd) <center>Normal Distribution Table</center>
+[normaltable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/normaltable.html) <center>Normal Distribution Table</center>
 
 <center> <h2>--O--</h2> </center>
-[onesampsgn](man/onesampsgn.Rd) <center>One-Sample Sign Analysis</center>
+[onesampsgn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/onesampsgn.html) <center>One-Sample Sign Analysis</center>
 
 <center> <h2>--P--</h2> </center>
-[pcn](man/pcn.Rd) <center>Probability of Contaminated Normal (CDF)</center>
+[pcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/pcn.html) <center>Probability of Contaminated Normal (CDF)</center>
 <br>
-[percentciboot](man/percentciboot.Rd) <center>Percent Confidence Interval bootstrap</center>
+[percentciboot](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/percentciboot.html) <center>Percent Confidence Interval bootstrap</center>
 <br>
-[piest](man/piest.Rd) <center>Estimation of Pi Using Binomial Experiment</center>
+[piest](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/piest.html) <center>Estimation of Pi Using Binomial Experiment</center>
 <br>
-[piest2](man/piest2.Rd) <center>Estimation of Pi by Monte Carlo Integration</center>
+[piest2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/piest2.html) <center>Estimation of Pi by Monte Carlo Integration</center>
 <br>
-[plifetime](man/plifetime.Rd) <center>Probability of Battery Lifetime</center>
+[plifetime](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plifetime.html) <center>Probability of Battery Lifetime</center>
 <br>
-[plogF](man/plogF.Rd) <center>Probability of Log Distribution</center>
+[plogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plogF.html) <center>Probability of Log Distribution</center>
 <br>
-[ploggamma](man/ploggamma.Rd) <center>PDF of Mixture Distribution</center>
+[ploggamma](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/ploggamma.html) <center>PDF of Mixture Distribution</center>
 <br>
-[plotsulfur](man/plotsulfur.Rd) <center>Plot Sulfurdioxide</center>
+[plotsulfur](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/plotsulfur.html) <center>Plot Sulfurdioxide</center>
 <br>
-[pltlogF](man/pltlogF.Rd) <center>Plot Log Function</center>
+[pltlogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/pltlogF.html) <center>Plot Log Function</center>
 <br>
-[poisrand](man/poisrand.Rd) <center>Simulating Poisson Processes</center>
+[poisrand](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poisrand.html) <center>Simulating Poisson Processes</center>
 <br>
-[poissonci](man/poissonci.Rd) <center>Confidence Interval for mean of of a Poisson Distribution</center>
+[poissonci](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissonci.html) <center>Confidence Interval for mean of of a Poisson Distribution</center>
 <br>
-[poissontable2](man/poissontable2.Rd) <center></center>
+[poissontable2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissontable2.html) <center></center>
 <br>
-[psum](man/psum.Rd) <center>Probability Outcomes for a Multinomial Trial</center>
+[psum](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/psum.html) <center>Probability Outcomes for a Multinomial Trial</center>
 
 <center> <h2>--Q--</h2> </center>
-[qlaplace](man/qlaplace.Rd) <center>Laplace Quantiles</center>
+[qlaplace](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qlaplace.html) <center>Laplace Quantiles</center>
 <br>
-[qlogF](man/qlogF.Rd) <center>Quantile of Log Distribution</center>
+[qlogF](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qlogF.html) <center>Quantile of Log Distribution</center>
 <br>
-[qqplotc4s2](man/qqplotc4s2.Rd) <center>Population Quantile Plots</center>
+[qqplotc4s2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/qqplotc4s2.html) <center>Population Quantile Plots</center>
+
 <center> <h2>--R--</h2> </center>
-[rcn](man/rcn.Rd) <center>Random Contaminated Normal Deviates</center>
+[rcn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/rcn.html) <center>Random Contaminated Normal Deviates</center>
 <br>
-[rscn](man/rscn.Rd) <center>Random Sample from Contaminatied Normal Distribution</center>
+[rscn](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/rscn.html) <center>Random Sample from Contaminatied Normal Distribution</center>
 
 <center> <h2>--S--</h2> </center>
 [simplegame](man/simplegame.Rd) <center>Simple Game for Estimation of Expected Gain</center>
