@@ -53,7 +53,7 @@ Below consists of the list of function within the mathstat package.
 <br>
 [boottestonemed](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/boottestonemed.html) <center>Bootstrap Test One Median</center>
 <br>
-[boottesttwo](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/boottesttwo.html) <center></center>
+[boottesttwo](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/boottesttwo.html) <center>Bootstrap Testing Procedure</center>
 
 <center> <h2>--C--</h2> </center>
 [chistable](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/chistable.html) <center>Chi-Square Distribution</center>

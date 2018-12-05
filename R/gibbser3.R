@@ -9,7 +9,7 @@
 #' random vector (X, Y).
 #'
 #' @param alpha test statistic applied in algorithm
-#' @param beta NEED INFO
+#' @param beta the constraint value on the algorithm
 #' @param nt NEED INFO
 #' @param m length of returned variables x1 and y1
 #' @param n length of returned variables x2 and y2
@@ -30,7 +30,7 @@
 #' @export gibbser3
 
 gibbser3 <- function(alpha, beta = 0, nt = 0, m = 0, n = 1) {
-  
+
   # checking arguments
   errors <- makeAssertCollection()
   # argument 1 alpha
@@ -71,22 +71,22 @@ gibbser3 <- function(alpha, beta = 0, nt = 0, m = 0, n = 1) {
   errors$push(is_oneelement(n, 5))
   # argument check results
   reportAssertions(errors)
-  
+
   x0 <- 1
-  
+
   yc <- rep(0, m + n)
   xc <- c(x0, rep(0, (m - 1) + n))
-  
+
   for (i in 2:(m + n)) {
     yc[i] <- rbeta(1, xc[i - 1] + alpha, nt - xc[i - 1] + beta)
     xc[i] <- rbinom(1, nt, yc[i])
   }
-  
+
   y1 <- yc[1:m]
   y2 <- yc[(m + 1):(m + n)]
-  
+
   x1 <- xc[1:m]
   x2 <- xc[(m + 1):(m + n)]
-  
+
   return(list(y1 = y1, y2 = y2, x1 = x1, x2 = x2))
 }
