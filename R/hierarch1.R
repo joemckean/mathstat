@@ -1,6 +1,7 @@
 #' @title Hierarchal Bayes Model
 #'
-#' @description **NEED INFO
+#' @description Computes the Gibbs sampler for the two conditional pdf's,
+#' g(lambda | x, b) and g(b | x, lambda).
 #'
 #' @param nsims Number of iterations for the Gibbs sampler
 #' @param x Value observed
@@ -57,24 +58,24 @@ hierarch1 <- function(nsims = 0, x = 0, tau = 0.05, kstart = 1) {
   reportAssertions(errors)
   # Function starting point
   bold <- 1
-  
+
   clambda <- rep(0, (nsims + kstart))
   cb <- rep(0, (nsims + kstart))
-  
+
   for (i in 1:(nsims + kstart)) {
-    clambda[i] <- rgamma(1, shape = (x + 1), scale = (bold/(bold + 
+    clambda[i] <- rgamma(1, shape = (x + 1), scale = (bold/(bold +
       1)))
-    newy <- rgamma(1, shape = 2, scale = (tau/(clambda[i] * tau + 
+    newy <- rgamma(1, shape = 2, scale = (tau/(clambda[i] * tau +
       1)))
-    
+
     cb[i] <- 1/newy
     bold <- 1/newy
   }
-  
+
   gibbslambda <- clambda[(kstart + 1):(nsims + kstart)]
   gibbsb <- cb[(kstart + 1):(nsims + kstart)]
-  
+
   # Need to know how to describe return values
-  return(list(clambda = clambda, cb = cb, gibbslambda = gibbslambda, 
+  return(list(clambda = clambda, cb = cb, gibbslambda = gibbslambda,
     gibbsb = gibbsb))
 }
