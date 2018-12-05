@@ -113,7 +113,8 @@ wil2powsim <- function(n1, n2, nsims, eps, vc, Delta = 0, alpha = 0.05) {
   reportAssertions(errors)
   
   errors$push(is_numeric(Delta, 6))
-  # errors$push(is_integer(n2 / length(Delta), 6, 'argument 6 length must divide argument 2'))
+  # errors$push(is_integer(n2 / length(Delta), 6, 'argument 6 length must
+  # divide argument 2'))
   errors$push(has_noinf(Delta, 6))
   reportAssertions(errors)
   

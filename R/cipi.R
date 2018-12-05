@@ -89,7 +89,8 @@ cipi <- function(fit, hmat, alpha = 0.05) {
   }
   
   matcipi <- cbind(matci, matpi)
-  colnames(matcipi) <- c("Pred", "SECI", "LCI", "UCI", "Pred", "SEPI", "LPI", "UPI")
+  colnames(matcipi) <- c("Pred", "SECI", "LCI", "UCI", "Pred", "SEPI", 
+    "LPI", "UPI")
   
   return(matcipi)
   

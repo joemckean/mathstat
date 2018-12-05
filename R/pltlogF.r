@@ -24,8 +24,9 @@ pltlogF <- function() {
   d3 <- dlogF(q3)
   
   axis(2, at = c(0, d2, d3), labels = c(" ", "0.10", "0.05"), pos = -8)
-  axis(1, at = c(-8, q1, q2, q3), labels = c("-8", expression(italic(bold(q[1]))), expression(italic(bold(q[2]))), 
-    expression(italic(bold(q[3])))), pos = 0, cex = 2)
+  axis(1, at = c(-8, q1, q2, q3), labels = c("-8", expression(italic(bold(q[1]))), 
+    expression(italic(bold(q[2]))), expression(italic(bold(q[3])))), 
+    pos = 0, cex = 2)
   segments(q1, 0, q1, d1, cex = 2)
   segments(q2, 0, q2, d2, cex = 2)
   segments(q3, 0, q3, d3, cex = 2)

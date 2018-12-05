@@ -42,8 +42,8 @@ piest <- function(n) {
   u2 <- runif(n)
   
   cnt <- rep(0, n)  # Create array of n zeros
-  # Prob of U1,U2 lying in unit cirle is pi/4 See ex4.8.1 X = 1 if U1^2+U2^2 < 1 else X = 0 thus
-  # mean of X is mu = pi/4
+  # Prob of U1,U2 lying in unit cirle is pi/4 See ex4.8.1 X = 1 if
+  # U1^2+U2^2 < 1 else X = 0 thus mean of X is mu = pi/4
   
   chk <- u1^2 + u2^2 - 1
   cnt[chk < 0] <- 1

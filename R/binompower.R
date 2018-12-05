@@ -1,5 +1,6 @@
-# The values below sketch power functions for tests described in Example 4.5.2.  But it is easy
-# to change these for other binomial situation
+# The values below sketch power functions for tests described in
+# Example 4.5.2.  But it is easy to change these for other binomial
+# situation
 
 #' @title Power Functions for Binomial Tests
 #'
@@ -36,8 +37,8 @@ binompower <- function() {
   par(mar = c(1, 1, 1, 1))
   
   
-  plot(x, pow2, xlab = "p", ylab = expression(gamma(p)), ylim = c(0, 1), xlim = c(0.35, 1), type = "l", 
-    lty = 2)
+  plot(x, pow2, xlab = "p", ylab = expression(gamma(p)), ylim = c(0, 
+    1), xlim = c(0.35, 1), type = "l", lty = 2)
   
   lines(x, pow1, lty = 1)
   title("Power Functions for Binomial Tests")

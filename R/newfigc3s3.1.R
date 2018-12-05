@@ -31,8 +31,8 @@ newfigc3s3.1 <- function() {
   par(mfrow = c(2, 1), mar = c(1, 1, 1, 1))
   
   # Upper Plot
-  plot(dumx, dumy, axes = TRUE, xlim = c(0, 15), ylim = c(0, 0.3), pch = " ", xlab = expression(x), 
-    ylab = expression(f(x)))
+  plot(dumx, dumy, axes = TRUE, xlim = c(0, 15), ylim = c(0, 0.3), pch = " ", 
+    xlab = expression(x), ylab = expression(f(x)))
   
   x <- seq(0, 34, 0.1)
   
@@ -60,7 +60,8 @@ newfigc3s3.1 <- function() {
   dumx <- runif(100, 0, 34)
   dumy <- runif(100, 0, 0.13)
   
-  plot(dumx, dumy, axes = TRUE, xlim = c(0, 34), ylim = c(0, 0.12), pch = " ", xlab = "x", ylab = "f(x)")
+  plot(dumx, dumy, axes = TRUE, xlim = c(0, 34), ylim = c(0, 0.12), pch = " ", 
+    xlab = "x", ylab = "f(x)")
   
   title(main = expression(paste(alpha, " = 4")), cex = 2)
   

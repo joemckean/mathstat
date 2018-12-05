@@ -43,7 +43,8 @@ dlogF <- function(x) {
   
   # FUNCTION BEGINS
   
-  # Piecewise of exp() function: { 0, x <= -746 exp(x) = { n, -745 <= x <= 709 { inf, 710 <= x
+  # Piecewise of exp() function: { 0, x <= -746 exp(x) = { n, -745 <= x
+  # <= 709 { inf, 710 <= x
   options(digits = 22)
   pdf <- exp(x)/(1 + 5 * exp(x))^(1.2)
   return(pdf)

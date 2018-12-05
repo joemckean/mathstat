@@ -78,7 +78,8 @@ mcpbon <- function(y, ind, alpha = 0.05) {
   
   for (j in 1:(k - 1)) {
     for (jp in (j + 1):k) {
-      see <- t.test(y[uvec == j], y[uvec == jp], conf.level = (1 - alphap))
+      see <- t.test(y[uvec == j], y[uvec == jp], conf.level = (1 - 
+        alphap))
       
       car1 <- cartype[j]
       car2 <- cartype[jp]
@@ -104,7 +105,8 @@ mcpbon <- function(y, ind, alpha = 0.05) {
     }
   }
   
-  colnames(tab) <- c("j", "jp", "muj", "mujp", "diff", "se", "err", "lb", "ub")
+  colnames(tab) <- c("j", "jp", "muj", "mujp", "diff", "se", "err", "lb", 
+    "ub")
   
   # Converting table to dataframe: Allows car names to be returned
   tab2 <- as.data.frame(tab, row.names = " ")

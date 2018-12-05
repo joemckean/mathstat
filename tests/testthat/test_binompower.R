@@ -5,8 +5,6 @@ binompower()
 dev.off()
 
 test_that("output", {
-    finger <- getFingerprint(file = "../test_img/binompowerkey.png")
-    expect_true(isSimilar(file = "../test_img/binompowertest.png",
-    					  finger,
-    					  threshold=25))
+  finger <- getFingerprint(file = "../test_img/binompowerkey.png")
+  expect_true(isSimilar(file = "../test_img/binompowertest.png", finger, threshold = 25))
 })

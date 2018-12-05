@@ -34,7 +34,8 @@
 #' @export abgame
 
 abgame <- function() {
-  # function starts define possible outcomes for flipping a coin and rolling a dice
+  # function starts define possible outcomes for flipping a coin and
+  # rolling a dice
   rngA <- c(0, 1)
   rngB <- 1:6
   # defines probability of outcomes for flipping a coin and rolling dice

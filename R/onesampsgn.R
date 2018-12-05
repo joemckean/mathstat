@@ -33,7 +33,8 @@
 #' @export onesampsgn
 # Test of H_0: theta = theta0
 
-onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05, maktable = TRUE, plotb = FALSE) {
+onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05, 
+  maktable = TRUE, plotb = FALSE) {
   
   # checking arguments
   errors <- makeAssertCollection()
@@ -134,18 +135,22 @@ onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05, makta
       cat("Results for the Sign procedure", "\n")
       
       if (alt == 0) {
-        cat("Test of theta =", theta0, " versus theta not equal to ", theta0, "\n")
+        cat("Test of theta =", theta0, " versus theta not equal to ", 
+          theta0, "\n")
       }
       
       if (alt == 1) {
-        cat("Test of theta =", theta0, " versus theta greater than ", theta0, "\n")
+        cat("Test of theta =", theta0, " versus theta greater than ", 
+          theta0, "\n")
       }
       
       if (alt == -1) {
-        cat("Test of theta =", theta0, " versus theta less than ", theta0, "\n")
+        cat("Test of theta =", theta0, " versus theta less than ", 
+          theta0, "\n")
       }
       
-      cat("Test stat. S is", ts, " Standardized (z) Test-Stat.", zs, "p-value", pval, "\n")
+      cat("Test stat. S is", ts, " Standardized (z) Test-Stat.", 
+        zs, "p-value", pval, "\n")
       
       cat("\n")
     }
@@ -154,12 +159,14 @@ onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05, makta
     
     pct <- 100 * (1 - alpha)
     
-    cat(pct, "%", "Confidence Interval is ", "(", lci, ",", uci, ")", "\n")
+    cat(pct, "%", "Confidence Interval is ", "(", lci, ",", uci, ")", 
+      "\n")
     
     cat("    Actual Confidence  is ", acconf, "\n")
     
     cat("Estimate of the scale parameter tau", tau, "\n")
-    cat("\n", "This CI is the asymptotic form, see Hettmansperger and McKean (2011)", "\n")
+    cat("\n", "This CI is the asymptotic form, see Hettmansperger and McKean (2011)", 
+      "\n")
   }
   
   if (plotb) {
@@ -168,8 +175,8 @@ onesampsgn <- function(x, test = FALSE, alt = 0, theta0 = 0, alpha = 0.05, makta
   }
   
   if (test == TRUE) {
-    return(list(ts = ts, zs = zs, pval = pval, est = est, lci = lci, uci = uci, acconf = acconf, 
-      tau = tau))
+    return(list(ts = ts, zs = zs, pval = pval, est = est, lci = lci, 
+      uci = uci, acconf = acconf, tau = tau))
   } else {
     return(list(est = est, lci = lci, uci = uci, acconf = acconf, tau = tau))
   }
