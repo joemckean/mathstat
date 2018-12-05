@@ -1,5 +1,5 @@
 
-is_positive <- function(x, argPos, msg = NULL) {
+is_positive <- function(x, argpos, msg = NULL) {
   # check to see if argument is a positive number 0 is not positive
   if (is.numeric(x)) {
     if (x >= 0) {
@@ -9,18 +9,18 @@ is_positive <- function(x, argPos, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argPos, "must be positive")
+  v <- c("argument", argpos, "must be positive")
   return(paste(v, collapse = " "))
 }
 
-is_negative <- function(x, argPos) {
+is_negative <- function(x, argpos) {
   # check to see if argument is a negative number 0 is not negitive
   if (is.numeric(x)) {
     if (x <= 0) {
       return()
     }
   }
-  v <- c("argument", argPos, "must be negative")
+  v <- c("argument", argpos, "must be negative")
   return(paste(v, collapse = " "))
 }
 
@@ -48,7 +48,7 @@ is_logical <- function(x, argpos) {
 }
 
 
-is_integer <- function(x, argPos, msg = NULL) {
+is_integer <- function(x, argpos, msg = NULL) {
   # check to see if argument is an integer
   if (is.numeric(x)) {
     if (is.nan(x%%1) || x%%1 == 0) {
@@ -58,15 +58,15 @@ is_integer <- function(x, argPos, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argPos, "must be an integer")
+  v <- c("argument", argpos, "must be an integer")
   return(paste(v, collapse = " "))
 }
 
-is_oneelement <- function(x, argPos) {
+is_oneelement <- function(x, argpos) {
   if (length(x) == 1) {
     return()
   }
-  v <- c("argument", argPos, "cannot have length greater than 1")
+  v <- c("argument", argpos, "cannot have length greater than 1")
   return(paste(v, collapse = " "))
 }
 
@@ -78,15 +78,15 @@ is_manyelement <- function(x, argpos) {
   return(paste(v, collapse = " "))
 }
 
-is_numvector <- function(x, argPos) {
+is_numvector <- function(x, argpos) {
   if (is.vector(x, mode = "numeric")) {
     return()
   }
-  v <- c("argument", argPos, "must be a numeric vector")
+  v <- c("argument", argpos, "must be a numeric vector")
   return(paste(v, collapse = " "))
 }
 
-is_numeric <- function(x, argPos, msg = NULL) {
+is_numeric <- function(x, argpos, msg = NULL) {
   # check to see if argument is a number
   if (is.numeric(x)) {
     return()
@@ -94,16 +94,16 @@ is_numeric <- function(x, argPos, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argPos, "must be a number")
+  v <- c("argument", argpos, "must be a number")
   return(paste(v, collapse = " "))
 }
 
-is_smaller <- function(x, y, argPosx, argPosy) {
+is_smaller <- function(x, y, argposx, argposy) {
   # check to see if on x < y
   if (x < y) {
     return()
   }
-  v <- c("argument", argPosx, "must be smaller than argument", argPosy)
+  v <- c("argument", argposx, "must be smaller than argument", argposy)
   return(paste(v, collapse = " "))
 }
 
@@ -119,7 +119,7 @@ is_inrange <- function(x, argpos, min, max, msg = NULL) {
   if (!is.null(msg)) {
     return(msg)
   }
-  v <- c("argument", argpos, "must be greater than or equal to", min, "and less than or equal to", 
+  v <- c("argument", argpos, "must be greater than or equal to", min, "and less than or equal to",
     max)
   return(paste(v, collapse = " "))
 }
@@ -140,17 +140,17 @@ is_xrange <- function(x, argpos, min, max, msg = NULL) {
   return(paste(v, collapse = " "))
 }
 
-is_vecinrange <- function(x, argPos, min, max) {
+is_vecinrange <- function(x, argpos, min, max) {
   outrange <- 0
   for (i in 1:length(x)) {
     if (is.nan(x[i])) {
-      
+
     } else if (x[i] < min || x[i] > max) {
       outrange <- outrange + 1
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument", argPos, "must be greater than or equal to", min, "and less than or equal to", 
+    v <- c("all elements in argument", argpos, "must be greater than or equal to", min, "and less than or equal to", 
       max)
     return(paste(v, collapse = " "))
   } else {
@@ -158,17 +158,17 @@ is_vecinrange <- function(x, argPos, min, max) {
   }
 }
 
-is_vecxrange <- function(x, argPos, min, max) {
+is_vecxrange <- function(x, argpos, min, max) {
   outrange <- 0
   for (i in 1:length(x)) {
     if (is.nan(x[i])) {
-      
+
     } else if (x[i] <= min || x[i] >= max) {
       outrange <- outrange + 1
     }
   }
   if (outrange > 0) {
-    v <- c("all elements in argument", argPos, "must be greater than", min, "and less than", 
+    v <- c("all elements in argument", argpos, "must be greater than", min, "and less than", 
       max)
     return(paste(v, collapse = " "))
   } else {
@@ -176,19 +176,19 @@ is_vecxrange <- function(x, argPos, min, max) {
   }
 }
 
-has_elements <- function(x, argPos, elements) {
+has_elements <- function(x, argpos, elements) {
   if (length(x) == elements) {
     return()
   }
-  v <- c("argument", argPos, "must have", elements, "elements")
+  v <- c("argument", argpos, "must have", elements, "elements")
   return(paste(v, collapse = " "))
 }
 
-is_noninf <- function(x, argPos) {
+is_noninf <- function(x, argpos) {
   if (!is.infinite(x)) {
     return()
   }
-  v <- c("argument", argPos, "cannot be infinite")
+  v <- c("argument", argpos, "cannot be infinite")
   return(paste(v, collapse = " "))
 }
 
@@ -212,33 +212,33 @@ has_nonan <- function(x, argpos) {
   return()
 }
 
-is_matrix <- function(x, argPos) {
+is_matrix <- function(x, argpos) {
   if (is.matrix(x)) {
     return()
   }
-  v <- c("argument", argPos, "must be a matrix")
+  v <- c("argument", argpos, "must be a matrix")
   return(paste(v, collapse = " "))
 }
 
-is_posmatrix2 <- function(x, argPos) {
+is_posmatrix2 <- function(x, argpos) {
   # is a all positive entry 2x2 matrix must be a 2x2 matrix
   if (x[1, 1] >= 0 && x[1, 2] >= 0 && x[2, 1] >= 0 && x[2, 2] >= 0) {
     return()
   }
-  v <- c("argument", argPos, "must have all positive entries")
+  v <- c("argument", argpos, "must have all positive entries")
   return(paste(v, collapse = " "))
 }
 
-is_posdetmat2 <- function(x, argPos) {
+is_posdetmat2 <- function(x, argpos) {
   # is positive determinate 2x2 matrix
   if (is.matrix(x)) {
     if (x[1, 1] * x[2, 2] - x[1, 2] * x[2, 1] > 0) {
       return()
     }
-    v <- c("the determinate of argument", argPos, "must be positive")
+    v <- c("the determinate of argument", argpos, "must be positive")
     return(paste(v, collapse = " "))
   }
-  v <- c("argument", argPos, "must be a matrix")
+  v <- c("argument", argpos, "must be a matrix")
   return(paste(v, collapse = " "))
 }
 
@@ -246,8 +246,7 @@ is_linearmodel <- function(x, argpos) {
   if (class(x) == "lm") {
     return()
   }
-  
+
   v <- c("argument", argpos, "must be a linear model")
   return(paste(v, collapse = " "))
 }
-
