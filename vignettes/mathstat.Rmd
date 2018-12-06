@@ -102,7 +102,7 @@ Below consists of the list of function within the mathstat package.
 [gibbser3](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/gibbser3.html) <center>Gibbs Sampler with Bayesian Inference</center>
 
 <center> <h2>--H--</h2> </center>
-[hcplot](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/hcplot.html) <center></center>
+[hcplot](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/hcplot.html) <center>Hair Color Plot</center>
 <br>
 [hierarch1](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/hierarch1.html) <center>Hierarchal Bayes Model</center>
 
@@ -150,7 +150,7 @@ Below consists of the list of function within the mathstat package.
 <br>
 [poissonci](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissonci.html) <center>Confidence Interval for mean of of a Poisson Distribution</center>
 <br>
-[poissontable2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissontable2.html) <center></center>
+[poissontable2](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/poissontable2.html) <center>Poisson Distribution Table</center>
 <br>
 [psum](http://www.stat.wmich.edu/mckean/Prjhmcpkg/Manpages/psum.html) <center>Probability Outcomes for a Multinomial Trial</center>
 
