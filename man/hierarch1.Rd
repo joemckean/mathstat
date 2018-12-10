@@ -19,7 +19,8 @@ hierarch1(nsims = 0, x = 0, tau = 0.05, kstart = 1)
 **NEED INFO
 }
 \description{
-**NEED INFO
+Computes the Gibbs sampler for the two conditional pdf's,
+g(lambda | x, b) and g(b | x, lambda).
 }
 \details{
 Computes the solution to Example 11.4.2 on page 681.
