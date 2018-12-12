@@ -3,7 +3,9 @@ Purpose: Provide overview of mathstat package
 Last Updated: 12/12/2018
 
 Package Overview: 
-This package illustrates the applicability of the concepts and alogrithms covered in 8th edition of the text *Introduction to Mathematical Statics* by Hogg, McKean, and Craig (2018). The topics in which these functions apply to includes but are not limited to the following:
+This package illustrates the applicability of the concepts and alogrithms covered in 8th edition of the text 
+*Introduction to Mathematical Statics* by Hogg, McKean, and Craig (2018). The topics in which these functions 
+apply to includes but are not limited to the following:
 
 1. Probability and Distributions
 2. Multivariate Distributions
