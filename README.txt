@@ -36,3 +36,8 @@ DESCRIPTION: Contains the mathstat package's metadata
 NAMESPACE: Contains the mathstat package's working environment
 
 mathstat.Rproj: mathstat package's executable developer environment file
+
+Package installation:
+1. devtools::install_github("joemckean/mathstat")
+
+2. library(mathstat)
