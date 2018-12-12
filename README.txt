@@ -19,7 +19,7 @@ apply to includes but are not limited to the following:
 10. Nonparametric and Robust Statistics
 11. Bayesian Statistics
 
-Directories: 
+Directories and Files: 
 
 R: Contains code for all the functions including the roxygen2 code for documentation
 
