@@ -29,7 +29,7 @@ man: Contains the functions' manuals (.Rd files) which where compiled by roxgyen
 
 tests: Contains all the unit test files for each of the functions in the R directory
 
-vignettes: Contains the package's vignette (.Rmd) file. 
+vignettes: Contains the package's vignette (.Rmd file). 
 
 DESCRIPTION: Contains the mathstat package's metadata 
 
