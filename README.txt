@@ -25,7 +25,7 @@ R: Contains code for all the functions including the roxygen2 code for documenta
 
 data: Contains all the data files included in the package (which are available to users to load after the package is installed)
 
-man: Contains the .Rd files which where compiled by roxgyen2 
+man: Contains the function's manuals (.Rd files) which where compiled by roxgyen2 
 
 tests: Contains all the unit test files for each of the functions in the R directory
 
