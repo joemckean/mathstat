@@ -9,7 +9,7 @@ gibbser3(alpha, beta = 0, nt = 0, m = 0, n = 1)
 \arguments{
 \item{alpha}{test statistic applied in algorithm}
 
-\item{beta}{NEED INFO}
+\item{beta}{the constraint value on the algorithm}
 
 \item{nt}{NEED INFO}
 

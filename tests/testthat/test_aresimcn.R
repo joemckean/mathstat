@@ -13,7 +13,7 @@ test_that("edge cases", {
   expect_error(aresimcn(n = 50, nsims = 100, eps = Inf), "argument 3 cannot include an Inf or -Inf")
   expect_error(aresimcn(n = 50, nsims = 100, vc = -1), "argument 4 must be positive")
   expect_error(aresimcn(n = 50, vc = Inf), "argument 4 cannot include an Inf or -Inf")
-  
+
 })
 
 test_that("input", {
