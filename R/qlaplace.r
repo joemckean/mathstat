@@ -7,16 +7,11 @@
 #'
 #' @param ps a vector of floating point numbers between 0 and 1, of probabilites.
 #'
-#' @return returns a vector of quantiles for standard laplace distribution. For
-#' quantiles with probabilites less than .5 reported first and greater than .5
-#' following them.
+#' @return returns a vector of quantiles for standard laplace distribution.
 #'
 #' @examples ps <- c(0.22, 0.93, 0.28)
 #' qlaplace(ps)
-#' ## [1] -0.8209806 -0.5798185  1.9661129 the first element corresponds to the
-#' ## first element in ps, the second element corespomds to the third element in
-#' ## ps, and the third corespomds to the second element in ps becaue the order
-#' ## they are reported in
+#' ## [1] -0.8209806  1.9661129 -0.5798185
 #' ps <- .9750
 #' qlaplace(ps)
 #' ## [1] 2.995732
@@ -33,17 +28,21 @@
 
 qlaplace <- function(ps) {
   # checking argument
-  errors <- makeAssertCollection()
+#j  errors <- makeAssertCollection()
   # argument 1 ps
-  errors$push(is_numvector(ps, 1))
-  errors$push(is_vecinrange(ps, 1, 0, 1))
-  errors$push(has_nonan(ps, 1))
-  reportAssertions(errors)
+#j  errors$push(is_numvector(ps, 1))
+#j  errors$push(is_vecinrange(ps, 1, 0, 1))
+#j  errors$push(has_nonan(ps, 1))
+#j  reportAssertions(errors)
   # function starts
+  arps <- order(ps)
+  rpd <- rank(ps,ties.method = c("first"))
+  ps <- ps[arps]
   low <- ps[ps < 0.5]
   high <- ps[ps >= 0.5]
   lowq <- log(2 * low)
   highq <- -log(2 * (1 - high))
   qlaplace <- c(lowq, highq)
+  qlaplace <- qlaplace[rpd]
   return(qlaplace)
 }
