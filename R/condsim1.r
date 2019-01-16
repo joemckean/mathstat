@@ -1,7 +1,7 @@
 #' @title Observation Generator
 #'
 #' @description this algorithm generates observations from the probability
-#' density function
+#' density function from the pdf of X given on page 675 of HMC.
 #'
 #' @param nsims a positive non-zero number, the amout of times you want it
 #' to generate an observation

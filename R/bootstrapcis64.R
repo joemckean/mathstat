@@ -1,7 +1,8 @@
 #' @title Percentile Bootstrap Confidence Interval
 #'
-#' @description This function returns a bootstrap confidence for the maximum likelihood
-#' estimator that x is less than or eqal to c discussed in Exercise 6.4.7 on page 395.
+#' @description This function returns a bootstrap confidence interval for the maximum likelihood
+#' estimator that X is less than or equal to c for X normally distributed; see  Exercise 6.4.7 
+#' on page 395.
 #'
 #' @param x a random variables with sample size \emph{n}
 #' @param c a number, a range value of intrest

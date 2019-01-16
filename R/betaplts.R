@@ -1,6 +1,6 @@
 #' @title Beta Distribution Plots
 #'
-#' @description this function plots the beta distribution for alpha equaling 2,
+#' @description this function plots the beta pdf for alpha equaling 2,
 #' 3, 4, and 5 and beta equaling 2, 3, 4, and 5.
 #'
 #' @examples betaplts()

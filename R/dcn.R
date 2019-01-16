@@ -1,17 +1,16 @@
-#' @title PDF of Contaminated Normal
+#' @title pdf of Contaminated Normal
 #'
-#' @description Computes the PDF of the standard normals for the PDF of W at w,
-#' represented as \eqn{P(W = w)} where W is the random variable of interest.
-#' See expression 3.4.19 on page 194 of the book.
+#' @description Computes the pdf of the contaminated normal pdf.
+#' See expression (3.4.17) on page 194 of HMC.
 #'
-#' @param w Variable bound on random variable of interest W.
+#' @param w value in the domain of the pdf.
 #'
 #' @param eps Proportion of contamination. Usually between 0 and 0.25.
 #'
 #' @param sigma_c Standard deviation of contaminated part.
 #' Should be greater than 1.
 #'
-#' @return Value of PDF at w for a contaminated normal.
+#' @return Value of pdf at w for a contaminated normal.
 #'
 #' @references Hogg, R. McKean, J. Craig, A (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson

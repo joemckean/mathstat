@@ -1,12 +1,14 @@
-#' @title probability mass function for exersize 1.6.5
+#' @title probability mass function for Exersize 1.6.5
 #'
-#' @description a pmf for choosing 5 out of 100 units to test for acceptability
+#' @description Suppose we have a lot of 100 items, 20 of which are defective.
+#' Let X be the number of defective item in a random sample of size 5 drawns
+#' without replacement.  This function calulates the pmf of X.
 #'
 #' @examples pmf_matrix <- dex165()
 #'
-#' @return a matrix with the value of x and its pmf
-#' @return x the x value used to determine the output for the pmf
-#' @return pmf the output of the probability mass function using the corresponding x value
+#' @return a matrix containing the table distribution of X.
+#' The first row of the table consists of the range of X and the second row
+#' the associated probabilities.
 #'
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.
