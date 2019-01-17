@@ -10,7 +10,9 @@
 #'
 #' @details Computes the solution to Example 11.4.2 on page 681.
 #'
-#' @return **NEED INFO
+#' @return clambda contains the whole simulated sequence (nsims + kstart)
+#' of Lambdas and gibbslamda contains the ater burn part (kstart+1: nsims + kstart).
+#' Likewise, cb and gibbsb for the sequence of B's.
 #'
 #' @seealso \code{\link{gibbser2}}
 #'
@@ -75,7 +77,6 @@ hierarch1 <- function(nsims = 0, x = 0, tau = 0.05, kstart = 1) {
   gibbslambda <- clambda[(kstart + 1):(nsims + kstart)]
   gibbsb <- cb[(kstart + 1):(nsims + kstart)]
 
-  # Need to know how to describe return values
   return(list(clambda = clambda, cb = cb, gibbslambda = gibbslambda,
     gibbsb = gibbsb))
 }
