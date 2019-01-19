@@ -12,9 +12,9 @@
 #' @param theta0 a number, the null value of the mean
 #' @param b an integer, the number of bootstrap resamples
 #'
-#' @examples sample <- c(4, 3, 2, 9)
-#' theta0 <- .05
-#' b <- 5
+#' @examples sample <- c(4, 3, 2, 9, 11, 13, 5, 8, 12, 15, 10, 200)
+#' theta0 <- 7
+#' b <- 3000
 #' boottestonemed(sample, theta0, b)
 #'
 #' @return a list with origtest, pvalue, and teststatall

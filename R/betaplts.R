@@ -1,7 +1,7 @@
 #' @title Beta Distribution Plots
 #'
 #' @description this function plots the beta pdf for alpha equaling 2,
-#' 3, 4, and 5 and beta equaling 2, 3, 4, and 5.
+#' 3, 4, and 5 and beta equaling 2, 3, 4, and 5.   See Example 3.3.5 of HMC.
 #'
 #' @examples betaplts()
 #'

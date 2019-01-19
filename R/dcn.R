@@ -17,13 +17,13 @@
 #'
 #' @examples
 #' # Example where variables are set then passed in as parameters.
-#' w <- 10
+#' w <- 3
 #' eps <- 0.5
 #' sigma_c <- 0.25
 #' p <- dcn(w, eps, sigma_c)
 #'
 #' # Example where parameters are passed in as values.
-#' p <- dcn(10, 0.5, 0.25)
+#' p <- dcn(3, 0.5, 0.25)
 #'
 #' @export dcn
 

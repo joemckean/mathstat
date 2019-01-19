@@ -1,9 +1,9 @@
 #' @title Estimation of Pi Using Binomial Experiment
 #'
-#' @description Uses iterative methods to estimate pi with standard error for
-#' the simulation discussed in Example 4.8.1 on page 293 of the book.
+#' @description Uses a simple Monte Carlo method to estimate pi with standard error as
+#' discussed in Example 4.8.1 on page 293 of the book.
 #'
-#' @param n Iterations (number of simulations) to repeat.
+#' @param n number of simulations to repeat.
 #'
 #' @return Tuple containing estimate value of pi and standard error.
 #'

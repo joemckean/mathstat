@@ -1,6 +1,6 @@
 #' @title Power Function Of The Two Sample Test
 #'
-#' @description computes power function for two-sample t-testfor the
+#' @description computes power function for two-sample t-test for the
 #' alternative mu1 > mu2. This test is discussed in Example 4.6.2,
 #' page 278. Power functions for two-sample t-tests are discussed in
 #' Example 8.3.3 on page 493.

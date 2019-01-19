@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' bday(2)
-#' bday(10)
+#' bday(23)
 #'
 #' @export bday
 

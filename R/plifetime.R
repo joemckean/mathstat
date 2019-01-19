@@ -1,6 +1,7 @@
 #' @title Probability of Battery Lifetime
 #'
-#' @description Let X & Y be the survival times of two batteries. This functions
+#' @description As in Example 2.1.3, page 88 of HMC, let X & Y be the 
+#' survival times of two batteries. Using the pdf given in Example 2.1.3, this function
 #' calculates the probability that (\emph{X, Y}) falls within the rectangle which
 #' represents the distribution of battery lifetime.The modes of the survival time
 #' are (x, y) = (sqrt(2)/2, sqrt(2)/2). X and Y denote the lifetimes of the batteries

@@ -4,7 +4,8 @@
 #' The PDF is given in expression 1.7.9 on page 52 of the book.
 #'
 #' @param x Real number (or vector of numbers) where \eqn{-\infty < x < \infty}.
-#' CDF of X is \eqn{F(x) = 1 - (1+5e^(x))^(-0.2)}.
+#' CDF of X is \eqn{F(x) = 1 - (1+5e^(x))^(-0.2)} (The sign on x is correct here,
+#' but not in the book).
 #'
 #' @return CDF (single value or vector based on input) of X. \eqn{P(X\le x)}
 #'

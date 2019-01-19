@@ -1,8 +1,8 @@
 #' @title The First Iteration of the EM Step
 #'
 #' @description This function returns one iteration of the EM
-#' step for excersize 6.6.8. The initial estimate for the step
-#' is theinput vector theta0 while the ouput are the onestep
+#' step for Excersize 6.6.8. The initial estimate for the step
+#' is the input vector theta0 while the ouputs are the onestep
 #' esimates as given on page 409 of the text.
 #'
 #' @param x a vector of quantiles.

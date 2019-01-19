@@ -5,7 +5,7 @@
 #'
 #' @param n Size of random sample to generate
 #' @param eps Proportion of contamination
-#' @param sigma_c Standard deviation of contaminated component
+#' @param sigma_c Standard deviation of contaminated component, should be greater than 1
 #'
 #' @details With probability (1-eps) a deviates are drawn from a standard normal
 #'          distribution. With probability eps deviates are drawn from a normal

@@ -1,6 +1,7 @@
 #' @title Plot Log Function
 #'
-#' @description  this function crates a file and plots the log function to that file
+#' @description  This function plots the pdf of the logF distribution.
+#' See Figure 1.7.2 on page 54 of HMC.
 #'
 #' @examples pltlogF()
 #'

@@ -8,8 +8,8 @@
 #'
 #' @return a list of numeric observations
 #'
-#' @examples nsims <- 5
-#' obs <- condsim1(nsims)
+#' @examples nsims <- 5000
+#' obs <- condsim1(nsims); hist(obs)
 #'
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.

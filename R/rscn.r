@@ -1,4 +1,4 @@
-#' @title random sample from contaminatied normal distribution
+#' @title random sample from a skewed contaminatied normal distribution
 #'
 #' @description simulates a random sample of size n drawn from a skewed contaminated normal
 #' distribution with percent contamination eps, standard deviation ratio

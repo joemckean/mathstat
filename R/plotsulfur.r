@@ -1,7 +1,7 @@
 #' @title plot sulfurdioxide
 #'
 #' @description This function creates a histogram using the sulfurdioxide table
-#' from the sulfrurdio.rda.
+#' from the sulfrurdio.rda.  See Example 4.1.7, page 234, of HMC.
 #'
 #' @examples plotsulfur()
 #'

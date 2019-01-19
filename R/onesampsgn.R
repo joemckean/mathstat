@@ -2,7 +2,9 @@
 #'
 #' @description Calculates a distribution free confidence interval for a sample
 #' median by deriving for the 100pth distribution percentile of a continuous random
-#' variable.
+#' variable.  It also computes an estimate tau; i.e, this estimate divided by root n
+#' is a standard error for the estimate of the median.
+#' Also, tests H_0: theta = theta0, where theta is the population median.
 #' .
 #' @param x Sample of size 'n'
 #' @param test Computes a two-sided sign test about theta0. If \code{test} is true,

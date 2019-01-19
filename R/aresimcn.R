@@ -1,8 +1,8 @@
 #' @title A Relative Efficency Investigation Simulation
 #'
-#' @description Calculates the relative efficency between estimators for finite
-#' samples sizes. The investigation involves making comparisons over families
-#' of distributions, as well as a selection of sample sizes.
+#' @description Calculates the empirical relative efficency between the Wilcoxon
+#' (Hodges-Lehmann) estimator and the sample mean when the population has a 
+#' contaminated normal distribution.
 #'
 #' @param n Size of generated samples
 #' @param nsims Number of simulations

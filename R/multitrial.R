@@ -1,7 +1,7 @@
 #' @title Multinomial Trial Simulation
 #'
 #' @description Computes the result of a random multinomial trial based on the inputted
-#' probability of outcome for each k level.
+#' probability of outcome for each level k.
 #'
 #' @param p A vector containing the probability of outcome for k levels of a random
 #' multinomial trial

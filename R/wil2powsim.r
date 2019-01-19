@@ -1,9 +1,11 @@
 #' @title Wilcox Power Simulation
 #'
-#' @description Iterates over specified number of simulations. At each step,
-#' generate independent samples, compute each test statistic, and record whether
-#' or not each test rejected. For each test, its empirical power is its number
-#' of rejections divided by the number of simulations.
+#' @description Computes the empirical powers for the Mann-Whitney and t-tests for the
+#' two sample problem.   Delta is the shift in location.   The hypotheses are H0: Delta =0
+#' versus H1: Delta not equal to 0.   The computed power is at the input parameter Delta.
+#' Sampling is over contaminated normal distributions at specified proportion of
+#' contamination and the value of the variance of the contaminated part.
+#' nsims simulations are performed. 
 #' See section 10.4.4 on page 605 of the book.
 #'
 #' @param n1 Sample size 1.
@@ -17,8 +19,7 @@
 #'
 #' @param vc Standard deviation of contaminated part.
 #'
-#' @param Delta Vector of shifts in location between models. Sample size 2 (n2)
-#' must be divisible by the number of ekements in this vector.
+#' @param Delta is the specfied alternative.
 #'
 #' @param alpha Level of significance of the test.
 #'
@@ -35,8 +36,8 @@
 #' nsims <- 100
 #' eps <- 0.2
 #' vc <- 10
-#' Delta <- c(-3, 3, 1)
-#' alpha <- 0.25
+#' Delta <- 3
+#' alpha <- 0.05
 #' results <- wil2powsim(n1, n2, nsims, eps, vc, Delta, alpha)
 #'
 #'

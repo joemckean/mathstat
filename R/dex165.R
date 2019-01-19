@@ -1,7 +1,7 @@
 #' @title probability mass function for Exersize 1.6.5
 #'
 #' @description Suppose we have a lot of 100 items, 20 of which are defective.
-#' Let X be the number of defective item in a random sample of size 5 drawns
+#' Let X be the number of defective item in a random sample of size 5 drawn
 #' without replacement.  This function calulates the pmf of X.
 #'
 #' @examples pmf_matrix <- dex165()
