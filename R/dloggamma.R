@@ -1,6 +1,7 @@
 #' @title Density of Log Gamma Distribution
 #'
 #' @description this function calculates density of log gamma distribution.
+#' See Expression (3.7.5) on page 219 of HMC.
 #'
 #' @param x a numeric Vector. All components are greater than 1.
 #' @param alpha a positive non-zero number corresponds to the shape.

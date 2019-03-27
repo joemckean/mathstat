@@ -1,7 +1,8 @@
 #' @title Bootstrap Test One Median
 #'
 #' @description  On page 311 of HMC (2019), a bootstrap test for a one sample
-#' location problem based on the sample mean is presented. For the function, boottestonemed, the sample median is
+#' location problem based on the sample mean is presented. For the function, 
+#' boottestonemed, the sample median is
 #' used for the test statistic. The hypotheses tested, are:H 0 :
 #' \eqn{\theta = \theta 0} versus H a : \eqn{\theta > \theta 0} where
 #' \eqn{\theta 0} is spectified, (an input value of the function).
@@ -11,9 +12,9 @@
 #' @param theta0 a number, the null value of the mean
 #' @param b an integer, the number of bootstrap resamples
 #'
-#' @examples sample <- c(4, 3, 2, 9)
-#' theta0 <- .05
-#' b <- 5
+#' @examples sample <- c(4, 3, 2, 9, 11, 13, 5, 8, 12, 15, 10, 200)
+#' theta0 <- 7
+#' b <- 3000
 #' boottestonemed(sample, theta0, b)
 #'
 #' @return a list with origtest, pvalue, and teststatall

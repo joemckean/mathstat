@@ -19,13 +19,13 @@
 #'
 #' @examples
 #' # Example where variables are set then passed in as parameters.
-#' w <- 10
-#' eps <- 0.5
-#' sigma_c <- 0.25
+#' w <- 1.96
+#' eps <- 0.25
+#' sigma_c <- 2.5
 #' p <- pcn(w, eps, sigma_c)
 #'
 #' # Example where parameters are passed in as values.
-#' p <- pcn(10, 0.5, 0.25)
+#' p <- pcn(1.96, 0.25, 2.5)
 #'
 #' @export pcn
 

@@ -1,6 +1,6 @@
 #' @title  Normal Distribution Table
 #'
-#' @description Generates the normal probabilities for values of \emph{z} that is
+#' @description Generates the standard normal probabilities for values of \emph{z} that is
 #' greater than or equal to zero. See page 709 for more details.
 #'
 #' @return \code{pz} is the normal distribution table for values of \emph{z} that is

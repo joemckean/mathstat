@@ -1,9 +1,10 @@
 #' @title Estimation of Pi by Monte Carlo Integration
 #'
-#' @description Uses integration to estimate pi given a sample size.
+#' @description Uses Monte Carlo integration to estimate pi given a simulation
+#' size.
 #' See example 4.8.4 on page 295 and 296 of the book.
 #'
-#' @param n Sample size.
+#' @param n simulation size.
 #'
 #' @return Tuple containing estimate value of pi and the standard error.
 #'

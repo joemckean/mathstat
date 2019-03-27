@@ -1,7 +1,7 @@
 #' @title Number drawing game
 #'
-#' @description in this game first a number is drawn from a set 1-20, let x
-#' be the number drawn. Next another number is drawn from a set x-25 if the
+#' @description in this game first a number is drawn from a set 1:20, let X
+#' be the number drawn. Next another number Y is drawn from a set X:25 if the
 #' second number is greater than 21 then its a win.
 #'
 #' @examples result <- ex1427()

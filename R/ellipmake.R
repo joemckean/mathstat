@@ -1,6 +1,6 @@
 #' @title Plot Ellipse
 #'
-#' @description this function plots an ellipse of varying size and coridnates of
+#' @description this function plots an ellipse of varying size and coordinates of
 #' the center
 #'
 #' @param p floating point number, between 0 and 1 adjusts the size of the ellipse

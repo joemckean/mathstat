@@ -1,6 +1,6 @@
 #' @title emperical alpha
-#' @description Obtains the empirical level of the probability
-#' density function where: f(x) = 4x^3 when 0 < x < 1; and 0 otherwise.
+#' @description Obtains the empirical alpha level of the t-test when sampling from
+#' a contaminated normal distribution.  See Example 4.8.6 on page 297 of HMC.
 #'
 #' @param nsims an integer, the number of simulations that are to be run
 #'

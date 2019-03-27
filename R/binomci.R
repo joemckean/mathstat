@@ -2,6 +2,7 @@
 #'
 #' @description This function iteratively solves for the upper and lower
 #' confidence interval bounds for the probaility of success for a binomial sample.
+#' See the Numerical Illustration on page 250 of HMC.
 #'
 #' @param s an integer the number of successes
 #' @param n an integer the the number of trials (zero or more)

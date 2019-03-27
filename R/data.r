@@ -271,7 +271,12 @@
 #' Fast Cars
 #'
 #' A data set containg 30 observations of car speeds.
-#'
+#' Car and Driver (July, 1995) conducted tests of these super cars.
+#' These speeds were achieved using as much distance as necessary
+#' and without exceeding the engine's redline.   6 runs were made, 3 in each
+#' direction.  See Kitchens (1997). 
+#' Car number and car: 1 Acura;  2 Ferrair;  3 Lotus; 4 Porsche;  5 Viper
+
 #' @format A list containing 30 rows and 2 variables
 #' \describe{
 #'   \item{ind}{type of car}
@@ -282,7 +287,8 @@
 #'
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.
-#'
+#' @references Kitchens, L.J. (1997), A Modern Introduction to Data
+#' Analysis and Modern Inference, 2nd Ed., Wadsworth.
 "fastcars"
 
 #' Generated exp Data

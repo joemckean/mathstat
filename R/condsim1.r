@@ -1,15 +1,15 @@
 #' @title Observation Generator
 #'
 #' @description this algorithm generates observations from the probability
-#' density function
+#' density function from the pdf of X given on page 675 of HMC.
 #'
 #' @param nsims a positive non-zero number, the amout of times you want it
 #' to generate an observation
 #'
 #' @return a list of numeric observations
 #'
-#' @examples nsims <- 5
-#' obs <- condsim1(nsims)
+#' @examples nsims <- 5000
+#' obs <- condsim1(nsims); hist(obs)
 #'
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.

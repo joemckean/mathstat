@@ -2,13 +2,15 @@
 #'
 #' @description This function iteratively solves for the upper and lower
 #' confidence interval bounds for the probability of success for a poisson
-#' sample.
+#' sample.   See the discussion in the paragraph Numerical Illustration
+#' on page 251 of HMC.  The variable value is 1-alpha for the upper bound 
+#' and alpha for the lower bound, which yields a 1 -2*alpha confidence interval.
 #'
 #' @param s a number, the number of events that have occured calculted as n * xbar
 #' @param n a number, the size
 #' @param theta1 a number n*theta1 is a mean and the lower bracket for the solution, must be positive.
 #' @param theta2 a number n*thata2 is a mean and the upper bracket for the solution, must be larger than theta1
-#' @param value a number the target distribution function
+#' @param value is 1-alpha for the upper bound and alpha for the lower bound for a 1 -2*alpha CI.
 #' @param maxstp an integer default is 100, the amount of times the solution is narrowed down
 #' @param eps a number default is .00001, the smallest difference in theta1 and theta2 as they are updated
 #'
