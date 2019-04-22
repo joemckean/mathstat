@@ -19,21 +19,21 @@
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.
 #'
-#' @details the mathmatical function that the entrys go through are:\cr
-#' f(x) = { log(2 * x)\cr
-#'        { -log(2 * (1 - x))
+#' @details the mathmatical function that the entrys go through are:
+#' # f(x) =  log(2 * x), OR
+#' #       -log(2 * (1 - x))
 #'
 #' @export qlaplace
 #'
 
 qlaplace <- function(ps) {
   # checking argument
-#j  errors <- makeAssertCollection()
+  errors <- makeAssertCollection()
   # argument 1 ps
-#j  errors$push(is_numvector(ps, 1))
-#j  errors$push(is_vecinrange(ps, 1, 0, 1))
-#j  errors$push(has_nonan(ps, 1))
-#j  reportAssertions(errors)
+  errors$push(is_numvector(ps, 1))
+  errors$push(is_vecinrange(ps, 1, 0, 1))
+  errors$push(has_nonan(ps, 1))
+  reportAssertions(errors)
   # function starts
   arps <- order(ps)
   rpd <- rank(ps,ties.method = c("first"))

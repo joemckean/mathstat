@@ -2,12 +2,12 @@
 #'
 #' @description The function plaplace returns the value of the cdf of
 #' the standard Laplace distribution which is discussed on page
-#' 77 of the text (HMC).   
+#' 77 of the text (HMC).
 #'
 #' @param x a vector of floating point numbers between -infty and +infinity.
 #'
 #' @return returns the corresponding vector of probabilities (values of the cdf)
-#' for the standard laplace distribution. 
+#' for the standard laplace distribution.
 #'
 #' @examples x <- c(2.2, 0.93, -0.28)
 #' plaplace(x)
@@ -22,9 +22,9 @@
 #' @references Hogg, R. McKean, J. Craig, A. (2018) Introduction to
 #' Mathematical Statistics, 8th Ed. Boston: Pearson.
 #'
-#' @details the cdf is:\cr
-#' F(x) = { (1/2)*exp(x)   x < 0\cr
-#'        { 1 - (1/2)*exp(-x)   x > 0
+#' @details the cdf is:
+#' F(x) =  (1/2)*exp(x)   x < 0, OR
+#'         1 - (1/2)*exp(-x)   x > 0
 #'
 #' @export plaplace
 #'

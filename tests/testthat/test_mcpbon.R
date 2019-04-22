@@ -4,7 +4,7 @@
 context("mcpbon")
 
 # Load data set
-load(url("http://www.stat.wmich.edu/mckean/hmchomepage/Data/fastcars.rda"))
+load("/data/fastcars.rda")
 
 # Declare variables
 speed <- fastcars$speed
@@ -31,7 +31,7 @@ test_that("input", {
 })
 
 test_that("output", {
-  expect_equal(names(mcpbon(speed, car)), c("j", "jp", "muj", "mujp", 
+  expect_equal(names(mcpbon(speed, car)), c("j", "jp", "muj", "mujp",
     "diff", "se", "err", "lb", "ub"))
   expect_equal(length(mcpbon(speed, car)$j), 10)
   expect_equal(length(mcpbon(speed, car)$jp), 10)
