@@ -32,15 +32,15 @@
 plaplace <- function(x) {
 
   # checking argument
-#j  errors <- makeAssertCollection()
+ errors <- makeAssertCollection()
   # argument 1: x
- #j errors$push(has_nonan(x, 1))
-#j  reportAssertions(errors)
-#j  errors$push(is_numeric(x, 1))
-#j  errors$push(has_noinf(x, 1))
+ errors$push(has_nonan(x, 1))
+ errors$push(is_numeric(x, 1))
+ errors$push(has_noinf(x, 1))
   # argument check results
-#j  reportAssertions(errors)
-  # function starts
+ reportAssertions(errors)
+
+ 	# function starts
   arx <- order(x)
   rx <- rank(x,ties.method = c("first"))
   x <- x[arx]

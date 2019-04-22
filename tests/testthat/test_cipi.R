@@ -4,7 +4,7 @@
 context("cipi")
 
 # Load data set
-load(url("http://www.stat.wmich.edu/mckean/hmchomepage/Data/men1500m.rda"))
+load("/data/men1500m.rda")
 
 # Declare variables
 year <- men1500m$year
